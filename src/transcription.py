@@ -76,6 +76,7 @@ def get_playlist_video_ids(playlist_url: str) -> list[dict]:
 def get_youtube_transcript(video_id: str, preferred_langs: list[str] = None) -> Optional[dict]:
     """
     Fetch transcript for a YouTube video using youtube-transcript-api.
+    Compatible with all versions of the library.
 
     Returns:
         {
@@ -87,53 +88,54 @@ def get_youtube_transcript(video_id: str, preferred_langs: list[str] = None) -> 
         or None if no transcript available.
     """
     try:
-        from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled, NoTranscriptFound
+        from youtube_transcript_api import YouTubeTranscriptApi
     except ImportError:
-        raise ImportError("Install youtube-transcript-api: pip install youtube-transcript-api")
+        raise ImportError(
+            "youtube-transcript-api not installed. "
+            "Add it to requirements.txt: youtube-transcript-api"
+        )
 
     if preferred_langs is None:
         preferred_langs = ["en", "en-US", "en-GB"]
 
-    try:
-        transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
-
-        # Try manual transcript first
-        transcript = None
-        is_generated = False
+    # Try each preferred language in order
+    last_error = None
+    for lang in preferred_langs:
         try:
-            transcript = transcript_list.find_manually_created_transcript(preferred_langs)
-        except Exception:
-            pass
+            segments = YouTubeTranscriptApi.get_transcript(
+                video_id, languages=[lang]
+            )
+            full_text = " ".join(
+                seg.get("text", "") for seg in segments
+            )
+            return {
+                "text": full_text,
+                "segments": segments,
+                "language": lang,
+                "is_generated": True,
+            }
+        except Exception as e:
+            last_error = e
+            continue
 
-        # Fall back to auto-generated
-        if transcript is None:
-            try:
-                transcript = transcript_list.find_generated_transcript(preferred_langs)
-                is_generated = True
-            except Exception:
-                # Try any available language
-                for t in transcript_list:
-                    transcript = t
-                    is_generated = t.is_generated
-                    break
-
-        if transcript is None:
-            return None
-
-        segments = transcript.fetch()
-        full_text = " ".join(seg["text"] for seg in segments)
-
+    # Try without specifying language (gets whatever is available)
+    try:
+        segments = YouTubeTranscriptApi.get_transcript(video_id)
+        full_text = " ".join(seg.get("text", "") for seg in segments)
         return {
             "text": full_text,
             "segments": segments,
-            "language": transcript.language_code,
-            "is_generated": is_generated,
+            "language": "auto",
+            "is_generated": True,
         }
+    except Exception as e:
+        last_error = e
 
-    except (Exception,) as e:
-        if "TranscriptsDisabled" in str(type(e)):
-            return None
-        raise e
+    # No transcript found
+    raise RuntimeError(
+        f"Could not fetch transcript for video {video_id}. "
+        f"The video may not have captions. Error: {last_error}"
+    )
 
 
 def format_transcript_with_timestamps(segments: list) -> str:
