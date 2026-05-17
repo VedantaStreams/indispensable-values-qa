@@ -225,3 +225,30 @@ def load_transcript_cache(video_id: str, cache_dir: Path) -> Optional[dict]:
         with open(cache_file, "r", encoding="utf-8") as f:
             return json.load(f)
     return None
+
+
+def fetch_youtube_transcript(url: str, language: str = "en") -> dict:
+    """
+    Wrapper: fetch transcript from a YouTube URL.
+    Extracts video ID, fetches transcript, cleans and returns result dict.
+    """
+    video_id = extract_video_id(url)
+    if not video_id:
+        raise ValueError(f"Could not extract video ID from URL: {url}")
+
+    preferred = [language, "en", "en-US"] if language != "en" else ["en", "en-US", "en-GB"]
+    result = get_youtube_transcript(video_id, preferred_langs=preferred)
+
+    if result is None:
+        raise RuntimeError(
+            f"No transcript found for this video. "
+            f"The video may not have captions enabled."
+        )
+
+    metadata = get_video_metadata(video_id)
+    result["video_id"]  = video_id
+    result["url"]       = url
+    result["title"]     = metadata.get("title", "")
+    result["channel"]   = metadata.get("channel", "")
+    result["text"]      = clean_transcript(result["text"])
+    return result

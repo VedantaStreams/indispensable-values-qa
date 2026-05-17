@@ -400,3 +400,113 @@ def load_raw_text(source_id: str, raw_dir: Path) -> Optional[str]:
     if out_file.exists():
         return out_file.read_text(encoding="utf-8")
     return None
+
+
+def ingest_file(file_path: str, metadata: dict) -> dict:
+    """
+    Ingest a single file (PDF/DOCX/TXT) into the raw data directory.
+    Extracts text, cleans it, and saves a source record.
+    Returns the source record dict.
+    """
+    import json
+    from datetime import datetime
+
+    path = Path(file_path)
+    raw_dir = path.parent
+    registry_path = raw_dir.parent / "processed" / "source_registry.json"
+    registry_path.parent.mkdir(parents=True, exist_ok=True)
+
+    # Extract text
+    text, extracted_meta = extract_text(path)
+
+    # Auto-detect and clean transcript format
+    if detect_story_format(text):
+        text = clean_story_transcript(text)
+    else:
+        text = clean_discourse_transcript(text)
+
+    # Merge metadata
+    meta = {**extracted_meta, **metadata}
+    meta["file_name"]    = path.name
+    meta["file_path"]    = str(path)
+    meta["ingested_at"]  = datetime.now().isoformat()
+    meta["source_type"]  = metadata.get("source_type", "discourse_transcript")
+
+    # Build and save source record
+    source_id = compute_file_hash(path)
+    record = build_source_record(
+        source_id=source_id,
+        text=text,
+        metadata=meta,
+        source_type=meta["source_type"],
+    )
+
+    # Save cleaned text
+    save_raw_text(source_id, text, raw_dir)
+
+    # Update registry
+    registry = load_source_registry(registry_path)
+    registry = [r for r in registry if r.get("source_id") != source_id]
+    registry.append(record)
+    save_source_registry(registry, registry_path)
+
+    return record
+
+
+def ingest_youtube_transcript(
+    transcript_data: dict,
+    metadata: dict,
+    raw_dir: Path,
+) -> dict:
+    """
+    Ingest a YouTube transcript result dict into the raw data directory.
+    Saves text and source record.
+    Returns the source record dict.
+    """
+    import hashlib
+    import json
+    from datetime import datetime
+
+    raw_dir = Path(raw_dir)
+    raw_dir.mkdir(parents=True, exist_ok=True)
+    registry_path = raw_dir.parent / "processed" / "source_registry.json"
+    registry_path.parent.mkdir(parents=True, exist_ok=True)
+
+    text      = transcript_data.get("text", "")
+    video_id  = transcript_data.get("video_id", "unknown")
+    title     = transcript_data.get("title", "YouTube Video")
+    url       = transcript_data.get("url", "")
+
+    # Save raw transcript as text file
+    txt_path = raw_dir / f"{video_id}.txt"
+    txt_path.write_text(text, encoding="utf-8")
+
+    # Build metadata
+    meta = {
+        **metadata,
+        "video_id":     video_id,
+        "title":        title,
+        "url":          url,
+        "channel":      transcript_data.get("channel", ""),
+        "language":     transcript_data.get("language", "en"),
+        "is_generated": transcript_data.get("is_generated", True),
+        "ingested_at":  datetime.now().isoformat(),
+        "source_type":  "youtube_transcript",
+    }
+
+    source_id = hashlib.md5(video_id.encode()).hexdigest()
+    record = build_source_record(
+        source_id=source_id,
+        text=text,
+        metadata=meta,
+        source_type="youtube_transcript",
+    )
+
+    save_raw_text(source_id, text, raw_dir)
+
+    registry = load_source_registry(registry_path)
+    registry = [r for r in registry if r.get("source_id") != source_id]
+    registry.append(record)
+    save_source_registry(registry, registry_path)
+
+    return record
