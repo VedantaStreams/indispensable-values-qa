@@ -1,0 +1,34 @@
+# Secrets — NEVER commit
+.streamlit/secrets.toml
+
+# Vector database (large binary — rebuild on deploy or use cloud DB)
+data/vector_db/
+
+# Raw uploaded content (may contain private teachings)
+# Uncomment if your content should stay private:
+# data/raw/
+# data/transcripts/
+# data/processed/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environments
+.env
+.venv
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
