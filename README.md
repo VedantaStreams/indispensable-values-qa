@@ -2,9 +2,9 @@
 
 **A Reverential AI-Powered Study Companion**
 
-Grounded in the teachings of Pujya Swami Aparajitanandaji of Chinmaya Mission, this
+Grounded in the teachings of Pūjya Swāmī Aparājitānandajī of Chinmaya Mission, this
 Streamlit-based RAG (Retrieval-Augmented Generation) application answers questions about
-the **20 Indispensable Values (jnana sadhana)** from Bhagavad Gita Chapter 13, verses 7-11.
+the **20 Indispensable Values (jñāna sādhana)** from Bhagavad Gītā Chapter 13, verses 7–11.
 
 Answers are drawn exclusively from Swamiji's authentic video talks, transcripts, stories,
 and published books -- never fabricated.
@@ -110,18 +110,18 @@ pytest tests/
 | Collection | Type | Items |
 |-----------|------|-------|
 | Value of Values | Discourse Transcripts | 8 discourses |
-| Bhagavad Gita Chapter 13 | Discourse Transcripts | 2 discourses |
+| Bhagavad Gītā Chapter 13 | Discourse Transcripts | 2 discourses |
 | Value Based Stories for All | Story Transcripts | 6 discourses |
 | Indispensable Values (2022) | Published Book | 320 pages |
 
 ## Key Conventions
 
 - **Never fabricate** Swamiji's words -- only answer from retrieved chunks
-- **Preserve Sanskrit** with diacritical marks (amanitvam, ksantih, etc.)
+- **Preserve Sanskrit** with diacritical marks (amānitvam, kṣāntiḥ, etc.)
 - Admin pages require password from `st.secrets["ADMIN_PASSWORD"]`
 - OpenAI key stored in `.streamlit/secrets.toml` (gitignored)
 - Similarity threshold: **0.15**, default chunks: **8**
 
 ---
 
-*Built with reverence -- Chinmaya Mission -- Bhagavad Gita Chapter 13*
+*Built with reverence -- Chinmaya Mission — Bhagavad Gītā Chapter 13*
