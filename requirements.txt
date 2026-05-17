@@ -17,7 +17,8 @@ python-docx>=1.1.0          # DOCX reader
 
 # ── YouTube Transcripts ─────────────────────────────────────────────────────────
 youtube-transcript-api>=0.6.2
-yt-dlp>=2024.1.1            # Playlist metadata + video info (better than pytube)
+yt-dlp>=2024.1.1            # Audio download from YouTube
+pydub>=0.25.1               # Audio chunking for long videos
 
 # ── Tokenization ────────────────────────────────────────────────────────────────
 tiktoken>=0.7.0             # Token counting for cost estimates
