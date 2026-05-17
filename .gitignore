@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Streamlit secrets (contains API keys)
+.streamlit/secrets.toml
+
+# ChromaDB persistent storage
+chroma_db/
+
+# Data files with potentially sensitive visitor info
+# (keep the empty seed files, ignore runtime data)
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Uploaded source files
+sources/
+uploads/
