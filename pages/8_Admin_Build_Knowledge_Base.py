@@ -1,326 +1,313 @@
 """
-pages/2_Build_Knowledge_Base.py — Process sources, chunk, embed, and index.
+pages/8_Admin_Build_Knowledge_Base.py — Admin only. Password protected.
+Processes uploaded files → chunks → embeddings → ChromaDB vector store.
 """
 import sys
+import json
+import time
 from pathlib import Path
-import sys
-from pathlib import Path as _Path
-_ROOT = _Path(__file__).parent.parent
+from datetime import datetime
+
+_ROOT = Path(__file__).parent.parent
 if str(_ROOT) not in sys.path:
     sys.path.insert(0, str(_ROOT))
-from src.page_header import render_om_symbol, render_page_quote
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.admin_guard import require_admin
-
 if not require_admin():
     import streamlit as st
     st.stop()
 
-
-
 import streamlit as st
-import time
-from pathlib import Path
+from src.page_header import render_om_symbol, render_page_quote
 
 st.set_page_config(
-    page_title="Build Knowledge Base | Indispensable Values",
+    page_title="Admin: Build Knowledge Base",
     page_icon="🔨",
-    layout="wide",
+    layout="wide"
 )
+
+# ── Paths ──────────────────────────────────────────────────────────────────────
+DATA_DIR      = _ROOT / "data"
+RAW_DIR       = DATA_DIR / "raw"
+REGISTRY_PATH = DATA_DIR / "processed" / "source_registry.json"
+STATUS_FILE   = DATA_DIR / "kb_status.json"
+RAW_DIR.mkdir(parents=True, exist_ok=True)
+REGISTRY_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+st.markdown("""
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital@1&display=swap');
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#F8F9F5;color:#1A3A28;}
+h1,h2,h3{font-family:'Playfair Display',serif!important;color:#2A5C3A!important;}
+div[data-testid="stSidebar"]{background:linear-gradient(180deg,#EDF3EC,#E0EBE2)!important;border-right:2px solid #B8D4BC;}
+div[data-testid="stSidebar"] *{color:#2A4A38!important;font-weight:600!important;}
+.stButton>button{background:linear-gradient(135deg,#4A7C59,#6A9E78);color:white!important;
+    border:none;border-radius:8px;font-weight:700;padding:.6rem 1.4rem;font-size:1rem;transition:all .3s;}
+.stButton>button:hover{background:linear-gradient(135deg,#2A5C3A,#4A7C59);transform:translateY(-2px);}
+.page-header{background:linear-gradient(135deg,#EDF3EC,#E4EDE4);border:2px solid #B8D4BC;
+    border-radius:18px;padding:2rem;text-align:center;margin-bottom:1.5rem;}
+.page-header-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:800;color:#2A5C3A;}
+.page-header-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:#4A7C59;}
+.stat-card{background:white;border:1.5px solid #B8D4BC;border-radius:12px;
+    padding:1.1rem;text-align:center;box-shadow:0 2px 8px rgba(74,124,89,.06);}
+.stat-number{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:800;color:#4A7C59;}
+.stat-label{color:#3A5040;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-top:.2rem;}
+.section-card{background:white;border:2px solid #B8D4BC;border-radius:14px;
+    padding:1.8rem;margin-bottom:1.5rem;box-shadow:0 2px 10px rgba(74,124,89,.06);}
+.section-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;
+    color:#2A5C3A;margin-bottom:1rem;padding-bottom:.4rem;border-bottom:2px solid #B8D4BC;}
+.file-row{display:flex;align-items:center;gap:.8rem;background:#EDF3EC;
+    border:1px solid #B8D4BC;border-radius:8px;padding:.6rem 1rem;margin-bottom:.4rem;font-size:.9rem;}
+</style>
+""", unsafe_allow_html=True)
 
 render_om_symbol()
 
-import sys
-sys.path.insert(0, str(Path(__file__).parent.parent))
+st.markdown("""
+<div class="page-header">
+    <div style="font-size:2rem;margin-bottom:.3rem;">🔨</div>
+    <div class="page-header-title">Admin · Build Knowledge Base</div>
+    <div class="page-header-sub">Process, chunk, embed and index uploaded sources</div>
+</div>
+""", unsafe_allow_html=True)
 
-from src.ui_components import inject_global_css, render_page_header, render_status_banner
-from src.ingestion import (
-    load_source_registry, save_source_registry, mark_source_processed,
-    extract_text, save_raw_text, load_raw_text,
-    clean_discourse_transcript, extract_discourse_metadata,
-    clean_story_transcript, detect_story_format,
-)
-from src.transcription import (
-    get_youtube_transcript, get_playlist_video_ids, clean_transcript,
-    get_video_metadata, save_transcript_cache, load_transcript_cache,
-    extract_video_id,
-)
-from src.chunking import build_chunk_documents, chunk_transcript_with_timestamps
-from src.embeddings import get_embeddings, estimate_embedding_cost
-from src.vector_store import add_chunks_to_store, get_collection_stats, delete_chunks_by_source
-
-inject_global_css()
-
-REGISTRY_PATH  = Path("data/source_registry.json")
-RAW_DIR        = Path("data/raw")
-TRANSCRIPT_DIR = Path("data/transcripts")
-
-render_page_header(
-    "Build Knowledge Base",
-    "Process, chunk, embed, and index uploaded sources",
-    "🔨",
+render_page_quote(
+    "Reforming oneself is like <strong>chiselling a stone</strong> to perfection!"
 )
 
-# ── Status Overview ────────────────────────────────────────────────────────────
-records = load_source_registry(REGISTRY_PATH)
-pending = [r for r in records if not r.get("processed")]
-done    = [r for r in records if r.get("processed")]
-stats   = get_collection_stats()
+# ── Import pipeline modules ────────────────────────────────────────────────────
+try:
+    from src.ingestion import (
+        extract_text, save_raw_text, load_raw_text,
+        clean_discourse_transcript, extract_discourse_metadata,
+        clean_story_transcript, detect_story_format,
+        load_source_registry, save_source_registry,
+        mark_source_processed, build_source_record, compute_file_hash,
+    )
+    from src.chunking import build_chunk_documents
+    from src.embeddings import get_embeddings
+    from src.vector_store import (
+        add_chunks_to_store, get_collection_stats,
+        delete_chunks_by_source, clear_collection,
+    )
+    PIPELINE_AVAILABLE = True
+except ImportError as e:
+    PIPELINE_AVAILABLE = False
+    PIPELINE_ERROR = str(e)
 
-col1, col2, col3, col4 = st.columns(4)
-col1.metric("📁 Total Sources", len(records))
-col2.metric("⏳ Pending", len(pending))
-col3.metric("✅ Processed", len(done))
-col4.metric("🔍 Chunks in DB", stats.get("total_chunks", 0))
+# ── Stats ──────────────────────────────────────────────────────────────────────
+raw_files = sorted(RAW_DIR.glob("*.*"))
+n_files   = len(raw_files)
 
-st.divider()
+try:
+    stats = get_collection_stats() if PIPELINE_AVAILABLE else {}
+except Exception:
+    stats = {}
 
-if not records:
-    st.info("No sources found. Please upload sources first on the **Upload Sources** page.")
+s1, s2, s3 = st.columns(3)
+with s1:
+    st.markdown(f"""<div class="stat-card">
+        <div class="stat-number">{n_files}</div>
+        <div class="stat-label">Files Uploaded</div>
+    </div>""", unsafe_allow_html=True)
+with s2:
+    st.markdown(f"""<div class="stat-card">
+        <div class="stat-number">{stats.get('total_chunks', 0):,}</div>
+        <div class="stat-label">Chunks in DB</div>
+    </div>""", unsafe_allow_html=True)
+with s3:
+    ready = "✅ Ready" if stats.get('total_chunks', 0) > 0 else "⏳ Not Built"
+    st.markdown(f"""<div class="stat-card">
+        <div class="stat-number" style="font-size:1.2rem;">{ready}</div>
+        <div class="stat-label">Query Status</div>
+    </div>""", unsafe_allow_html=True)
+
+st.markdown("<br>", unsafe_allow_html=True)
+
+# ── Pipeline error notice ──────────────────────────────────────────────────────
+if not PIPELINE_AVAILABLE:
+    st.error(f"⚠️ Pipeline not available: {PIPELINE_ERROR}")
+    st.info("The core pipeline modules (chunking, embeddings, vector store) "
+            "need to be properly set up before building the knowledge base.")
     st.stop()
 
-# ── Settings ──────────────────────────────────────────────────────────────────
-with st.expander("⚙️ Processing Settings", expanded=False):
-    col_s1, col_s2, col_s3 = st.columns(3)
-    with col_s1:
-        chunk_size = st.slider("Chunk Size (chars)", 600, 1800, 1000, 100)
-        chunk_overlap = st.slider("Chunk Overlap (chars)", 100, 400, 200, 50)
-    with col_s2:
-        embedding_model = st.selectbox(
-            "Embedding Model",
-            ["text-embedding-3-small", "text-embedding-3-large"],
-            index=0,
-            help="3-small is cost-effective and excellent for most use cases.",
-        )
-        reprocess_existing = st.checkbox("Re-process already processed sources", value=False)
-    with col_s3:
-        enable_transcription = st.checkbox("Fetch YouTube transcripts", value=True)
-        clean_transcripts = st.checkbox("Clean transcripts (remove fillers)", value=True)
-        st.caption(f"Est. cost per 100 chunks: ~${estimate_embedding_cost(100, 250, embedding_model):.4f}")
-
-# ── Source Selection ──────────────────────────────────────────────────────────
-st.markdown("### Select Sources to Process")
-
-to_process = pending if not reprocess_existing else records
-if not to_process:
-    st.success("All sources have been processed. Enable 'Re-process' above to rebuild.")
+# ── No files notice ────────────────────────────────────────────────────────────
+if not raw_files:
+    st.info("📭 No source files found. "
+            "Go to **Admin → Upload Sources** to upload transcripts and books first.")
     st.stop()
 
-selected_ids = []
-select_all = st.checkbox("Select All Pending", value=True)
+# ── File list ──────────────────────────────────────────────────────────────────
+st.markdown('<div class="section-card"><div class="section-title">📁 Files Ready to Process</div>',
+            unsafe_allow_html=True)
 
-for rec in to_process:
-    label = f"[{rec.get('source_type','').upper()}] {rec.get('file_name','Unknown')} — {rec.get('speaker','')}"
-    checked = select_all or st.checkbox(label, key=f"sel_{rec['source_id']}", value=False)
-    if checked:
-        selected_ids.append(rec["source_id"])
+for fpath in raw_files:
+    size_kb = fpath.stat().st_size / 1024
+    ext  = fpath.suffix.upper().lstrip(".")
+    icon = {"PDF":"📄","DOCX":"📝","TXT":"📃"}.get(ext,"📎")
+    st.markdown(f"""<div class="file-row">
+        <span>{icon}</span>
+        <span><strong>{fpath.name}</strong></span>
+        <span style="color:#4A7C59;font-size:.82rem;">{size_kb:.1f} KB · {ext}</span>
+    </div>""", unsafe_allow_html=True)
 
-if not selected_ids:
-    st.info("Select at least one source to process.")
-    st.stop()
+st.markdown('</div>', unsafe_allow_html=True)
 
-st.caption(f"{len(selected_ids)} source(s) selected.")
-st.divider()
+# ── Settings ───────────────────────────────────────────────────────────────────
+st.markdown('<div class="section-card"><div class="section-title">⚙️ Build Settings</div>',
+            unsafe_allow_html=True)
 
-# ── Cost Estimate ──────────────────────────────────────────────────────────────
-estimated_chunks = len(selected_ids) * 25  # rough average
-est_cost = estimate_embedding_cost(estimated_chunks, 250, embedding_model)
-st.info(
-    f"💡 **Estimated embedding cost:** ~${est_cost:.4f} USD "
-    f"(~{estimated_chunks} chunks × {embedding_model}). "
-    "Actual cost depends on document length."
+col1, col2 = st.columns(2)
+with col1:
+    chunk_size    = st.slider("Chunk Size (characters)", 600, 1800, 1000, 100,
+                        help="Size of each text chunk. 1000 works well for discourses.")
+    chunk_overlap = st.slider("Chunk Overlap (characters)", 100, 400, 200, 50,
+                        help="Overlap between chunks for context continuity.")
+with col2:
+    embedding_model = st.selectbox("Embedding Model",
+        ["text-embedding-3-small", "text-embedding-3-large"],
+        help="3-small is cost-effective and excellent quality.")
+    reprocess = st.checkbox("Re-process already indexed files",
+        value=False,
+        help="Enable to rebuild from scratch. Deletes existing chunks first.")
+    clean_text = st.checkbox("Clean transcripts (remove fillers)",
+        value=True,
+        help="Remove 'um', 'uh', repeated words from Wisdom Distiller transcripts.")
+
+# Cost estimate
+est_chunks = n_files * 30
+st.caption(
+    f"💡 Estimated cost: ~${est_chunks * 250 * 0.00002 / 1000:.4f} USD "
+    f"({est_chunks} estimated chunks × {embedding_model})"
 )
+st.markdown('</div>', unsafe_allow_html=True)
 
 # ── Build Button ───────────────────────────────────────────────────────────────
-if st.button("🚀 Build Knowledge Base", type="primary", use_container_width=True):
-    records = load_source_registry(REGISTRY_PATH)
-    selected_records = [r for r in records if r["source_id"] in selected_ids]
+if st.button("🚀 Build Knowledge Base", use_container_width=True, type="primary"):
 
     progress_bar = st.progress(0)
     status_box   = st.empty()
-    log_box      = st.container()
+    log          = st.container()
+
+    try:
+        import streamlit as st2
+        api_key = st.secrets.get("OPENAI_API_KEY", "")
+    except Exception:
+        api_key = ""
 
     embeddings = get_embeddings(embedding_model)
-    total = len(selected_records)
-    total_chunks_added = 0
+    total = len(raw_files)
+    total_chunks = 0
+    errors = 0
 
-    for idx, rec in enumerate(selected_records):
-        src_id   = rec["source_id"]
-        src_type = rec.get("source_type", "document")
-        src_name = rec.get("file_name", "Unknown")
-
-        status_box.markdown(f"**Processing ({idx+1}/{total}):** `{src_name}`")
-        progress_bar.progress((idx) / total)
+    for idx, fpath in enumerate(raw_files):
+        progress_bar.progress(idx / total)
+        status_box.markdown(f"**Processing ({idx+1}/{total}):** `{fpath.name}`")
 
         try:
-            chunk_docs = []
+            # Extract text
+            text, meta = extract_text(fpath)
 
-            # ── YouTube Video ──────────────────────────────────────────────
-            if src_type in ("youtube_video",):
-                if not enable_transcription:
-                    log_box.warning(f"⏭ Skipped (transcription disabled): {src_name}")
-                    continue
+            # Clean based on format
+            if detect_story_format(text):
+                text = clean_story_transcript(text)
+                log.info(f"  🪷 Story format detected — cleaned")
+            elif "Discourse Summary" in text or "DISCOURSE DETAILS" in text:
+                embedded_meta = extract_discourse_metadata(text)
+                meta.update({k:v for k,v in embedded_meta.items() if v})
+                text = clean_discourse_transcript(text)
+                log.info(f"  🧹 Discourse format detected — cleaned")
+            elif clean_text:
+                from src.transcription import clean_transcript
+                text = clean_transcript(text)
 
-                video_id = rec.get("video_id") or extract_video_id(rec.get("source_url", ""))
-                if not video_id:
-                    log_box.error(f"❌ Invalid video ID for: {src_name}")
-                    continue
+            # Build source record
+            source_id = compute_file_hash(fpath)
+            record = build_source_record(
+                source_id=source_id,
+                text=text,
+                metadata={**meta, "file_name": fpath.name,
+                          "file_path": str(fpath),
+                          "source_type": meta.get("source_type","document")},
+                source_type=meta.get("source_type","document"),
+            )
 
-                # Check cache
-                cached = load_transcript_cache(video_id, TRANSCRIPT_DIR)
-                if cached:
-                    log_box.info(f"📦 Using cached transcript: {video_id}")
-                    transcript_data = cached
-                else:
-                    log_box.info(f"🔄 Fetching transcript: {video_id}")
-                    transcript_data = get_youtube_transcript(video_id)
-                    if transcript_data:
-                        if clean_transcripts:
-                            transcript_data["text"] = clean_transcript(transcript_data["text"])
-                        save_transcript_cache(video_id, transcript_data, TRANSCRIPT_DIR)
-
-                if not transcript_data:
-                    log_box.warning(f"⚠️ No transcript available for {video_id}. Skipping.")
-                    continue
-
-                video_meta = get_video_metadata(video_id)
-                source_meta = {**rec, "title": video_meta.get("title", src_name)}
-
-                if transcript_data.get("segments"):
-                    chunk_docs = chunk_transcript_with_timestamps(
-                        transcript_data["segments"], source_meta, words_per_chunk=280
-                    )
-                else:
-                    chunk_docs = build_chunk_documents(
-                        transcript_data["text"], source_meta,
-                        chunk_size=chunk_size, overlap=chunk_overlap,
-                    )
-
-            # ── YouTube Playlist ───────────────────────────────────────────
-            elif src_type == "youtube_playlist":
-                if not enable_transcription:
-                    log_box.warning(f"⏭ Skipped (transcription disabled): {src_name}")
-                    continue
-
-                playlist_url = rec.get("source_url", "")
-                log_box.info(f"📋 Fetching playlist: {playlist_url}")
-
+            # Delete existing chunks if reprocessing
+            if reprocess:
                 try:
-                    videos = get_playlist_video_ids(playlist_url)
-                    log_box.info(f"  Found {len(videos)} video(s) in playlist.")
-                except Exception as e:
-                    log_box.error(f"❌ Playlist fetch error: {e}")
-                    continue
+                    delete_chunks_by_source(source_id)
+                except Exception:
+                    pass
 
-                for vid in videos:
-                    vid_id = vid.get("video_id")
-                    vid_title = vid.get("title", vid_id)
-                    if not vid_id:
-                        continue
+            # Chunk
+            chunks = build_chunk_documents(
+                text, record,
+                chunk_size=chunk_size,
+                overlap=chunk_overlap,
+            )
 
-                    cached = load_transcript_cache(vid_id, TRANSCRIPT_DIR)
-                    if cached:
-                        td = cached
-                    else:
-                        td = get_youtube_transcript(vid_id)
-                        if td:
-                            if clean_transcripts:
-                                td["text"] = clean_transcript(td["text"])
-                            save_transcript_cache(vid_id, td, TRANSCRIPT_DIR)
-                        else:
-                            log_box.warning(f"  ⚠️ No transcript: {vid_title}")
-                            continue
+            if not chunks:
+                log.warning(f"⚠️ No chunks generated for {fpath.name}")
+                continue
 
-                    vid_meta = {**rec, "title": vid_title, "source_url": vid.get("url", ""), "video_id": vid_id}
-                    if td.get("segments"):
-                        vchunks = chunk_transcript_with_timestamps(td["segments"], vid_meta, words_per_chunk=280)
-                    else:
-                        vchunks = build_chunk_documents(td["text"], vid_meta, chunk_size=chunk_size, overlap=chunk_overlap)
+            # Embed and store
+            n_added = add_chunks_to_store(chunks, embeddings, batch_size=50)
+            total_chunks += n_added
 
-                    chunk_docs.extend(vchunks)
-                    log_box.info(f"  ✅ {vid_title}: {len(vchunks)} chunks")
-                    time.sleep(0.5)  # Be gentle with YouTube API
+            # Update registry
+            registry = load_source_registry(REGISTRY_PATH)
+            registry = [r for r in registry if r.get("source_id") != source_id]
+            registry.append(record)
+            save_source_registry(registry, REGISTRY_PATH)
+            mark_source_processed(source_id, n_added, REGISTRY_PATH)
 
-            # ── Document / PDF / DOCX / TXT ───────────────────────────────
-            else:
-                file_path = Path(rec.get("file_path", ""))
-                raw_text = load_raw_text(src_id, RAW_DIR)
-
-                if not raw_text:
-                    if not file_path.exists():
-                        log_box.error(f"❌ File not found: {file_path}")
-                        continue
-                    text, extra = extract_text(file_path)
-                    save_raw_text(src_id, text, RAW_DIR)
-                    page_texts = extra.get("page_texts", None)
-                else:
-                    text = raw_text
-                    page_texts = None
-
-                # Auto-detect transcript format and clean accordingly
-                if detect_story_format(text):
-                    # Value Based Stories for All — summer camp format
-                    text = clean_story_transcript(text)
-                    log_box.info(f"  🪷 Story transcript format detected — cleaned (classroom prompts removed, stories preserved).")
-                    page_texts = None
-                elif "Discourse Summary" in text or "DISCOURSE DETAILS" in text:
-                    # Standard Value of Values / BG Chapter 13 discourse format
-                    embedded_meta = extract_discourse_metadata(text)
-                    if embedded_meta.get("speaker") and not rec.get("speaker"):
-                        rec["speaker"] = embedded_meta["speaker"]
-                    if embedded_meta.get("topic") and not rec.get("topic"):
-                        rec["topic"] = embedded_meta["topic"]
-                    text = clean_discourse_transcript(text)
-                    log_box.info(f"  🧹 Discourse transcript format detected — cleaned.")
-                    page_texts = None
-
-                chunk_docs = build_chunk_documents(
-                    text, rec,
-                    page_texts=page_texts,
-                    chunk_size=chunk_size,
-                    overlap=chunk_overlap,
-                )
-
-            # ── Embed and Store ────────────────────────────────────────────
-            if chunk_docs:
-                if reprocess_existing:
-                    delete_chunks_by_source(src_id)
-
-                n_added = add_chunks_to_store(chunk_docs, embeddings, batch_size=50)
-                total_chunks_added += n_added
-                mark_source_processed(src_id, n_added, REGISTRY_PATH)
-                log_box.success(f"✅ {src_name}: {n_added} chunks indexed.")
-            else:
-                log_box.warning(f"⚠️ No chunks generated for: {src_name}")
+            log.success(f"✅ {fpath.name} — {n_added} chunks indexed")
 
         except Exception as e:
-            log_box.error(f"❌ Error processing {src_name}: {e}")
+            log.error(f"❌ {fpath.name}: {e}")
+            errors += 1
             continue
 
     progress_bar.progress(1.0)
     status_box.empty()
 
-    final_stats = get_collection_stats()
-    render_status_banner(
-        f"🎉 Knowledge base built! "
-        f"**{total_chunks_added}** new chunks indexed across **{len(selected_records)}** source(s). "
-        f"Total chunks in DB: **{final_stats['total_chunks']}**.",
-        "success",
-    )
+    # Save KB status
+    kb_status = {
+        "built_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
+        "chunks":   stats.get("total_chunks", 0) + total_chunks,
+        "sources":  total - errors,
+        "errors":   errors,
+    }
+    STATUS_FILE.write_text(json.dumps(kb_status, indent=2))
 
-# ── Reset / Clear ──────────────────────────────────────────────────────────────
+    if total_chunks > 0:
+        st.success(
+            f"🎉 Knowledge base built! **{total_chunks:,}** chunks indexed "
+            f"from **{total - errors}** file(s). "
+            f"{'⚠️ ' + str(errors) + ' error(s).' if errors else ''}"
+        )
+        st.balloons()
+    else:
+        st.error("❌ No chunks were indexed. Check the error messages above.")
+
+# ── Danger Zone ────────────────────────────────────────────────────────────────
 st.divider()
 with st.expander("⚠️ Danger Zone — Reset Knowledge Base"):
-    st.warning("This will delete ALL chunks from the vector database. Source files will be kept.")
-    if st.button("🗑 Clear Vector Database", type="secondary"):
-        from src.vector_store import clear_collection
-        clear_collection()
-        # Reset processed flags
-        records = load_source_registry(REGISTRY_PATH)
-        for r in records:
-            r["processed"] = False
-            r["chunk_count"] = 0
-        save_source_registry(records, REGISTRY_PATH)
-        render_status_banner("Vector database cleared. Sources marked as unprocessed.", "warning")
-        st.rerun()
+    st.warning("This deletes ALL chunks from the vector database. "
+               "Source files are kept. You will need to rebuild after this.")
+    if st.button("🗑️ Clear Vector Database", type="secondary"):
+        try:
+            clear_collection()
+            # Reset registry
+            if REGISTRY_PATH.exists():
+                registry = load_source_registry(REGISTRY_PATH)
+                for r in registry:
+                    r["processed"] = False
+                    r["chunk_count"] = 0
+                save_source_registry(registry, REGISTRY_PATH)
+            # Reset status
+            STATUS_FILE.write_text(json.dumps({"chunks": 0, "sources": 0}))
+            st.success("✅ Vector database cleared. Upload and rebuild to restore.")
+            st.rerun()
+        except Exception as e:
+            st.error(f"❌ Error clearing database: {e}")
