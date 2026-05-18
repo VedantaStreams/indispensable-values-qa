@@ -40,23 +40,26 @@ st.markdown("""
 .swamiji-quote{background:linear-gradient(135deg,#EDF3EC,#F8F9F5);border-left:5px solid #4A7C59;border-radius:0 14px 14px 0;padding:1rem 1.5rem;margin:.8rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:#2A4A38;line-height:1.7;}
 .swamiji-quote-attr{font-family:'Lato',sans-serif;font-style:normal;font-size:.75rem;font-weight:700;color:#4A7C59;letter-spacing:.5px;margin-top:.4rem;}
 .qa-header {
-    background: linear-gradient(135deg, #0d0a1e 0%, #1a1230 50%, #0a1a12 100%);
-    border: 1px solid rgba(212,175,55,0.35);
-    border-radius: 14px;
-    padding: 1.8rem 2.2rem;
+    background: linear-gradient(135deg, #EDF3EC 0%, #E4EDE4 50%, #EFF4EF 100%);
+    border: 2px solid #B8D4BC;
+    border-radius: 18px;
+    padding: 2rem 2.2rem;
     margin-bottom: 1.5rem;
     text-align: center;
+    box-shadow: 0 4px 20px rgba(74,124,89,.08);
 }
 .qa-header-title {
-    font-family: 'Lora', serif;
-    font-size: 2rem;
-    color: #f5e6c8;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #2A5C3A;
     margin-bottom: 0.3rem;
 }
 .qa-header-sub {
-    color: #d4af57;
+    color: #4A7C59;
     font-style: italic;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    font-family: 'Cormorant Garamond', serif;
 }
 .chat-wrapper {
     max-height: 58vh;
@@ -65,41 +68,41 @@ st.markdown("""
     margin-bottom: 1rem;
 }
 .user-bubble {
-    background: linear-gradient(135deg, #2d1b4e, #3a2060);
-    border: 1px solid rgba(212,175,55,0.3);
+    background: linear-gradient(135deg, #4A7C59, #6A9E78);
+    border: 1px solid #B8D4BC;
     border-radius: 16px 16px 4px 16px;
     padding: 0.85rem 1.15rem;
     margin: 0.5rem 0 0.5rem 18%;
-    color: #f5e6c8;
+    color: white;
     font-size: 0.95rem;
     line-height: 1.6;
 }
 .bot-bubble {
-    background: linear-gradient(135deg, #0d1822, #152030);
-    border: 1px solid rgba(212,175,55,0.2);
+    background: white;
+    border: 1.5px solid #B8D4BC;
     border-radius: 4px 16px 16px 16px;
     padding: 1rem 1.3rem;
     margin: 0.5rem 18% 0.5rem 0;
-    color: #e8d5b0;
+    color: #1A3A28;
     font-size: 0.93rem;
     line-height: 1.75;
 }
 .role-label {
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.06em;
     margin-bottom: 0.3rem;
-    opacity: 0.75;
+    opacity: 0.85;
 }
-.user-label { color: #d4af57; text-align: right; }
-.bot-label  { color: #7ec8a0; }
+.user-label { color: #4A7C59; text-align: right; }
+.bot-label  { color: #2A5C3A; }
 .sample-q {
-    background: rgba(212,175,55,0.07);
-    border: 1px solid rgba(212,175,55,0.2);
+    background: #EDF3EC;
+    border: 1.5px solid #B8D4BC;
     border-radius: 10px;
     padding: 0.6rem 1rem;
     font-size: 0.85rem;
-    color: #d4af57;
+    color: #2A5C3A;
     cursor: pointer;
     margin-bottom: 0.4rem;
     transition: background 0.2s;
@@ -177,7 +180,7 @@ st.markdown("""
     <div style="font-size:2.5rem; margin-bottom:0.4rem;">🪷</div>
     <div class="qa-header-title">Indispensable Values Q&amp;A</div>
     <div class="qa-header-sub">
-        Ask questions grounded in Swamiji's teachings on the Jñāna Sādhana values of Bhagavad Gītā Chapter 13
+        Ask questions grounded in Swamiji's teachings on Bhagavad Gītā Chapters 13 &amp; 16 — Jñāna Sādhana values &amp; Daivī / Āsurī qualities
     </div>
 </div>
 """, unsafe_allow_html=True)
