@@ -42,7 +42,7 @@ div[data-testid="stSidebar"]{background:linear-gradient(180deg,#EDF3EC,#E0EBE2)!
 div[data-testid="stSidebar"] *{color:#2A4A38!important;font-weight:600!important;}
 
 .swamiji-quote{background:linear-gradient(135deg,#EDF3EC,#F8F9F5);border-left:5px solid #4A7C59;border-radius:0 14px 14px 0;padding:1.2rem 1.8rem;margin:1rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.08rem;color:#2A4A38;line-height:1.8;}
-.swamiji-quote-attr{font-family:'Lato',sans-serif;font-style:normal;font-size:.78rem;font-weight:700;color:#4A7C59;letter-spacing:.5px;margin-top:.5rem;text-transform:uppercase;}
+.swamiji-quote-attr{font-family:'Lato',sans-serif;font-style:normal;font-size:.78rem;font-weight:700;color:#4A7C59;letter-spacing:.5px;margin-top:.5rem;}
 .page-header{background:linear-gradient(135deg,#EDF3EC,#E4EDE4);border:2px solid #B8D4BC;border-radius:18px;padding:2.5rem;text-align:center;margin-bottom:2rem;box-shadow:0 4px 20px rgba(74,124,89,.08);}
 .page-header-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#2A5C3A;}
 .page-header-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:#4A7C59;}
@@ -300,10 +300,10 @@ st.markdown("""
 
 st.markdown('''
 <div class="swamiji-quote">
-    That which is infinite, all-pervading cannot have a form. But for the sake of
+    &ldquo;That which is infinite, all-pervading cannot have a form. But for the sake of
     the devotee, Bhagawān takes up a form. Just like formless water takes a particular
     form when cooled below 0°. In the same way, formless God takes a form under the
-    extreme devotion of devotees.
+    extreme devotion of devotees.&rdquo;
     <div class="swamiji-quote-attr">— Swāmī Aparājitānandajī</div>
 </div>
 ''', unsafe_allow_html=True)

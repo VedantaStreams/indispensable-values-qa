@@ -72,10 +72,10 @@ div[data-testid="stSidebar"] *{color:#2A4A38!important;font-weight:600!important
 /* ── Quotes ── */
 .swamiji-quote{background:linear-gradient(135deg,#EDF3EC,#F8F9F5);border-left:5px solid #4A7C59;
     border-radius:0 14px 14px 0;padding:1.2rem 1.8rem;margin:1rem 0;
-    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:#2A4A38;line-height:1.8;
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;font-weight:700;color:#2A4A38;line-height:1.8;
     box-shadow:0 2px 8px rgba(74,124,89,.07);}
-.swamiji-quote-attr{font-family:'Lato',sans-serif;font-style:normal;font-size:.75rem;
-    font-weight:700;color:#4A7C59;letter-spacing:.5px;margin-top:.5rem;text-transform:uppercase;}
+.swamiji-quote-attr{font-family:'Playfair Display',serif;font-style:normal;font-size:.95rem;
+    font-weight:700;color:#4A7C59;letter-spacing:.3px;margin-top:.6rem;}
 
 /* ── Value pills ── */
 .value-pills{text-align:center;margin:.5rem 0 1.5rem;line-height:2.8;}
@@ -190,13 +190,13 @@ st.markdown('''
 col_q1, col_q2 = st.columns(2)
 with col_q1:
     st.markdown('''<div class="swamiji-quote">
-        Reforming oneself is like <strong>chiselling a stone</strong> to perfection!
+        &ldquo;Reforming oneself is like <strong>chiselling a stone</strong> to perfection!&rdquo;
         <div class="swamiji-quote-attr">— Swāmī Aparājitānandajī</div>
     </div>''', unsafe_allow_html=True)
 with col_q2:
     st.markdown('''<div class="swamiji-quote">
-        Rate your <strong>spiritual progress</strong> with the
-        <strong>intensity of Peace</strong> which you experience.
+        &ldquo;Rate your <strong>spiritual progress</strong> with the
+        <strong>intensity of Peace</strong> which you experience.&rdquo;
         <div class="swamiji-quote-attr">— Swāmī Aparājitānandajī</div>
     </div>''', unsafe_allow_html=True)
 

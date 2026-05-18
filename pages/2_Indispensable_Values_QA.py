@@ -38,7 +38,7 @@ inject_global_css()
 st.markdown("""
 <style>
 .swamiji-quote{background:linear-gradient(135deg,#EDF3EC,#F8F9F5);border-left:5px solid #4A7C59;border-radius:0 14px 14px 0;padding:1rem 1.5rem;margin:.8rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:#2A4A38;line-height:1.7;}
-.swamiji-quote-attr{font-family:'Lato',sans-serif;font-style:normal;font-size:.75rem;font-weight:700;color:#4A7C59;letter-spacing:.5px;margin-top:.4rem;text-transform:uppercase;}
+.swamiji-quote-attr{font-family:'Lato',sans-serif;font-style:normal;font-size:.75rem;font-weight:700;color:#4A7C59;letter-spacing:.5px;margin-top:.4rem;}
 .qa-header {
     background: linear-gradient(135deg, #0d0a1e 0%, #1a1230 50%, #0a1a12 100%);
     border: 1px solid rgba(212,175,55,0.35);

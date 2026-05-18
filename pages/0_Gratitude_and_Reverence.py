@@ -86,8 +86,8 @@ div[data-testid="stSidebar"] *{color:#2A4A38!important;font-weight:600!important
     font-family:'Cormorant Garamond',serif;font-style:italic;
     font-size:1.05rem;color:#2A4A38;line-height:1.8;
     box-shadow:0 2px 8px rgba(74,124,89,.07);}
-.swamiji-quote-attr{font-family:'Lato',sans-serif;font-style:normal;font-size:.75rem;
-    font-weight:700;color:#4A7C59;letter-spacing:.5px;margin-top:.5rem;text-transform:uppercase;}
+.swamiji-quote-attr{font-family:'Playfair Display',serif;font-style:normal;font-size:.95rem;
+    font-weight:700;color:#4A7C59;letter-spacing:.3px;margin-top:.6rem;}
 
 /* ── Mantra ── */
 .mantra-box{background:linear-gradient(135deg,#EDF3EC,#F8F9F5);border:2px solid #B8D4BC;
@@ -173,14 +173,14 @@ st.markdown('''<div class="gratitude-box">
 # ── Quotes ────────────────────────────────────────────────────────────────────
 st.markdown('''
 <div class="swamiji-quote">
-    God is not someone who can be seen through the naked eyes.
-    He is someone who can be known through a pure heart — experienced in a pure heart.
+    &ldquo;God is not someone who can be seen through the naked eyes.
+    He is someone who can be known through a pure heart — experienced in a pure heart.&rdquo;
     <div class="swamiji-quote-attr">— Swāmī Aparājitānandajī</div>
 </div>
 <div class="swamiji-quote">
-    A heart filled with noble emotions like kindness, compassion, mercy,
+    &ldquo;A heart filled with noble emotions like kindness, compassion, mercy,
     truthfulness, honesty — such a heart is called a pure heart. And anyone
-    who has such a pure heart can definitely experience the presence of God.
+    who has such a pure heart can definitely experience the presence of God.&rdquo;
     <div class="swamiji-quote-attr">— Swāmī Aparājitānandajī</div>
 </div>
 ''', unsafe_allow_html=True)

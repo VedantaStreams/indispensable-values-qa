@@ -78,8 +78,8 @@ div[data-testid="stSidebar"] *{color:#2A4A38!important;font-weight:600!important
     border-radius:0 14px 14px 0;padding:1.2rem 1.8rem;margin:1rem 0;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;
     color:#2A4A38;line-height:1.8;box-shadow:0 2px 8px rgba(74,124,89,.07);}
-.swamiji-quote-attr{font-family:'Lato',sans-serif;font-style:normal;font-size:.75rem;
-    font-weight:700;color:#4A7C59;letter-spacing:.5px;margin-top:.5rem;text-transform:uppercase;}
+.swamiji-quote-attr{font-family:'Playfair Display',serif;font-style:normal;font-size:.95rem;
+    font-weight:700;color:#4A7C59;letter-spacing:.3px;margin-top:.6rem;}
 
 .tag{display:inline-block;background:#EDF3EC;border:1.5px solid #B8D4BC;color:#2A5C3A;
     border-radius:20px;padding:.25rem .85rem;font-size:.85rem;margin:.2rem;
@@ -194,8 +194,8 @@ st.markdown("""
     <div class="swamiji-quote-attr">— Swāmī Aparājitānandajī</div>
 </div>
 <div class="swamiji-quote">
-    Remember, in life, the only permanent relationship is our relationship with God.
-    All other relationships are impermanent. Our only permanent relationship is with God.
+    &ldquo;Remember, in life, the only permanent relationship is our relationship with God.
+    All other relationships are impermanent. Our only permanent relationship is with God.&rdquo;
     <div class="swamiji-quote-attr">— Swāmī Aparājitānandajī</div>
 </div>
 """, unsafe_allow_html=True)

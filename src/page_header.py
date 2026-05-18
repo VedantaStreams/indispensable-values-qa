@@ -20,24 +20,25 @@ _OM_CSS = """
 }
 .page-quote-block {
     text-align:center;
-    max-width:700px;
-    margin:.2rem auto 1.5rem;
+    max-width:780px;
+    margin:.5rem auto 1.8rem;
     font-family:'Cormorant Garamond', serif;
     font-style:italic;
-    font-size:1.05rem;
+    font-size:1.45rem;
+    font-weight:700;
     color:#2A4A38;
     line-height:1.75;
     padding:0 1.5rem;
 }
 .page-quote-attr {
     display:block;
-    font-family:'Lato', sans-serif;
+    font-family:'Playfair Display', serif;
     font-style:normal;
-    font-size:.75rem;
+    font-size:1.05rem;
     font-weight:700;
     color:#4A7C59;
-    letter-spacing:.5px;
-    margin-top:.5rem;
+    letter-spacing:.3px;
+    margin-top:.7rem;
 }
 </style>
 """
