@@ -221,16 +221,14 @@ if st.button("🚀 Build Knowledge Base", use_container_width=True, type="primar
                 from src.transcription import clean_transcript
                 text = clean_transcript(text)
 
-            # Build source record
-            source_id = compute_file_hash(fpath)
+            # Build source record using actual function signature
             record = build_source_record(
-                source_id=source_id,
-                text=text,
-                metadata={**meta, "file_name": fpath.name,
-                          "file_path": str(fpath),
+                file_path=fpath,
+                metadata={**meta, "file_path": str(fpath),
                           "source_type": meta.get("source_type","document")},
                 source_type=meta.get("source_type","document"),
             )
+            source_id = record["source_id"]
 
             # Delete existing chunks if reprocessing
             if reprocess:
@@ -239,9 +237,9 @@ if st.button("🚀 Build Knowledge Base", use_container_width=True, type="primar
                 except Exception:
                     pass
 
-            # Chunk
+            # Chunk — correct param name is source_metadata
             chunks = build_chunk_documents(
-                text, record,
+                text, record,  # positional: text, source_metadata
                 chunk_size=chunk_size,
                 overlap=chunk_overlap,
             )
