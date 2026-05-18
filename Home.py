@@ -1,3 +1,5 @@
+import os
+os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))

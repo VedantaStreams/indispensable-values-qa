@@ -1,3 +1,5 @@
+import os
+os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
 """
 pages/3_Indispensable_Values_QA.py — The main RAG-powered Q&A chatbot page.
 """

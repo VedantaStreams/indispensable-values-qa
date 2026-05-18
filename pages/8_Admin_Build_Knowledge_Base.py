@@ -4,9 +4,13 @@ Processes uploaded files → chunks → embeddings → ChromaDB vector store.
 """
 import sys
 import json
+import os
 import time
 from pathlib import Path
 from datetime import datetime
+
+# Fix protobuf version conflict with ChromaDB
+os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
 
 _ROOT = Path(__file__).parent.parent
 if str(_ROOT) not in sys.path:

@@ -1,3 +1,5 @@
+import os
+os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
 """
 pages/4_Source_Library.py — Browse all indexed sources and their chunk metadata.
 """
