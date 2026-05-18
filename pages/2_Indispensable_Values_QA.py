@@ -234,23 +234,69 @@ if msgs:
 
 st.divider()
 
-# ── Sample Questions ───────────────────────────────────────────────────────────
+# ── 20 Starter Questions ──────────────────────────────────────────────────────
 if not st.session_state.messages:
-    st.markdown("**✨ Sample Questions — click to ask:**")
-    sample_questions = [
-        "What is amānitvam and how does Swamiji explain it?",
-        "How does ahiṃsā apply in daily life according to the teachings?",
-        "What is the difference between kṣāntiḥ and tolerance?",
-        "Why does Bhagavad Gītā Chapter 13 list these values as qualifications for knowledge?",
-        "How can ārjavam (simplicity) be practised by a seeker?",
-        "What does Swamiji say about the relationship between humility and spiritual growth?",
-    ]
-    cols = st.columns(2)
-    for i, q in enumerate(sample_questions):
-        with cols[i % 2]:
-            if st.button(q, key=f"sample_{i}", use_container_width=True):
-                st.session_state.messages.append({"role": "user", "content": q})
-                st.rerun()
+    st.markdown("""
+    <div style="background:#EDF3EC;border:1.5px solid #B8D4BC;border-radius:12px;
+        padding:1rem 1.4rem;margin-bottom:1rem;border-left:5px solid #4A7C59;">
+        <div style="font-family:'Playfair Display',serif;font-weight:700;
+            color:#2A5C3A;font-size:1.05rem;margin-bottom:.3rem;">
+            ✨ Starter Questions
+        </div>
+        <div style="font-size:.88rem;color:#3A5040;line-height:1.6;">
+            New to the app? Click any question below to begin your inquiry.
+            Questions are drawn from <strong>Bhagavad Gītā Chapters 13 &amp; 16</strong>
+            — the divine and demoniac qualities Swamiji unfolds in his discourses.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    starter_themes = {
+        "🌱 Foundation": [
+            "What are the 20 Indispensable Values from Bhagavad Gītā Chapter 13?",
+            "Why are these values called 'indispensable' for spiritual progress?",
+            "What does *amānitvam* (humility) mean in Vedānta?",
+            "How is humility different from low self-esteem?",
+        ],
+        "❤️ Heart & Emotions": [
+            "What is true *ahiṃsā* (non-violence) in daily life?",
+            "How can I cultivate *kṣāntiḥ* (forbearance)?",
+            "What is the difference between forgiveness and weakness?",
+            "How do I deal with anger from a spiritual perspective?",
+        ],
+        "🧘 Inner Discipline": [
+            "How do I practice *ātma-vinigraha* (self-control)?",
+            "What is the role of *vairāgya* (dispassion) in daily life?",
+            "How do I overcome attachment to results of my actions?",
+            "What is the right attitude toward success and failure?",
+        ],
+        "👤 Self & Ego": [
+            "What is *anahaṅkāra* and how do I let go of ego?",
+            "How is non-doership understood in Vedānta?",
+            "What is the difference between confidence and pride?",
+            "What does Chapter 16 say about divine vs demoniac qualities?",
+        ],
+        "💕 Devotion & Practice": [
+            "What is *bhakti avyabhicāriṇī* — unswerving devotion?",
+            "How do I deepen my relationship with God?",
+            "What is the right time and way to practice spiritual values?",
+            "How do I balance worldly responsibilities with spiritual life?",
+        ],
+    }
+
+    for theme, questions in starter_themes.items():
+        st.markdown(f"**{theme}**")
+        cols = st.columns(2)
+        for i, q in enumerate(questions):
+            # Strip markdown for actual question
+            clean_q = q.replace("*", "")
+            with cols[i % 2]:
+                if st.button(q, key=f"start_{theme}_{i}", use_container_width=True):
+                    st.session_state.messages.append(
+                        {"role": "user", "content": clean_q}
+                    )
+                    st.rerun()
+        st.markdown("<br>", unsafe_allow_html=True)
 
 # ── Chat History ───────────────────────────────────────────────────────────────
 chat_container = st.container()
