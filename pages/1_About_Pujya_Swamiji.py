@@ -36,10 +36,10 @@ st.markdown("""
     display:block!important;
 }
 
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#2A0F0F;color:#F5E6C8;}
-h1,h2,h3{font-family:'Playfair Display',serif!important;color:#D4AF37!important;}
-div[data-testid="stSidebar"]{background:linear-gradient(180deg,#4A1F1F,#6A2828)!important;border-right:2px solid #8B3A2E;}
-div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important;}
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#FFF8F0;color:#2C1810;}
+h1,h2,h3{font-family:'Playfair Display',serif!important;color:#8B4513!important;}
+div[data-testid="stSidebar"]{background:linear-gradient(180deg,#FFFFFF,#FFD9A8)!important;border-right:2px solid #FFCC80;}
+div[data-testid="stSidebar"] *{color:#2C1810!important;font-weight:600!important;}
 
 /* ── Pink-gold border on photo ── */
 [data-testid="stImage"] img {
@@ -48,61 +48,61 @@ div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important
     object-position:top center!important;
     border:5px solid transparent!important;
     background:linear-gradient(white,white) padding-box,
-               linear-gradient(135deg,#D4AF37,#C0392B,#D4AF37,#FFD89A) border-box!important;
+               linear-gradient(135deg,#E67E22,#8B1A2A,#8B4513,#E67E22) border-box!important;
     box-shadow:0 8px 30px rgba(0,0,0,.20)!important;
 }
 
-.page-header{background:linear-gradient(135deg,#4A1F1F,#5A2424);border:2px solid #8B3A2E;
+.page-header{background:linear-gradient(135deg,#FFFFFF,#FFEDD9);border:2px solid #FFCC80;
     border-radius:18px;padding:2.5rem;text-align:center;margin-bottom:2rem;
     box-shadow:0 4px 20px rgba(0,0,0,.08);}
-.page-header-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#D4AF37;}
-.page-header-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:#C0392B;}
+.page-header-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#8B4513;}
+.page-header-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:#E67E22;}
 
-.bio-name{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:#D4AF37;
+.bio-name{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:#8B4513;
     text-align:center;margin:.8rem 0 .1rem;}
-.bio-title{font-family:'Cormorant Garamond',serif;font-style:italic;color:#C0392B;
+.bio-title{font-family:'Cormorant Garamond',serif;font-style:italic;color:#E67E22;
     font-size:1rem;text-align:center;}
 .bio-loc{font-size:.85rem;color:#B8956B;text-align:center;margin:.1rem 0;}
 
-.bio-card{background:#4A1F1F;border:2px solid #8B3A2E;border-radius:16px;padding:2rem;
+.bio-card{background:#FFFFFF;border:2px solid #FFCC80;border-radius:16px;padding:2rem;
     box-shadow:0 4px 16px rgba(0,0,0,.08);margin-bottom:1.5rem;}
-.bio-para{color:#F5E6C8;font-size:.97rem;line-height:1.9;margin-bottom:.9rem;}
+.bio-para{color:#2C1810;font-size:.97rem;line-height:1.9;margin-bottom:.9rem;}
 .bio-para:last-child{margin-bottom:0;}
 
-.quote-block{background:linear-gradient(135deg,#4A1F1F,#2A0F0F);border-left:5px solid #C0392B;
+.quote-block{background:linear-gradient(135deg,#FFFFFF,#FFF8F0);border-left:5px solid #E67E22;
     border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.2rem 0;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;
-    color:#D4AF37;line-height:1.8;}
+    color:#8B4513;line-height:1.8;}
 
-.swamiji-quote{background:linear-gradient(135deg,#4A1F1F,#2A0F0F);border-left:5px solid #C0392B;
+.swamiji-quote{background:linear-gradient(135deg,#FFFFFF,#FFF8F0);border-left:5px solid #E67E22;
     border-radius:0 14px 14px 0;padding:1.2rem 1.8rem;margin:1rem 0;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;
-    color:#F5E6C8;line-height:1.8;box-shadow:0 2px 8px rgba(0,0,0,.07);}
+    color:#2C1810;line-height:1.8;box-shadow:0 2px 8px rgba(0,0,0,.07);}
 .swamiji-quote-attr{font-family:'Playfair Display',serif;font-style:normal;font-size:.95rem;
-    font-weight:700;color:#C0392B;letter-spacing:.3px;margin-top:.6rem;}
+    font-weight:700;color:#E67E22;letter-spacing:.3px;margin-top:.6rem;}
 
-.tag{display:inline-block;background:#4A1F1F;border:1.5px solid #8B3A2E;color:#D4AF37;
+.tag{display:inline-block;background:#FFFFFF;border:1.5px solid #FFCC80;color:#8B4513;
     border-radius:20px;padding:.25rem .85rem;font-size:.85rem;margin:.2rem;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;}
 
-.milestone{display:flex;align-items:flex-start;gap:1rem;background:#4A1F1F;
-    border:1.5px solid #8B3A2E;border-radius:12px;padding:1.1rem 1.4rem;
+.milestone{display:flex;align-items:flex-start;gap:1rem;background:#FFFFFF;
+    border:1.5px solid #FFCC80;border-radius:12px;padding:1.1rem 1.4rem;
     margin-bottom:.8rem;box-shadow:0 2px 8px rgba(0,0,0,.05);}
 .milestone-year{font-family:'Playfair Display',serif;font-size:1rem;font-weight:800;
-    color:#C0392B;min-width:58px;}
-.milestone-text{color:#F5E6C8;font-size:.92rem;line-height:1.65;}
+    color:#E67E22;min-width:58px;}
+.milestone-text{color:#2C1810;font-size:.92rem;line-height:1.65;}
 
-.value-section{background:#4A1F1F;border:1.5px solid #8B3A2E;border-radius:14px;padding:1.8rem;
+.value-section{background:#FFFFFF;border:1.5px solid #FFCC80;border-radius:14px;padding:1.8rem;
     margin-bottom:1rem;box-shadow:0 2px 10px rgba(0,0,0,.06);}
 .value-section-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;
-    color:#D4AF37;margin-bottom:.8rem;padding-bottom:.4rem;border-bottom:1.5px solid #8B3A2E;}
+    color:#8B4513;margin-bottom:.8rem;padding-bottom:.4rem;border-bottom:1.5px solid #FFCC80;}
 .value-item{display:flex;align-items:flex-start;margin-bottom:.55rem;}
-.value-bullet{color:#C0392B;font-size:1rem;margin-right:.6rem;flex-shrink:0;}
-.value-text{color:#F5E6C8;font-size:.9rem;line-height:1.6;}
-.value-name{font-weight:700;color:#D4AF37;font-family:'Cormorant Garamond',serif;font-style:italic;}
+.value-bullet{color:#E67E22;font-size:1rem;margin-right:.6rem;flex-shrink:0;}
+.value-text{color:#2C1810;font-size:.9rem;line-height:1.6;}
+.value-name{font-weight:700;color:#8B4513;font-family:'Cormorant Garamond',serif;font-style:italic;}
 
 .section-title{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;
-    color:#D4AF37;margin:2rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid #8B3A2E;}
+    color:#8B4513;margin:2rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid #FFCC80;}
 
 [data-testid="stImage"] {
     display: flex !important;
@@ -142,12 +142,12 @@ with col_photo:
     <div class="bio-name">Swāmī Aparājitānandajī</div>
     <div class="bio-title">Chinmaya Mission</div>
     <div style="font-family:'Cormorant Garamond',serif;font-style:italic;
-        color:#C9A961;font-size:.92rem;text-align:center;margin:.2rem 0;">
+        color:#5C3820;font-size:.92rem;text-align:center;margin:.2rem 0;">
         Chinmaya Mission Chicago</div>
     <div style="font-size:.85rem;color:#B8956B;text-align:center;margin:.1rem 0;">
         Yamunotri Center</div>
     <div style="font-size:.82rem;text-align:center;margin:.3rem 0;">
-        <a href="mailto:swamiaparajitananda@gmail.com" style="color:#C0392B;
+        <a href="mailto:swamiaparajitananda@gmail.com" style="color:#E67E22;
         text-decoration:none;">swamiaparajitananda@gmail.com</a>
     </div>
     <div style="text-align:center;margin-top:.6rem;">
@@ -220,25 +220,25 @@ st.markdown('''
         Pūjya Swāmī Aparājitānandajī has authored several books over the years:
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:.8rem;">
-        <div style="background:#4A1F1F;border:1.5px solid #8B3A2E;border-radius:10px;padding:.8rem 1rem;">
-            <div style="font-family:'Playfair Display',serif;font-weight:700;color:#D4AF37;font-size:.95rem;">📖 Gurudev's Quotes — Volume I</div>
-            <div style="font-size:.82rem;color:#C9A961;margin-top:.2rem;"><strong>2007</strong> · Selected quotes from Pūjya Swāmī Chinmayānandajī</div>
+        <div style="background:#FFFFFF;border:1.5px solid #FFCC80;border-radius:10px;padding:.8rem 1rem;">
+            <div style="font-family:'Playfair Display',serif;font-weight:700;color:#8B4513;font-size:.95rem;">📖 Gurudev's Quotes — Volume I</div>
+            <div style="font-size:.82rem;color:#5C3820;margin-top:.2rem;"><strong>2007</strong> · Selected quotes from Pūjya Swāmī Chinmayānandajī</div>
         </div>
-        <div style="background:#4A1F1F;border:1.5px solid #8B3A2E;border-radius:10px;padding:.8rem 1rem;">
-            <div style="font-family:'Playfair Display',serif;font-weight:700;color:#D4AF37;font-size:.95rem;">📖 Gurudev's Quotes — Volume II</div>
-            <div style="font-size:.82rem;color:#C9A961;margin-top:.2rem;"><strong>2010</strong> · Selected quotes from Pūjya Swāmī Chinmayānandajī</div>
+        <div style="background:#FFFFFF;border:1.5px solid #FFCC80;border-radius:10px;padding:.8rem 1rem;">
+            <div style="font-family:'Playfair Display',serif;font-weight:700;color:#8B4513;font-size:.95rem;">📖 Gurudev's Quotes — Volume II</div>
+            <div style="font-size:.82rem;color:#5C3820;margin-top:.2rem;"><strong>2010</strong> · Selected quotes from Pūjya Swāmī Chinmayānandajī</div>
         </div>
-        <div style="background:#4A1F1F;border:1.5px solid #8B3A2E;border-radius:10px;padding:.8rem 1rem;">
-            <div style="font-family:'Playfair Display',serif;font-weight:700;color:#D4AF37;font-size:.95rem;">📖 Gurudev's Quotes — Volume III</div>
-            <div style="font-size:.82rem;color:#C9A961;margin-top:.2rem;"><strong>2013</strong> · Selected quotes from Pūjya Swāmī Chinmayānandajī</div>
+        <div style="background:#FFFFFF;border:1.5px solid #FFCC80;border-radius:10px;padding:.8rem 1rem;">
+            <div style="font-family:'Playfair Display',serif;font-weight:700;color:#8B4513;font-size:.95rem;">📖 Gurudev's Quotes — Volume III</div>
+            <div style="font-size:.82rem;color:#5C3820;margin-top:.2rem;"><strong>2013</strong> · Selected quotes from Pūjya Swāmī Chinmayānandajī</div>
         </div>
-        <div style="background:#4A1F1F;border:1.5px solid #8B3A2E;border-radius:10px;padding:.8rem 1rem;">
-            <div style="font-family:'Playfair Display',serif;font-weight:700;color:#D4AF37;font-size:.95rem;">📖 Read Daily, Live Fully</div>
-            <div style="font-size:.82rem;color:#C9A961;margin-top:.2rem;"><strong>2017</strong> · A daily spiritual companion for seekers</div>
+        <div style="background:#FFFFFF;border:1.5px solid #FFCC80;border-radius:10px;padding:.8rem 1rem;">
+            <div style="font-family:'Playfair Display',serif;font-weight:700;color:#8B4513;font-size:.95rem;">📖 Read Daily, Live Fully</div>
+            <div style="font-size:.82rem;color:#5C3820;margin-top:.2rem;"><strong>2017</strong> · A daily spiritual companion for seekers</div>
         </div>
-        <div style="background:#4A1F1F;border:1.5px solid #8B3A2E;border-radius:10px;padding:.8rem 1rem;grid-column:1/-1;border-left:5px solid #D4AF37;">
-            <div style="font-family:'Playfair Display',serif;font-weight:700;color:#D4AF37;font-size:1rem;">📖 Indispensable Values</div>
-            <div style="font-size:.82rem;color:#C9A961;margin-top:.2rem;"><strong>2022</strong> · Central Chinmaya Mission Trust · 37 values from Bhagavad Gītā Chapters 13 &amp; 16</div>
+        <div style="background:#FFFFFF;border:1.5px solid #FFCC80;border-radius:10px;padding:.8rem 1rem;grid-column:1/-1;border-left:5px solid #8B4513;">
+            <div style="font-family:'Playfair Display',serif;font-weight:700;color:#8B4513;font-size:1rem;">📖 Indispensable Values</div>
+            <div style="font-size:.82rem;color:#5C3820;margin-top:.2rem;"><strong>2022</strong> · Central Chinmaya Mission Trust · 37 values from Bhagavad Gītā Chapters 13 &amp; 16</div>
         </div>
     </div>
 </div>
@@ -296,9 +296,9 @@ with col2:
 # ── Footer ────────────────────────────────────────────────────────────────────
 st.markdown("""
 <div style="text-align:center;margin-top:2rem;padding:1.5rem;
-    border-top:2px solid #8B3A2E;color:#B8956B;
+    border-top:2px solid #FFCC80;color:#B8956B;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.95rem;
-    background:linear-gradient(135deg,#4A1F1F,#2A0F0F);border-radius:12px;">
+    background:linear-gradient(135deg,#FFFFFF,#FFF8F0);border-radius:12px;">
     🪷 &nbsp; Hari Om &nbsp; 🪷 <br>
     <em>We are blessed to have Swāmī Aparājitānandajī's teachings illumine our path.</em>
 </div>
