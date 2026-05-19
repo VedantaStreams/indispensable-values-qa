@@ -36,9 +36,9 @@ st.markdown("""
     display:block!important;
 }
 
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#1A0F0A;color:#F5E6C8;}
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#2A0F0F;color:#F5E6C8;}
 h1,h2,h3{font-family:'Playfair Display',serif!important;color:#D4AF37!important;}
-div[data-testid="stSidebar"]{background:linear-gradient(180deg,#2C1810,#4A2818)!important;border-right:2px solid #5C3820;}
+div[data-testid="stSidebar"]{background:linear-gradient(180deg,#4A1F1F,#6A2828)!important;border-right:2px solid #8B3A2E;}
 div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important;}
 
 /* ── Pink-gold border on photo ── */
@@ -48,61 +48,71 @@ div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important
     object-position:top center!important;
     border:5px solid transparent!important;
     background:linear-gradient(white,white) padding-box,
-               linear-gradient(135deg,#D4AF37,#FF8C42,#D4AF37,#FFD89A) border-box!important;
+               linear-gradient(135deg,#D4AF37,#C0392B,#D4AF37,#FFD89A) border-box!important;
     box-shadow:0 8px 30px rgba(0,0,0,.20)!important;
 }
 
-.page-header{background:linear-gradient(135deg,#2C1810,#3D2418);border:2px solid #5C3820;
+.page-header{background:linear-gradient(135deg,#4A1F1F,#5A2424);border:2px solid #8B3A2E;
     border-radius:18px;padding:2.5rem;text-align:center;margin-bottom:2rem;
     box-shadow:0 4px 20px rgba(0,0,0,.08);}
 .page-header-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#D4AF37;}
-.page-header-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:#FF8C42;}
+.page-header-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:#C0392B;}
 
 .bio-name{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:#D4AF37;
     text-align:center;margin:.8rem 0 .1rem;}
-.bio-title{font-family:'Cormorant Garamond',serif;font-style:italic;color:#FF8C42;
+.bio-title{font-family:'Cormorant Garamond',serif;font-style:italic;color:#C0392B;
     font-size:1rem;text-align:center;}
 .bio-loc{font-size:.85rem;color:#B8956B;text-align:center;margin:.1rem 0;}
 
-.bio-card{background:#2C1810;border:2px solid #5C3820;border-radius:16px;padding:2rem;
+.bio-card{background:#4A1F1F;border:2px solid #8B3A2E;border-radius:16px;padding:2rem;
     box-shadow:0 4px 16px rgba(0,0,0,.08);margin-bottom:1.5rem;}
 .bio-para{color:#F5E6C8;font-size:.97rem;line-height:1.9;margin-bottom:.9rem;}
 .bio-para:last-child{margin-bottom:0;}
 
-.quote-block{background:linear-gradient(135deg,#2C1810,#1A0F0A);border-left:5px solid #FF8C42;
+.quote-block{background:linear-gradient(135deg,#4A1F1F,#2A0F0F);border-left:5px solid #C0392B;
     border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.2rem 0;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;
     color:#D4AF37;line-height:1.8;}
 
-.swamiji-quote{background:linear-gradient(135deg,#2C1810,#1A0F0A);border-left:5px solid #FF8C42;
+.swamiji-quote{background:linear-gradient(135deg,#4A1F1F,#2A0F0F);border-left:5px solid #C0392B;
     border-radius:0 14px 14px 0;padding:1.2rem 1.8rem;margin:1rem 0;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;
     color:#F5E6C8;line-height:1.8;box-shadow:0 2px 8px rgba(0,0,0,.07);}
 .swamiji-quote-attr{font-family:'Playfair Display',serif;font-style:normal;font-size:.95rem;
-    font-weight:700;color:#FF8C42;letter-spacing:.3px;margin-top:.6rem;}
+    font-weight:700;color:#C0392B;letter-spacing:.3px;margin-top:.6rem;}
 
-.tag{display:inline-block;background:#2C1810;border:1.5px solid #5C3820;color:#D4AF37;
+.tag{display:inline-block;background:#4A1F1F;border:1.5px solid #8B3A2E;color:#D4AF37;
     border-radius:20px;padding:.25rem .85rem;font-size:.85rem;margin:.2rem;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;}
 
-.milestone{display:flex;align-items:flex-start;gap:1rem;background:#2C1810;
-    border:1.5px solid #5C3820;border-radius:12px;padding:1.1rem 1.4rem;
+.milestone{display:flex;align-items:flex-start;gap:1rem;background:#4A1F1F;
+    border:1.5px solid #8B3A2E;border-radius:12px;padding:1.1rem 1.4rem;
     margin-bottom:.8rem;box-shadow:0 2px 8px rgba(0,0,0,.05);}
 .milestone-year{font-family:'Playfair Display',serif;font-size:1rem;font-weight:800;
-    color:#FF8C42;min-width:58px;}
+    color:#C0392B;min-width:58px;}
 .milestone-text{color:#F5E6C8;font-size:.92rem;line-height:1.65;}
 
-.value-section{background:#2C1810;border:1.5px solid #5C3820;border-radius:14px;padding:1.8rem;
+.value-section{background:#4A1F1F;border:1.5px solid #8B3A2E;border-radius:14px;padding:1.8rem;
     margin-bottom:1rem;box-shadow:0 2px 10px rgba(0,0,0,.06);}
 .value-section-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;
-    color:#D4AF37;margin-bottom:.8rem;padding-bottom:.4rem;border-bottom:1.5px solid #5C3820;}
+    color:#D4AF37;margin-bottom:.8rem;padding-bottom:.4rem;border-bottom:1.5px solid #8B3A2E;}
 .value-item{display:flex;align-items:flex-start;margin-bottom:.55rem;}
-.value-bullet{color:#FF8C42;font-size:1rem;margin-right:.6rem;flex-shrink:0;}
+.value-bullet{color:#C0392B;font-size:1rem;margin-right:.6rem;flex-shrink:0;}
 .value-text{color:#F5E6C8;font-size:.9rem;line-height:1.6;}
 .value-name{font-weight:700;color:#D4AF37;font-family:'Cormorant Garamond',serif;font-style:italic;}
 
 .section-title{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;
-    color:#D4AF37;margin:2rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid #5C3820;}
+    color:#D4AF37;margin:2rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid #8B3A2E;}
+
+[data-testid="stImage"] {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+}
+[data-testid="stImage"] img {
+    margin: 0 auto !important;
+    display: block !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -137,7 +147,7 @@ with col_photo:
     <div style="font-size:.85rem;color:#B8956B;text-align:center;margin:.1rem 0;">
         Yamunotri Center</div>
     <div style="font-size:.82rem;text-align:center;margin:.3rem 0;">
-        <a href="mailto:swamiaparajitananda@gmail.com" style="color:#FF8C42;
+        <a href="mailto:swamiaparajitananda@gmail.com" style="color:#C0392B;
         text-decoration:none;">swamiaparajitananda@gmail.com</a>
     </div>
     <div style="text-align:center;margin-top:.6rem;">
@@ -201,6 +211,39 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ── 20 Values ─────────────────────────────────────────────────────────────────
+# ── Published Works ───────────────────────────────────────────────────────────
+st.markdown('<div class="section-title">Published Works (2007–2022)</div>',
+            unsafe_allow_html=True)
+st.markdown('''
+<div class="bio-card">
+    <div class="bio-para" style="margin-bottom:.5rem;">
+        Pūjya Swāmī Aparājitānandajī has authored several books over the years:
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:.8rem;">
+        <div style="background:#4A1F1F;border:1.5px solid #8B3A2E;border-radius:10px;padding:.8rem 1rem;">
+            <div style="font-family:'Playfair Display',serif;font-weight:700;color:#D4AF37;font-size:.95rem;">📖 Gurudev's Quotes — Volume I</div>
+            <div style="font-size:.82rem;color:#C9A961;margin-top:.2rem;"><strong>2007</strong> · Selected quotes from Pūjya Swāmī Chinmayānandajī</div>
+        </div>
+        <div style="background:#4A1F1F;border:1.5px solid #8B3A2E;border-radius:10px;padding:.8rem 1rem;">
+            <div style="font-family:'Playfair Display',serif;font-weight:700;color:#D4AF37;font-size:.95rem;">📖 Gurudev's Quotes — Volume II</div>
+            <div style="font-size:.82rem;color:#C9A961;margin-top:.2rem;"><strong>2010</strong> · Selected quotes from Pūjya Swāmī Chinmayānandajī</div>
+        </div>
+        <div style="background:#4A1F1F;border:1.5px solid #8B3A2E;border-radius:10px;padding:.8rem 1rem;">
+            <div style="font-family:'Playfair Display',serif;font-weight:700;color:#D4AF37;font-size:.95rem;">📖 Gurudev's Quotes — Volume III</div>
+            <div style="font-size:.82rem;color:#C9A961;margin-top:.2rem;"><strong>2013</strong> · Selected quotes from Pūjya Swāmī Chinmayānandajī</div>
+        </div>
+        <div style="background:#4A1F1F;border:1.5px solid #8B3A2E;border-radius:10px;padding:.8rem 1rem;">
+            <div style="font-family:'Playfair Display',serif;font-weight:700;color:#D4AF37;font-size:.95rem;">📖 Read Daily, Live Fully</div>
+            <div style="font-size:.82rem;color:#C9A961;margin-top:.2rem;"><strong>2017</strong> · A daily spiritual companion for seekers</div>
+        </div>
+        <div style="background:#4A1F1F;border:1.5px solid #8B3A2E;border-radius:10px;padding:.8rem 1rem;grid-column:1/-1;border-left:5px solid #D4AF37;">
+            <div style="font-family:'Playfair Display',serif;font-weight:700;color:#D4AF37;font-size:1rem;">📖 Indispensable Values</div>
+            <div style="font-size:.82rem;color:#C9A961;margin-top:.2rem;"><strong>2022</strong> · Central Chinmaya Mission Trust · 37 values from Bhagavad Gītā Chapters 13 &amp; 16</div>
+        </div>
+    </div>
+</div>
+''', unsafe_allow_html=True)
+
 st.markdown('<div class="section-title">The 20 Indispensable Values — Bhagavad Gītā 13.7–11</div>',
             unsafe_allow_html=True)
 
@@ -253,9 +296,9 @@ with col2:
 # ── Footer ────────────────────────────────────────────────────────────────────
 st.markdown("""
 <div style="text-align:center;margin-top:2rem;padding:1.5rem;
-    border-top:2px solid #5C3820;color:#B8956B;
+    border-top:2px solid #8B3A2E;color:#B8956B;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.95rem;
-    background:linear-gradient(135deg,#2C1810,#1A0F0A);border-radius:12px;">
+    background:linear-gradient(135deg,#4A1F1F,#2A0F0F);border-radius:12px;">
     🪷 &nbsp; Hari Om &nbsp; 🪷 <br>
     <em>We are blessed to have Swāmī Aparājitānandajī's teachings illumine our path.</em>
 </div>

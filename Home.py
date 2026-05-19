@@ -21,25 +21,25 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Lato:wght@300;400;700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap');
 
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#1A0F0A;color:#F5E6C8;}
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#2A0F0F;color:#F5E6C8;}
 h1,h2,h3,h4{font-family:'Playfair Display',serif!important;color:#D4AF37!important;}
-div[data-testid="stSidebar"]{background:linear-gradient(180deg,#2C1810,#4A2818)!important;border-right:2px solid #5C3820;}
+div[data-testid="stSidebar"]{background:linear-gradient(180deg,#4A1F1F,#6A2828)!important;border-right:2px solid #8B3A2E;}
 div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important;}
-.stButton>button{background:linear-gradient(135deg,#FF8C42,#FFB07A);color:white!important;border:none;border-radius:8px;font-weight:700;padding:.6rem 1.4rem;transition:all .3s;}
-.stButton>button:hover{background:linear-gradient(135deg,#D4AF37,#FF8C42);transform:translateY(-2px);}
+.stButton>button{background:linear-gradient(135deg,#C0392B,#E74C3C);color:white!important;border:none;border-radius:8px;font-weight:700;padding:.6rem 1.4rem;transition:all .3s;}
+.stButton>button:hover{background:linear-gradient(135deg,#D4AF37,#C0392B);transform:translateY(-2px);}
 
 /* ── Hero — full width ── */
 .hero-block{
-    background:linear-gradient(135deg,#2C1810 0%,#3D2418 50%,#2C1810 100%);
-    border:2px solid #5C3820;border-radius:20px;
+    background:linear-gradient(135deg,#4A1F1F 0%,#5A2424 50%,#4A1F1F 100%);
+    border:2px solid #8B3A2E;border-radius:20px;
     padding:2.5rem 3rem 2rem;text-align:center;
     margin-bottom:1.5rem;
     box-shadow:0 4px 24px rgba(0,0,0,.10);
     width:100%;
 }
 .om-box{
-    background:linear-gradient(135deg,#2C1810,#4A2818);
-    border:2px solid #5C3820;border-radius:16px;
+    background:linear-gradient(135deg,#4A1F1F,#6A2828);
+    border:2px solid #8B3A2E;border-radius:16px;
     width:90px;height:90px;
     display:inline-flex;align-items:center;justify-content:center;
     margin-bottom:.8rem;
@@ -47,20 +47,20 @@ div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important
 }
 .om-img{width:70px;height:70px;object-fit:contain;border-radius:10px;}
 .hero-title{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:800;line-height:1.2;margin-bottom:.3rem;}
-.hero-accent{color:#FF8C42;}.hero-dark{color:#F5E6C8;}
-.hero-skt{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:#FF8C42;margin-bottom:.2rem;}
+.hero-accent{color:#C0392B;}.hero-dark{color:#F5E6C8;}
+.hero-skt{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:#C0392B;margin-bottom:.2rem;}
 .hero-deva{font-size:1rem;color:#B8956B;font-family:'Cormorant Garamond',serif;}
 .hero-meaning{font-size:.88rem;color:#B8956B;font-style:italic;font-family:'Cormorant Garamond',serif;margin-bottom:1rem;}
 .features-row{display:flex;align-items:center;justify-content:center;gap:.5rem;flex-wrap:wrap;margin:.5rem 0;}
-.feat-dot{color:#FF8C42;font-size:1rem;}.feat-tag{font-size:.82rem;color:#C9A961;font-weight:700;letter-spacing:.3px;}
+.feat-dot{color:#C0392B;font-size:1rem;}.feat-tag{font-size:.82rem;color:#C9A961;font-weight:700;letter-spacing:.3px;}
 .hero-verse{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.93rem;color:#D4AF37;
     margin-top:.8rem;padding:.6rem 1.5rem;background:rgba(0,0,0,.06);
-    border-radius:10px;border-left:3px solid #FF8C42;display:inline-block;text-align:left;}
+    border-radius:10px;border-left:3px solid #C0392B;display:inline-block;text-align:left;}
 
 /* ── Intro text ── */
 .intro-block{
-    background:#2C1810;border:1.5px solid #5C3820;
-    border-left:5px solid #FF8C42;
+    background:#4A1F1F;border:1.5px solid #8B3A2E;
+    border-left:5px solid #C0392B;
     border-radius:0 14px 14px 0;
     padding:1.8rem 2.2rem;margin:1.5rem 0;
     box-shadow:0 2px 12px rgba(0,0,0,.06);
@@ -70,12 +70,12 @@ div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important
 .intro-block p:last-child{margin-bottom:0;}
 
 /* ── Quotes ── */
-.swamiji-quote{background:linear-gradient(135deg,#2C1810,#1A0F0A);border-left:5px solid #FF8C42;
+.swamiji-quote{background:linear-gradient(135deg,#4A1F1F,#2A0F0F);border-left:5px solid #C0392B;
     border-radius:0 14px 14px 0;padding:1.2rem 1.8rem;margin:1rem 0;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;font-weight:700;color:#F5E6C8;line-height:1.8;
     box-shadow:0 2px 8px rgba(0,0,0,.07);}
 .swamiji-quote-attr{font-family:'Playfair Display',serif;font-style:normal;font-size:.95rem;
-    font-weight:700;color:#FF8C42;letter-spacing:.3px;margin-top:.6rem;}
+    font-weight:700;color:#C0392B;letter-spacing:.3px;margin-top:.6rem;}
 
 /* ── Value pills — clean grid layout ── */
 .value-pills{
@@ -86,33 +86,33 @@ div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important
     margin:1rem auto 1.5rem;
 }
 .value-pill{
-    background:#3D2418;border:1.5px solid #D4AF37;color:#FFD89A;
+    background:#5A2424;border:1.5px solid #D4AF37;color:#FFD89A;
     border-radius:20px;padding:.4rem .6rem;font-size:.82rem;
     text-align:center;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;
 }
 
 /* ── Nav cards ── */
-.nav-card{background:#2C1810;border:1.5px solid #5C3820;border-radius:14px;padding:1.4rem 1.2rem;
+.nav-card{background:#4A1F1F;border:1.5px solid #8B3A2E;border-radius:14px;padding:1.4rem 1.2rem;
     margin-bottom:1rem;box-shadow:0 2px 10px rgba(0,0,0,.06);transition:all .3s;height:100%;}
-.nav-card:hover{border-color:#FF8C42;box-shadow:0 6px 20px rgba(0,0,0,.14);transform:translateY(-3px);}
+.nav-card:hover{border-color:#C0392B;box-shadow:0 6px 20px rgba(0,0,0,.14);transform:translateY(-3px);}
 .nav-card-icon{font-size:2rem;margin-bottom:.5rem;}
 .nav-card-title{font-family:'Playfair Display',serif;color:#D4AF37;font-size:1.05rem;font-weight:700;margin-bottom:.4rem;}
 .nav-card-desc{color:#C9A961;font-size:.86rem;line-height:1.6;}
 
 /* ── Stats ── */
-.stat-card{background:#2C1810;border:1.5px solid #5C3820;border-radius:12px;padding:1.1rem;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.06);}
-.stat-number{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:800;color:#FF8C42;}
+.stat-card{background:#4A1F1F;border:1.5px solid #8B3A2E;border-radius:12px;padding:1.1rem;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+.stat-number{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:800;color:#C0392B;}
 .stat-label{color:#C9A961;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-top:.2rem;}
 .section-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#D4AF37;
-    margin:1.5rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid #5C3820;}
+    margin:1.5rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid #8B3A2E;}
 
 /* ── Visitor bar ── */
 .visitor-bar{display:flex;align-items:center;justify-content:center;gap:2rem;
-    background:linear-gradient(135deg,#2C1810,#1A0F0A);border:1.5px solid #5C3820;
+    background:linear-gradient(135deg,#4A1F1F,#2A0F0F);border:1.5px solid #8B3A2E;
     border-radius:12px;padding:.8rem 1.5rem;margin:1rem 0;flex-wrap:wrap;}
 .visitor-stat{text-align:center;}
-.visitor-num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:800;color:#FF8C42;}
+.visitor-num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:800;color:#C0392B;}
 .visitor-lbl{font-size:.72rem;font-weight:700;color:#C9A961;text-transform:uppercase;letter-spacing:.5px;}
 
 /* ── Gurudev bottom ── */
@@ -122,18 +122,18 @@ div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important
     object-fit:cover;object-position:top center;
     border:5px solid transparent;
     background:linear-gradient(white,white) padding-box,
-               linear-gradient(135deg,#D4AF37,#FF8C42,#D4AF37,#FFD89A) border-box;
+               linear-gradient(135deg,#D4AF37,#C0392B,#D4AF37,#FFD89A) border-box;
     box-shadow:0 8px 30px rgba(0,0,0,.20);
 }
 .gurudev-name{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;
     color:#D4AF37;margin:.7rem 0 .1rem;}
 .gurudev-sub{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:.95rem;color:#FF8C42;}
+    font-size:.95rem;color:#C0392B;}
 
 /* ── Footer ── */
 .footer{text-align:center;color:#B8956B;font-size:.88rem;font-family:'Cormorant Garamond',serif;
-    font-style:italic;margin-top:2rem;padding:1.5rem;border-top:2px solid #5C3820;
-    background:linear-gradient(135deg,#2C1810,#1A0F0A);border-radius:12px;line-height:2.2;}
+    font-style:italic;margin-top:2rem;padding:1.5rem;border-top:2px solid #8B3A2E;
+    background:linear-gradient(135deg,#4A1F1F,#2A0F0F);border-radius:12px;line-height:2.2;}
 
 /* Remove blank space under st.image */
 [data-testid="stImage"]{margin-bottom:-1.5rem!important;padding-bottom:0!important;}
@@ -297,12 +297,12 @@ st.markdown(f'''<div class="visitor-bar">
         <div class="visitor-num">{vc["total"]:,}</div>
         <div class="visitor-lbl">Total Visitors</div>
     </div>
-    <div style="color:#5C3820;font-size:1.5rem;">·</div>
+    <div style="color:#8B3A2E;font-size:1.5rem;">·</div>
     <div class="visitor-stat">
         <div class="visitor-num">{vc["today"]}</div>
         <div class="visitor-lbl">Today</div>
     </div>
-    <div style="color:#5C3820;font-size:1.5rem;">·</div>
+    <div style="color:#8B3A2E;font-size:1.5rem;">·</div>
     <div class="visitor-stat">
         <div class="visitor-num" style="font-size:1rem;">Since {vc["since"]}</div>
         <div class="visitor-lbl">Tracking Since</div>

@@ -30,24 +30,24 @@ REGISTRY_PATH = DATA_DIR / "processed" / "source_registry.json"
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap');
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#1A0F0A;color:#F5E6C8;}
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#2A0F0F;color:#F5E6C8;}
 h1,h2,h3{font-family:'Playfair Display',serif!important;color:#D4AF37!important;}
-div[data-testid="stSidebar"]{background:linear-gradient(180deg,#2C1810,#4A2818)!important;border-right:2px solid #5C3820;}
+div[data-testid="stSidebar"]{background:linear-gradient(180deg,#4A1F1F,#6A2828)!important;border-right:2px solid #8B3A2E;}
 div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important;}
 
-.page-header{background:linear-gradient(135deg,#2C1810,#3D2418);border:2px solid #5C3820;
+.page-header{background:linear-gradient(135deg,#4A1F1F,#5A2424);border:2px solid #8B3A2E;
     border-radius:18px;padding:2rem;text-align:center;margin-bottom:1.5rem;
     box-shadow:0 4px 20px rgba(0,0,0,.08);}
 .page-header-title{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:800;color:#D4AF37;}
-.page-header-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:#FF8C42;}
+.page-header-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:#C0392B;}
 
-.section-card{background:#2C1810;border:2px solid #5C3820;border-radius:14px;
+.section-card{background:#4A1F1F;border:2px solid #8B3A2E;border-radius:14px;
     padding:1.8rem;margin-bottom:1.5rem;box-shadow:0 2px 10px rgba(0,0,0,.06);}
 .section-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;
-    color:#D4AF37;margin-bottom:1rem;padding-bottom:.4rem;border-bottom:2px solid #5C3820;}
+    color:#D4AF37;margin-bottom:1rem;padding-bottom:.4rem;border-bottom:2px solid #8B3A2E;}
 
-.chapter-card{background:linear-gradient(135deg,#2C1810,#1A0F0A);
-    border:1.5px solid #5C3820;border-left:5px solid #FF8C42;
+.chapter-card{background:linear-gradient(135deg,#4A1F1F,#2A0F0F);
+    border:1.5px solid #8B3A2E;border-left:5px solid #C0392B;
     border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin-bottom:1rem;}
 .chapter-title{font-family:'Playfair Display',serif;font-weight:800;color:#D4AF37;
     font-size:1.2rem;margin-bottom:.3rem;}
@@ -55,22 +55,22 @@ div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important
     color:#D4AF37;font-size:1rem;margin-bottom:.6rem;}
 .chapter-desc{color:#F5E6C8;font-size:.92rem;line-height:1.7;}
 
-.discourse-row{background:#2C1810;border:1px solid #5C3820;border-radius:8px;
+.discourse-row{background:#4A1F1F;border:1px solid #8B3A2E;border-radius:8px;
     padding:.6rem 1rem;margin-bottom:.4rem;display:flex;align-items:center;gap:.7rem;}
 .discourse-icon{font-size:1.1rem;}
 .discourse-name{font-weight:700;color:#F5E6C8;font-size:.92rem;flex:1;}
-.discourse-badge{background:#2C1810;color:#FF8C42;font-size:.72rem;font-weight:700;
+.discourse-badge{background:#4A1F1F;color:#C0392B;font-size:.72rem;font-weight:700;
     padding:.2rem .6rem;border-radius:10px;letter-spacing:.3px;}
 
-.book-card{background:#2C1810;border:1.5px solid #5C3820;border-radius:10px;
+.book-card{background:#4A1F1F;border:1.5px solid #8B3A2E;border-radius:10px;
     padding:1rem 1.2rem;margin-bottom:.6rem;}
 .book-title{font-family:'Playfair Display',serif;font-weight:700;color:#D4AF37;font-size:1rem;}
 .book-meta{color:#B8956B;font-size:.82rem;margin-top:.2rem;font-style:italic;}
 
 .stat-row{display:flex;align-items:center;justify-content:center;gap:2rem;
-    background:linear-gradient(135deg,#2C1810,#1A0F0A);border:1.5px solid #5C3820;
+    background:linear-gradient(135deg,#4A1F1F,#2A0F0F);border:1.5px solid #8B3A2E;
     border-radius:12px;padding:1rem 1.5rem;margin:1rem 0;flex-wrap:wrap;}
-.stat-num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:800;color:#FF8C42;}
+.stat-num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:800;color:#C0392B;}
 .stat-lbl{font-size:.72rem;font-weight:700;color:#C9A961;
     text-transform:uppercase;letter-spacing:.5px;}
 </style>
@@ -109,17 +109,17 @@ st.markdown(f"""
         <div class="stat-num">14</div>
         <div class="stat-lbl">Discourses</div>
     </div>
-    <div style="color:#5C3820;font-size:1.3rem;">·</div>
+    <div style="color:#8B3A2E;font-size:1.3rem;">·</div>
     <div style="text-align:center;">
         <div class="stat-num">5</div>
         <div class="stat-lbl">Books</div>
     </div>
-    <div style="color:#5C3820;font-size:1.3rem;">·</div>
+    <div style="color:#8B3A2E;font-size:1.3rem;">·</div>
     <div style="text-align:center;">
         <div class="stat-num">{n_indexed}</div>
         <div class="stat-lbl">Indexed</div>
     </div>
-    <div style="color:#5C3820;font-size:1.3rem;">·</div>
+    <div style="color:#8B3A2E;font-size:1.3rem;">·</div>
     <div style="text-align:center;">
         <div class="stat-num">{total_chunks:,}</div>
         <div class="stat-lbl">Chunks</div>

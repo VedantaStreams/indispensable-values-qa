@@ -56,7 +56,6 @@ VALUE_PROMPTS = [
             "What does my reaction to being ignored or criticized reveal about my ego?",
         ],
         "prompt":   'When did I feel proud or seek recognition today? Can I see this as an opportunity to practice humility?',
-                  "Can I see this as an opportunity to practice humility?",
     },
     {
         "value": "adambhitvam",
@@ -68,7 +67,6 @@ VALUE_PROMPTS = [
             "Where do I display my achievements rather than simply being content with them?",
         ],
         "prompt":   'Where in my life is my outer behaviour different from my inner thoughts? How can I move toward inner-outer alignment?',
-                  "inner thoughts? How can I move toward inner-outer alignment?",
     },
     {
         "value": "ahiṃsā",
@@ -80,7 +78,6 @@ VALUE_PROMPTS = [
             "When did I speak unkindly today? What was beneath that unkindness?",
         ],
         "prompt":   'Did I cause hurt today — by word, thought, or deed? How can I practice gentleness with myself and others?',
-                  "How can I practice gentleness with myself and others?",
     },
     {
         "value": "kṣāntiḥ",
@@ -92,7 +89,6 @@ VALUE_PROMPTS = [
             "What old hurt am I still carrying? Can I release a small piece of it today?",
         ],
         "prompt":   'What tested my patience today? Did I forgive easily, or did I hold on to the hurt?',
-                  "or did I hold on to the hurt?",
     },
     {
         "value": "ārjavam",
@@ -104,7 +100,6 @@ VALUE_PROMPTS = [
             "Where am I taking a crooked path when a straight one is available?",
         ],
         "prompt":   'Were my thoughts, words, and actions in alignment today? Where did I complicate what could have been simple?',
-                  "Where did I complicate what could have been simple?",
     },
     {
         "value": "ācāryopāsanam",
@@ -116,7 +111,6 @@ VALUE_PROMPTS = [
             "Who in my life teaches me through their being, not just their words?",
         ],
         "prompt":   'How did I honour my teachers — past or present — today? What teaching am I currently reflecting upon?',
-                  "What teaching am I currently reflecting upon?",
     },
     {
         "value": "śaucam",
@@ -128,7 +122,6 @@ VALUE_PROMPTS = [
             "What thought-pattern is muddying my mind that I can release?",
         ],
         "prompt":   'How is the state of my mind today — clear or cluttered? What can I let go of to invite more purity?',
-                  "What can I let go of to invite more purity?",
     },
     {
         "value": "sthairyam",
@@ -140,7 +133,6 @@ VALUE_PROMPTS = [
             "Where am I demanding quick results when steady effort is what's needed?",
         ],
         "prompt":   'Did I waver in my sādhana today? What kept me going, or what made me give up?',
-                  "or what made me give up?",
     },
     {
         "value": "ātmavinigrahaḥ",
@@ -152,7 +144,6 @@ VALUE_PROMPTS = [
             "What one sense-pleasure can I gently moderate this week?",
         ],
         "prompt":   'Where did my senses pull me today? How did I respond — with awareness or reactively?',
-                  "with awareness or reactively?",
     },
     {
         "value": "vairāgyam",
@@ -164,7 +155,6 @@ VALUE_PROMPTS = [
             "What is my mind chasing today that it cannot find there?",
         ],
         "prompt":   'What did I cling to today — possessions, opinions, outcomes? Can I sit with the freedom of holding things lightly?',
-                  "Can I sit with the freedom of holding things lightly?",
     },
     {
         "value": "anahaṅkāra",
@@ -176,7 +166,6 @@ VALUE_PROMPTS = [
             "Can I do a small kind act today without anyone knowing?",
         ],
         "prompt":   "Where did my sense of 'I' assert itself today? Can I see the Self that observes the ego?",
-                  "Can I see the Self that observes the ego?",
     },
     {
         "value": "asaktiḥ",
@@ -188,7 +177,6 @@ VALUE_PROMPTS = [
             "Can I love someone today without expecting anything in return?",
         ],
         "prompt":   'What am I attached to that brings me anxiety? Can I love without clinging today?',
-                  "Can I love without clinging today?",
     },
     {
         "value": "samacittatvam",
@@ -200,7 +188,6 @@ VALUE_PROMPTS = [
             "What if I greeted every event today as a teacher?",
         ],
         "prompt":   'Was I equally accepting of pleasant and unpleasant events today? Where did I lose my balance?',
-                  "Where did I lose my balance?",
     },
     {
         "value": "bhakti avyabhicāriṇī",
@@ -212,7 +199,6 @@ VALUE_PROMPTS = [
             "If God walked into my room right now, what would I want to feel or say?",
         ],
         "prompt":   'How did I remember the Divine today? What deepens my devotion?',
-                  "What deepens my devotion?",
     },
     {
         "value": "viveka",
@@ -224,7 +210,6 @@ VALUE_PROMPTS = [
             "What did I assume was real today that, on reflection, was just thought?",
         ],
         "prompt":   'Where did I confuse the real with the unreal today? What is permanent, what is fleeting?',
-                  "What is permanent, what is fleeting?",
     },
     {
         "value": "abhayaṁ",
@@ -236,7 +221,6 @@ VALUE_PROMPTS = [
             "What truth do I know but am afraid to act upon?",
         ],
         "prompt":   'What fear is holding me back today? What would I do if I were not afraid?',
-                  "What would I do if I were not afraid?",
     },
     {
         "value": "sattva-saṁśuddhiḥ",
@@ -248,7 +232,6 @@ VALUE_PROMPTS = [
             "What sattvic practice can I add tomorrow — silence, study, prayer, sattvic food, time in nature?",
         ],
         "prompt":   'What thoughts dominated my mind today — sattvic, rajasic, or tamasic? How can I cultivate more sattva?',
-                  "or tamasic? How can I cultivate more sattva?",
     },
     {
         "value": "satyam",
@@ -260,7 +243,6 @@ VALUE_PROMPTS = [
             "How can I speak truth that is also kind and necessary?",
         ],
         "prompt":   'Was I truthful today — to myself and others? Where did I stretch or hide the truth?',
-                  "Where did I stretch or hide the truth?",
     },
     {
         "value": "dānam",
@@ -272,7 +254,6 @@ VALUE_PROMPTS = [
             "What can I give silently today, without telling anyone?",
         ],
         "prompt":   'How did I give today — of my time, attention, resources? What is the spirit behind my giving?',
-                  "What is the spirit behind my giving?",
     },
     {
         "value": "tapas",
@@ -284,7 +265,6 @@ VALUE_PROMPTS = [
             "What discomfort can I welcome today as a teacher?",
         ],
         "prompt":   'What sādhana did I undertake today? Where did I choose discipline over comfort?',
-                  "Where did I choose discipline over comfort?",
     },
 ]
 
@@ -307,51 +287,51 @@ def get_today_value():
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap');
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#1A0F0A;color:#F5E6C8;}
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#2A0F0F;color:#F5E6C8;}
 h1,h2,h3{font-family:'Playfair Display',serif!important;color:#D4AF37!important;}
-div[data-testid="stSidebar"]{background:linear-gradient(180deg,#2C1810,#4A2818)!important;border-right:2px solid #5C3820;}
+div[data-testid="stSidebar"]{background:linear-gradient(180deg,#4A1F1F,#6A2828)!important;border-right:2px solid #8B3A2E;}
 div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important;}
-.stButton>button{background:linear-gradient(135deg,#FF8C42,#FFB07A);color:white!important;
+.stButton>button{background:linear-gradient(135deg,#C0392B,#E74C3C);color:white!important;
     border:none;border-radius:8px;font-weight:700;padding:.6rem 1.4rem;transition:all .3s;}
-.stButton>button:hover{background:linear-gradient(135deg,#D4AF37,#FF8C42);transform:translateY(-2px);}
+.stButton>button:hover{background:linear-gradient(135deg,#D4AF37,#C0392B);transform:translateY(-2px);}
 
-.page-header{background:linear-gradient(135deg,#2C1810,#3D2418);border:2px solid #5C3820;
+.page-header{background:linear-gradient(135deg,#4A1F1F,#5A2424);border:2px solid #8B3A2E;
     border-radius:18px;padding:2rem;text-align:center;margin-bottom:1.5rem;
     box-shadow:0 4px 20px rgba(0,0,0,.08);}
 .page-header-title{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:800;color:#D4AF37;}
 .page-header-sub{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.1rem;color:#FF8C42;}
+    font-size:1.1rem;color:#C0392B;}
 
-.value-card{background:linear-gradient(135deg,#2C1810,#1A0F0A);
-    border:2px solid #5C3820;border-left:5px solid #FF8C42;
+.value-card{background:linear-gradient(135deg,#4A1F1F,#2A0F0F);
+    border:2px solid #8B3A2E;border-left:5px solid #C0392B;
     border-radius:14px;padding:1.8rem 2rem;margin-bottom:1.5rem;
     box-shadow:0 2px 12px rgba(0,0,0,.07);}
 .value-sanskrit{font-family:'Cormorant Garamond',serif;font-style:italic;
     font-size:1.8rem;font-weight:700;color:#D4AF37;margin-bottom:.2rem;}
-.value-english{font-family:'Lato',sans-serif;font-size:.95rem;color:#FF8C42;
+.value-english{font-family:'Lato',sans-serif;font-size:.95rem;color:#C0392B;
     font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:1rem;}
 .value-prompt{font-family:'Cormorant Garamond',serif;font-style:italic;
     font-size:1.15rem;color:#F5E6C8;line-height:1.7;
-    padding:1rem 1.2rem;background:#2C1810;border-radius:10px;
+    padding:1rem 1.2rem;background:#4A1F1F;border-radius:10px;
     border-left:3px solid #D4AF37;}
 
-.entry-card{background:#2C1810;border:1.5px solid #5C3820;border-radius:12px;
+.entry-card{background:#4A1F1F;border:1.5px solid #8B3A2E;border-radius:12px;
     padding:1.2rem 1.5rem;margin-bottom:1rem;
     box-shadow:0 2px 8px rgba(0,0,0,.05);}
 .entry-date{font-family:'Playfair Display',serif;font-weight:700;color:#D4AF37;
     font-size:.95rem;margin-bottom:.3rem;}
 .entry-value{font-family:'Cormorant Garamond',serif;font-style:italic;
-    color:#FF8C42;font-size:.9rem;margin-bottom:.5rem;}
+    color:#C0392B;font-size:.9rem;margin-bottom:.5rem;}
 .entry-text{color:#F5E6C8;font-size:.92rem;line-height:1.7;white-space:pre-wrap;}
 
 .section-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;
     color:#D4AF37;margin:1.5rem 0 1rem;padding-bottom:.4rem;
-    border-bottom:2px solid #5C3820;}
+    border-bottom:2px solid #8B3A2E;}
 
-.stTextArea textarea{border:1.5px solid #5C3820!important;border-radius:10px!important;
+.stTextArea textarea{border:1.5px solid #8B3A2E!important;border-radius:10px!important;
     font-family:'Cormorant Garamond',serif!important;font-size:1.05rem!important;
-    color:#F5E6C8!important;background:#1A0F0A!important;}
-.stTextArea textarea:focus{border-color:#FF8C42!important;}
+    color:#F5E6C8!important;background:#2A0F0F!important;}
+.stTextArea textarea:focus{border-color:#C0392B!important;}
 </style>
 """, unsafe_allow_html=True)
 
@@ -535,7 +515,7 @@ with tab_browse:
                 unsafe_allow_html=True)
 
     st.markdown("""
-    <div style="background:#2C1810;border-left:4px solid #FF8C42;border-radius:10px;
+    <div style="background:#4A1F1F;border-left:4px solid #C0392B;border-radius:10px;
         padding:1rem 1.4rem;margin-bottom:1.2rem;font-size:.9rem;color:#C9A961;">
         Each value has a reflection prompt to guide your inner inquiry.
         Click any value below to write a reflection on it.
@@ -549,7 +529,7 @@ with tab_browse:
                 font-size:1.3rem;font-weight:700;color:#D4AF37;">
                 {v['value']}
             </div>
-            <div style="font-family:'Lato',sans-serif;font-size:.85rem;color:#FF8C42;
+            <div style="font-family:'Lato',sans-serif;font-size:.85rem;color:#C0392B;
                 font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:.5rem;">
                 {v['english']}
             </div>

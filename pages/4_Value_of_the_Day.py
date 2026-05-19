@@ -1,8 +1,7 @@
 """
-pages/11_Value_of_the_Day.py — Daily contemplation page.
+pages/4_Value_of_the_Day.py — Daily contemplation page.
 Auto-rotates through 20 values from Bhagavad Gītā Chapters 13 & 16.
-Shows: Sanskrit value, English meaning, verse reference, reflection prompt,
-       and a related Swamiji quote.
+Each value has 4 prompts that rotate daily for richer contemplation.
 """
 import os
 os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
@@ -24,494 +23,381 @@ st.set_page_config(
     layout="wide",
 )
 
-# ── 20 Values with full daily contemplation content ──────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
+# 20 Values — each with 4 rotating prompts
+# ══════════════════════════════════════════════════════════════════════════════
 DAILY_VALUES = [
     {
-        "value":    "amānitvam",
-        "english":  "Humility",
+        "value":      "amānitvam",
+        "english":    "Humility",
         "devanagari": "अमानित्वम्",
-        "verse":    "BG 13.7",
-        "definition": "Absence of self-glorification, of the desire for recognition, "
-                      "or seeking honor and respect from others.",
-        "teaching": "Humility is not low self-esteem. It is the natural state of one who "
-                    "has seen the infinite Self and recognizes the same Self in all beings. "
-                    "True humility arises from the understanding that whatever talents or "
-                    "accomplishments we possess have been given by Īśvara.",
+        "verse":      "BG 13.7",
+        "definition": "Absence of self-glorification, of the desire for recognition, or seeking honor and respect from others.",
+        "teaching":   "Humility is not low self-esteem. It is the natural state of one who has seen the infinite Self and recognizes the same Self in all beings. True humility arises from the understanding that whatever talents or accomplishments we possess have been given by Īśvara.",
         "prompts": [
             "Where did I seek recognition or praise today? Can I dedicate my actions and accomplishments to the Lord?",
             "When did I feel offended that someone didn't acknowledge me? What does this reveal about my ego?",
-            "Whose contribution did I overlook or take for granted today? How can I express gratitude?",
-            "If no one was watching, would I still do my good deeds with the same energy? Why or why not?",
+            "Whose contribution did I overlook today? How can I express gratitude?",
+            "If no one was watching, would I still do my good deeds with the same energy?",
         ],
-        "prompt":   'Where did I seek recognition or praise today? Can I dedicate my actions and accomplishments to the Lord?',
-                    "Can I dedicate my actions and accomplishments to the Lord?",
-        "quote":    "Reforming oneself is like <strong>chiselling a stone</strong> to perfection!",
+        "quote": "Reforming oneself is like <strong>chiselling a stone</strong> to perfection!",
     },
     {
-        "value":    "adambhitvam",
-        "english":  "Absence of Pretense",
+        "value":      "adambhitvam",
+        "english":    "Absence of Pretense",
         "devanagari": "अदम्भित्वम्",
-        "verse":    "BG 13.7",
-        "definition": "The quality of not displaying or showing off one's qualifications, "
-                      "wealth, status, or spiritual practices.",
-        "teaching": "Where there is dambha (hypocrisy/show), there is a gap between what we "
-                    "are inside and what we project outside. The seeker walks a path of "
-                    "inner-outer alignment — being the same in private as in public.",
+        "verse":      "BG 13.7",
+        "definition": "The quality of not displaying or showing off one's qualifications, wealth, status, or spiritual practices.",
+        "teaching":   "Where there is dambha (hypocrisy), there is a gap between what we are inside and what we project outside. The seeker walks a path of inner-outer alignment — being the same in private as in public.",
         "prompts": [
-            "Where am I projecting an image rather than being authentic? How can I bring my outer behavior in alignment with my inner truth?",
-            "Did I exaggerate my achievements or spiritual practices to impress someone today?",
+            "Where am I projecting an image rather than being authentic?",
+            "Did I exaggerate my achievements to impress someone today?",
             "In which relationship do I feel I must wear a mask? What would happen if I removed it?",
-            "Where in my social media or conversations do I display rather than simply share?",
+            "Where do I display rather than simply share?",
         ],
-        "prompt":   'Where am I projecting an image rather than being authentic? How can I bring my outer behavior in alignment with my inner truth?',
-                    "How can I bring my outer behavior in alignment with my inner truth?",
-        "quote":    "<strong>True happiness</strong> shouldn't be because of! "
-                    "<strong>True happiness</strong> should be in spite of!",
+        "quote": "<strong>True happiness</strong> shouldn't be because of! <strong>True happiness</strong> should be in spite of!",
     },
     {
-        "value":    "ahiṃsā",
-        "english":  "Non-Injury",
+        "value":      "ahiṃsā",
+        "english":    "Non-Injury",
         "devanagari": "अहिंसा",
-        "verse":    "BG 13.7",
+        "verse":      "BG 13.7",
         "definition": "Not causing pain to any living being — by thought, word, or deed.",
-        "teaching": "Ahiṃsā is not merely avoiding physical violence. It includes harsh words, "
-                    "cutting remarks, hateful thoughts, and indifference to others' suffering. "
-                    "It is positive love and compassion, not just the absence of cruelty.",
+        "teaching":   "Ahiṃsā is not merely avoiding physical violence. It includes harsh words, cutting remarks, hateful thoughts, and indifference to others' suffering. It is positive love and compassion, not just the absence of cruelty.",
         "prompts": [
-            "Did I cause hurt today — by word, action, or thought? How can I practice greater tenderness in all my relationships?",
-            "When did I speak harshly today? What was happening inside me at that moment?",
+            "Did I cause hurt today — by word, action, or thought?",
             "Whose pain did I notice today, and how did I respond — with compassion or indifference?",
             "Am I being harsh with myself in any way? Where can I extend kindness inward first?",
+            "When did I speak unkindly today? What was happening inside me?",
         ],
-        "prompt":   'Did I cause hurt today — by word, action, or thought? How can I practice greater tenderness in all my relationships?',
-                    "How can I practice greater tenderness in all my relationships?",
-        "quote":    "A heart filled with <strong>noble emotions</strong> like kindness, "
-                    "compassion, mercy, truthfulness, honesty — such a heart is called a "
-                    "<strong>pure heart</strong>.",
+        "quote": "A heart filled with <strong>noble emotions</strong> like kindness, compassion, mercy, truthfulness, honesty — such a heart is called a <strong>pure heart</strong>.",
     },
     {
-        "value":    "kṣāntiḥ",
-        "english":  "Forbearance",
+        "value":      "kṣāntiḥ",
+        "english":    "Forbearance",
         "devanagari": "क्षान्तिः",
-        "verse":    "BG 13.7",
+        "verse":      "BG 13.7",
         "definition": "Patience, forgiveness, and forbearance in the face of provocation or injury.",
-        "teaching": "Kṣānti is not weakness or suppression. It is the strength to remain "
-                    "unaffected when wronged, knowing that anger only burns the one who holds it. "
-                    "The mighty one is not who can strike back, but who can forgive.",
+        "teaching":   "Kṣānti is not weakness or suppression. It is the strength to remain unaffected when wronged, knowing that anger only burns the one who holds it. The mighty one is not who can strike back, but who can forgive.",
         "prompts": [
-            "What tested my patience today? Did I respond with peace or with reactivity? What can I forgive today?",
-            "Whom have I not yet forgiven? What is the cost of holding on to this resentment?",
-            "When I was wronged today, did I react or respond? What helps me pause before reacting?",
-            "What story am I telling myself about a past hurt? Is there another way to see it?",
+            "What tested my patience today? Did I respond with peace or with reactivity?",
+            "Whom have I not yet forgiven? What is the cost of holding this resentment?",
+            "When I was wronged today, did I pause before reacting?",
+            "What old hurt am I still carrying? Can I release a small piece of it today?",
         ],
-        "prompt":   'What tested my patience today? Did I respond with peace or with reactivity? What can I forgive today?',
-                    "or with reactivity? What can I forgive today?",
-        "quote":    "Rate your <strong>spiritual progress</strong> with the "
-                    "<strong>intensity of Peace</strong> which you experience.",
+        "quote": "Rate your <strong>spiritual progress</strong> with the <strong>intensity of Peace</strong> which you experience.",
     },
     {
-        "value":    "ārjavam",
-        "english":  "Simplicity / Straightforwardness",
+        "value":      "ārjavam",
+        "english":    "Simplicity / Straightforwardness",
         "devanagari": "आर्जवम्",
-        "verse":    "BG 13.7",
+        "verse":      "BG 13.7",
         "definition": "Alignment of thought, word, and action — the absence of crookedness.",
-        "teaching": "Ārjavam is the simplicity of one whose inner and outer lives are unified. "
-                    "What is thought is spoken; what is spoken is acted upon. There is no "
-                    "duplicity, no hidden agenda, no double-dealing.",
+        "teaching":   "Ārjavam is the simplicity of one whose inner and outer lives are unified. What is thought is spoken; what is spoken is acted upon. There is no duplicity, no hidden agenda, no double-dealing.",
         "prompts": [
-            "Were my thoughts, words, and deeds aligned today? Where did I take the easy crooked path instead of the simple straight one?",
-            "Was there a moment today where I said one thing but meant another? Why?",
-            "Where am I complicating something that could be simple — in relationships, in choices, in speech?",
+            "Were my thoughts, words, and deeds aligned today?",
+            "Was there a moment today where I said one thing but meant another?",
+            "Where am I complicating something that could be simple?",
             "What untold truth, if spoken simply and kindly, would bring relief to my heart?",
         ],
-        "prompt":   'Were my thoughts, words, and deeds aligned today? Where did I take the easy crooked path instead of the simple straight one?',
-                    "Where did I take the easy crooked path instead of the simple straight one?",
-        "quote":    "God resides in the hearts of all. But only those <strong>blessed ones</strong> "
-                    "who have kept their <strong>heart pure</strong> can experience it.",
+        "quote": "God resides in the hearts of all. But only those <strong>blessed ones</strong> who have kept their <strong>heart pure</strong> can experience it.",
     },
     {
-        "value":    "ācāryopāsanam",
-        "english":  "Service to the Teacher",
+        "value":      "ācāryopāsanam",
+        "english":    "Service to the Teacher",
         "devanagari": "आचार्योपासनम्",
-        "verse":    "BG 13.7",
+        "verse":      "BG 13.7",
         "definition": "Devoted service and reverence to one's spiritual teacher (Guru).",
-        "teaching": "The Guru is the channel through which the eternal teaching flows. "
-                    "Upāsana means 'sitting near' — not just physically, but with surrender, "
-                    "attentiveness, and a heart ready to receive. Without a Guru, the scriptures "
-                    "remain mere words.",
+        "teaching":   "The Guru is the channel through which the eternal teaching flows. Upāsana means 'sitting near' — not just physically, but with surrender, attentiveness, and a heart ready to receive. Without a Guru, the scriptures remain mere words.",
         "prompts": [
-            "How am I honoring my teachers — past and present? What teaching am I currently studying and applying?",
+            "How am I honoring my teachers — past and present?",
             "Which of Swamiji's teachings has touched me most deeply this week? How am I living it?",
             "Whom can I think of as my teacher in daily life — colleagues, family, even challenges?",
             "If I had ten minutes with my Guru today, what would I want to ask or share?",
         ],
-        "prompt":   'How am I honoring my teachers — past and present? What teaching am I currently studying and applying?',
-                    "What teaching am I currently studying and applying?",
-        "quote":    "Remember, in life, the <strong>only permanent relationship</strong> "
-                    "is our relationship with <strong>God</strong>.",
+        "quote": "Remember, in life, the <strong>only permanent relationship</strong> is our relationship with <strong>God</strong>.",
     },
     {
-        "value":    "śaucam",
-        "english":  "Purity",
+        "value":      "śaucam",
+        "english":    "Purity",
         "devanagari": "शौचम्",
-        "verse":    "BG 13.7",
+        "verse":      "BG 13.7",
         "definition": "Cleanliness — both external (body, surroundings) and internal (mind, thoughts).",
-        "teaching": "External cleanliness reflects inner cleanliness. The mind cleansed of "
-                    "raga (attachment), dveṣa (aversion), and ahaṅkāra (ego) becomes a fit "
-                    "vessel for higher knowledge. As Swamiji teaches — God resides in a pure heart.",
+        "teaching":   "External cleanliness reflects inner cleanliness. The mind cleansed of raga (attachment), dveṣa (aversion), and ahaṅkāra (ego) becomes a fit vessel for higher knowledge. God resides in a pure heart.",
         "prompts": [
-            "What is the state of my mind today — clear or cluttered? What thoughts can I release to invite more purity?",
-            "What media, conversations, or environments influenced my inner state today? Which felt purifying?",
-            "Is there a corner of my home, life, or mind that needs cleansing? Where shall I begin?",
-            "How did my external environment affect my internal state today, or vice versa?",
+            "What is the state of my mind today — clear or cluttered?",
+            "What media, conversations, or environments influenced my inner state today?",
+            "Is there a corner of my home, life, or mind that needs cleansing?",
+            "How did my external environment affect my internal state today?",
         ],
-        "prompt":   'What is the state of my mind today — clear or cluttered? What thoughts can I release to invite more purity?',
-                    "What thoughts can I release to invite more purity?",
-        "quote":    "God is not someone who can be seen through the naked eyes. "
-                    "He is someone who can be experienced in a <strong>pure heart</strong>.",
+        "quote": "God is not someone who can be seen through the naked eyes. He is someone who can be experienced in a <strong>pure heart</strong>.",
     },
     {
-        "value":    "sthairyam",
-        "english":  "Steadfastness",
+        "value":      "sthairyam",
+        "english":    "Steadfastness",
         "devanagari": "स्थैर्यम्",
-        "verse":    "BG 13.7",
+        "verse":      "BG 13.7",
         "definition": "Steadiness and perseverance in spiritual practice, especially in difficulties.",
-        "teaching": "The path is long and the obstacles many. Sthairyam is the inner resolve "
-                    "that says — 'I will continue, whatever may come.' It is not enthusiasm "
-                    "of a moment but the quiet determination of a lifetime.",
+        "teaching":   "The path is long and the obstacles many. Sthairyam is the inner resolve that says — 'I will continue, whatever may come.' It is not enthusiasm of a moment but the quiet determination of a lifetime.",
         "prompts": [
-            "Did I waver in my practice today? What strengthens my resolve? What weakens it, and how can I guard against that?",
-            "What spiritual practice have I been inconsistent with lately? What's the smallest step to resume?",
-            "When I felt like giving up today, what kept me going? Can I trust that strength tomorrow?",
+            "Did I waver in my practice today? What strengthens my resolve?",
+            "What spiritual practice have I been inconsistent with lately?",
+            "When I felt like giving up today, what kept me going?",
             "Where am I demanding quick results when steady practice is what's needed?",
         ],
-        "prompt":   'Did I waver in my practice today? What strengthens my resolve? What weakens it, and how can I guard against that?',
-                    "What weakens it, and how can I guard against that?",
-        "quote":    "Reforming oneself is like <strong>chiselling a stone</strong> to perfection!",
+        "quote": "Reforming oneself is like <strong>chiselling a stone</strong> to perfection!",
     },
     {
-        "value":    "ātmavinigrahaḥ",
-        "english":  "Self-Control",
+        "value":      "ātmavinigrahaḥ",
+        "english":    "Self-Control",
         "devanagari": "आत्मविनिग्रहः",
-        "verse":    "BG 13.7",
+        "verse":      "BG 13.7",
         "definition": "Control of the senses and mind — not allowing them to run unchecked.",
-        "teaching": "The senses by nature run outward, seeking objects of pleasure. "
-                    "Ātma-vinigraha is the conscious choice to direct them inward, "
-                    "toward the Self. Not by suppression, but by wisdom — knowing that "
-                    "lasting joy is within, not in fleeting objects.",
+        "teaching":   "The senses by nature run outward, seeking objects of pleasure. Ātma-vinigraha is the conscious choice to direct them inward, toward the Self. Not by suppression, but by wisdom.",
         "prompts": [
-            "Where did my senses pull me today? Did I respond with awareness or impulsively? What am I learning about my impulses?",
-            "Which sense-craving keeps returning despite knowing it doesn't truly satisfy?",
-            "When did I act mindfully today, and when did I act on autopilot?",
-            "What single sense-pleasure am I willing to moderate this week as a form of tapas?",
+            "Where did my senses pull me today? Did I respond with awareness or impulsively?",
+            "Which sense-craving keeps returning despite knowing it doesn't satisfy?",
+            "When did I act mindfully today versus on autopilot?",
+            "What single sense-pleasure am I willing to moderate this week?",
         ],
-        "prompt":   'Where did my senses pull me today? Did I respond with awareness or impulsively? What am I learning about my impulses?',
-                    "awareness or impulsively? What am I learning about my impulses?",
-        "quote":    "Rate your <strong>spiritual progress</strong> with the "
-                    "<strong>intensity of Peace</strong> which you experience.",
+        "quote": "Rate your <strong>spiritual progress</strong> with the <strong>intensity of Peace</strong> which you experience.",
     },
     {
-        "value":    "vairāgyam",
-        "english":  "Dispassion",
+        "value":      "vairāgyam",
+        "english":    "Dispassion",
         "devanagari": "वैराग्यम्",
-        "verse":    "BG 13.8",
+        "verse":      "BG 13.8",
         "definition": "Dispassion toward sense objects — not attachment to pleasures of body or world.",
-        "teaching": "Vairāgya is not hatred of the world or escapism. It is the wisdom to "
-                    "engage fully with life without being enslaved by its objects. "
-                    "Like a lotus untouched by water — present yet free.",
+        "teaching":   "Vairāgya is not hatred of the world or escapism. It is the wisdom to engage fully with life without being enslaved by its objects. Like a lotus untouched by water — present yet free.",
         "prompts": [
-            "What do I cling to that brings me anxiety? Can I love fully without grasping?",
-            "What sense-pleasure am I overestimating right now? What does my experience actually show?",
+            "What do I cling to that brings me anxiety?",
+            "What sense-pleasure am I overestimating right now?",
             "If I lost what I'm most attached to, who would I still be?",
-            "Where is my mind running to throughout the day? What is it seeking that it cannot find there?",
+            "Where is my mind running throughout the day? What is it seeking?",
         ],
-        "prompt":   'What do I cling to that brings me anxiety? Can I love fully without grasping?',
-                    "Can I love fully without grasping?",
-        "quote":    "<strong>True happiness</strong> shouldn't be because of! "
-                    "<strong>True happiness</strong> should be in spite of!",
+        "quote": "<strong>True happiness</strong> shouldn't be because of! <strong>True happiness</strong> should be in spite of!",
     },
     {
-        "value":    "anahaṅkāra",
-        "english":  "Absence of Ego",
+        "value":      "anahaṅkāra",
+        "english":    "Absence of Ego",
         "devanagari": "अनहङ्कारः",
-        "verse":    "BG 13.8",
+        "verse":      "BG 13.8",
         "definition": "Freedom from the false sense of 'I' identifying with body, mind, and ego.",
-        "teaching": "The 'I' that takes credit, fears criticism, and seeks to be special — "
-                    "that is ahaṅkāra. The Self (Ātman) needs no recognition because it is "
-                    "already complete. Anahaṅkāra is the natural ease of one who knows this.",
+        "teaching":   "The 'I' that takes credit, fears criticism, and seeks to be special — that is ahaṅkāra. The Self needs no recognition because it is already complete. Anahaṅkāra is the natural ease of one who knows this.",
         "prompts": [
-            "Where did my ego assert itself today? Can I see the witness Self behind the ego's movements?",
-            "When did I take personal credit for what was really a collective effort or Īśvara's grace?",
+            "Where did my ego assert itself today?",
+            "When did I take personal credit for what was really collective effort or grace?",
             "What criticism stung me today? What does that reveal about my self-image?",
-            "Can I do one small act today without anyone knowing — purely for the joy of it?",
+            "Can I do one small act today without anyone knowing?",
         ],
-        "prompt":   "Where did my ego assert itself today? Can I see the witness Self behind the ego's movements?",
-                    "Can I see the witness Self behind the ego's movements?",
-        "quote":    "God resides in the hearts of all. But only those <strong>blessed ones</strong> "
-                    "who have kept their <strong>heart pure</strong> can experience it.",
+        "quote": "God resides in the hearts of all. But only those <strong>blessed ones</strong> who have kept their <strong>heart pure</strong> can experience it.",
     },
     {
-        "value":    "asaktiḥ",
-        "english":  "Non-Attachment",
+        "value":      "asaktiḥ",
+        "english":    "Non-Attachment",
         "devanagari": "असक्तिः",
-        "verse":    "BG 13.9",
+        "verse":      "BG 13.9",
         "definition": "Freedom from clinging — to people, possessions, situations, outcomes.",
-        "teaching": "Asakti does not mean cold detachment. It means the freedom that allows "
-                    "us to love deeply without dependence. We hold our relationships and "
-                    "responsibilities with open hands, not clenched fists.",
+        "teaching":   "Asakti does not mean cold detachment. It means the freedom that allows us to love deeply without dependence. We hold our relationships and responsibilities with open hands, not clenched fists.",
         "prompts": [
-            "What attachment is causing me suffering? Can I hold this lightly while still loving completely?",
+            "What attachment is causing me suffering?",
             "Where is my happiness conditional on someone else behaving a certain way?",
             "What possession, relationship, or role do I cling to as my identity?",
             "Can I love someone fully today without expecting anything in return?",
         ],
-        "prompt":   'What attachment is causing me suffering? Can I hold this lightly while still loving completely?',
-                    "Can I hold this lightly while still loving completely?",
-        "quote":    "Remember, in life, the <strong>only permanent relationship</strong> "
-                    "is our relationship with <strong>God</strong>.",
+        "quote": "Remember, in life, the <strong>only permanent relationship</strong> is our relationship with <strong>God</strong>.",
     },
     {
-        "value":    "samacittatvam",
-        "english":  "Equanimity",
+        "value":      "samacittatvam",
+        "english":    "Equanimity",
         "devanagari": "समचित्तत्वम्",
-        "verse":    "BG 13.9",
+        "verse":      "BG 13.9",
         "definition": "Evenness of mind in pleasant and unpleasant events, success and failure.",
-        "teaching": "Sama-citta is not indifference. It is the inner stability of one who "
-                    "knows that situations come and go, but the Self remains. Both praise "
-                    "and criticism are received with the same calm presence.",
+        "teaching":   "Sama-citta is not indifference. It is the inner stability of one who knows that situations come and go, but the Self remains. Both praise and criticism are received with the same calm presence.",
         "prompts": [
-            "Was I equally accepting of pleasant and unpleasant events today? Where did I lose my inner balance, and what helped restore it?",
-            "What event today disturbed me most? Where did the disturbance actually arise — outside or within?",
-            "Can I trace one situation where I was elated and one where I was depressed? What lay beneath both?",
-            "What would my day look like if I greeted every event — pleasant or not — as a teacher?",
+            "Was I equally accepting of pleasant and unpleasant events today?",
+            "What disturbed me most today? Where did the disturbance actually arise?",
+            "What moment of elation and what moment of low did I have today?",
+            "What if I greeted every event today as a teacher?",
         ],
-        "prompt":   'Was I equally accepting of pleasant and unpleasant events today? Where did I lose my inner balance, and what helped restore it?',
-                    "Where did I lose my inner balance, and what helped restore it?",
-        "quote":    "Rate your <strong>spiritual progress</strong> with the "
-                    "<strong>intensity of Peace</strong> which you experience.",
+        "quote": "Rate your <strong>spiritual progress</strong> with the <strong>intensity of Peace</strong> which you experience.",
     },
     {
-        "value":    "bhakti avyabhicāriṇī",
-        "english":  "Unswerving Devotion",
+        "value":      "bhakti avyabhicāriṇī",
+        "english":    "Unswerving Devotion",
         "devanagari": "भक्तिरव्यभिचारिणी",
-        "verse":    "BG 13.10",
+        "verse":      "BG 13.10",
         "definition": "Single-pointed, unwavering devotion to the Lord, without distraction.",
-        "teaching": "Bhakti is not emotional excitement. It is the steady flow of love and "
-                    "remembrance of God in all moments — in joy and sorrow, success and failure. "
-                    "Like oil poured continuously, unbroken, unswerving.",
+        "teaching":   "Bhakti is not emotional excitement. It is the steady flow of love and remembrance of God in all moments — in joy and sorrow, success and failure. Like oil poured continuously, unbroken.",
         "prompts": [
-            "How did I remember the Divine today? What practices help me stay connected throughout the day?",
+            "How did I remember the Divine today?",
             "When was I most aware of the Lord's presence today? When did I forget?",
-            "What single act today can I offer up as worship — cooking, walking, listening?",
-            "If God walked into my room right now, what would I want to say or simply feel?",
+            "What single act today can I offer up as worship?",
+            "If God walked into my room right now, what would I want to feel or say?",
         ],
-        "prompt":   'How did I remember the Divine today? What practices help me stay connected throughout the day?',
-                    "What practices help me stay connected throughout the day?",
-        "quote":    "Whatever you may offer — it doesn't matter. What Bhagavān sees is "
-                    "the <strong>devotion</strong> with which you offer.",
+        "quote": "Whatever you may offer — it doesn't matter. What Bhagavān sees is the <strong>devotion</strong> with which you offer.",
     },
     {
-        "value":    "viveka",
-        "english":  "Discrimination",
+        "value":      "viveka",
+        "english":    "Discrimination",
         "devanagari": "विवेक",
-        "verse":    "BG 13.11",
+        "verse":      "BG 13.11",
         "definition": "Discrimination between the real (eternal) and the unreal (transient).",
-        "teaching": "Viveka is the prime faculty of the seeker. Everything in this world is "
-                    "transient — relationships, success, body itself. Only the Self is eternal. "
-                    "The wise person constantly turns the mind toward the imperishable.",
+        "teaching":   "Viveka is the prime faculty of the seeker. Everything in this world is transient — relationships, success, body itself. Only the Self is eternal. The wise person constantly turns the mind toward the imperishable.",
         "prompts": [
-            "Where did I confuse the temporary with the permanent today? What is unchanging in my experience right now?",
-            "What am I treating as a problem to be solved that is actually the nature of the world to be accepted?",
-            "If everything in this world is changing, what within me is the unchanging witness?",
-            "What did I assume was real today that, on reflection, was just a thought or projection?",
+            "Where did I confuse the temporary with the permanent today?",
+            "What am I treating as a problem when it's just the nature of the world?",
+            "If everything in this world is changing, what within me is unchanging?",
+            "What did I assume was real today that, on reflection, was just a thought?",
         ],
-        "prompt":   'Where did I confuse the temporary with the permanent today? What is unchanging in my experience right now?',
-                    "What is unchanging in my experience right now?",
-        "quote":    "That which is <strong>infinite, all-pervading</strong> cannot have a form. "
-                    "But for the sake of the devotee, Bhagawān <strong>takes up a form</strong>.",
+        "quote": "That which is <strong>infinite, all-pervading</strong> cannot have a form. But for the sake of the devotee, Bhagawān <strong>takes up a form</strong>.",
     },
     {
-        "value":    "abhayaṁ",
-        "english":  "Fearlessness",
+        "value":      "abhayaṁ",
+        "english":    "Fearlessness",
         "devanagari": "अभयम्",
-        "verse":    "BG 16.1",
+        "verse":      "BG 16.1",
         "definition": "Freedom from fear — the first of the daivī sampat (divine qualities).",
-        "teaching": "Fear arises from a sense of separation — from God, from the Self, from "
-                    "the wholeness of existence. The realized one is fearless because they "
-                    "know nothing can be lost — the Self is forever full and eternal.",
+        "teaching":   "Fear arises from a sense of separation — from God, from the Self, from the wholeness of existence. The realized one is fearless because they know nothing can be lost — the Self is forever full and eternal.",
         "prompts": [
-            "What fear is holding me back today? What would I do if I knew I was truly safe and supported?",
+            "What fear is holding me back today?",
             "What is the worst-case scenario I'm imagining? Even then, would the Self be untouched?",
             "Where is my fear pretending to be wisdom or caution?",
             "What truth do I know but am afraid to act upon?",
         ],
-        "prompt":   'What fear is holding me back today? What would I do if I knew I was truly safe and supported?',
-                    "What would I do if I knew I was truly safe and supported?",
-        "quote":    "Remember, in life, the <strong>only permanent relationship</strong> "
-                    "is our relationship with <strong>God</strong>.",
+        "quote": "Remember, in life, the <strong>only permanent relationship</strong> is our relationship with <strong>God</strong>.",
     },
     {
-        "value":    "sattva-saṁśuddhiḥ",
-        "english":  "Purity of Mind",
+        "value":      "sattva-saṁśuddhiḥ",
+        "english":    "Purity of Mind",
         "devanagari": "सत्त्वसंशुद्धिः",
-        "verse":    "BG 16.1",
+        "verse":      "BG 16.1",
         "definition": "Purity of inner antaḥkaraṇa (mind, intellect, ego) — established in sattva.",
-        "teaching": "When the mind is pure, it reflects the Self clearly — like a polished mirror "
-                    "reflecting the sun. Sattvic qualities — clarity, peace, contentment — emerge "
-                    "naturally. The grossness of rajas and tamas falls away.",
+        "teaching":   "When the mind is pure, it reflects the Self clearly — like a polished mirror reflecting the sun. Sattvic qualities — clarity, peace, contentment — emerge naturally.",
         "prompts": [
-            "What thoughts dominated my mind today — peaceful, restless, or dull? What can I do to cultivate more sattva tomorrow?",
+            "What thoughts dominated my mind today — peaceful, restless, or dull?",
             "What did I consume today — food, media, conversations — and what state of mind did it produce?",
             "Which of my habits foster clarity, and which dull or agitate my mind?",
             "What sattvic practice can I add tomorrow — silence, study, prayer, sattvic food, nature?",
         ],
-        "prompt":   'What thoughts dominated my mind today — peaceful, restless, or dull? What can I do to cultivate more sattva tomorrow?',
-                    "What can I do to cultivate more sattva tomorrow?",
-        "quote":    "God is not someone who can be seen through the naked eyes. "
-                    "He is someone who can be experienced in a <strong>pure heart</strong>.",
+        "quote": "God is not someone who can be seen through the naked eyes. He is someone who can be experienced in a <strong>pure heart</strong>.",
     },
     {
-        "value":    "satyam",
-        "english":  "Truthfulness",
+        "value":      "satyam",
+        "english":    "Truthfulness",
         "devanagari": "सत्यम्",
-        "verse":    "BG 16.2",
+        "verse":      "BG 16.2",
         "definition": "Truthfulness in word and thought — saying what is real, beneficial, and kind.",
-        "teaching": "Satyam is not blunt truth-telling. The scriptures say: truth that hurts "
-                    "is not satyam in its highest sense. Speak truth that is beneficial, kind, "
-                    "and necessary. And above all — be truthful with yourself.",
+        "teaching":   "Satyam is not blunt truth-telling. The scriptures say: truth that hurts is not satyam in its highest sense. Speak truth that is beneficial, kind, and necessary. And above all — be truthful with yourself.",
         "prompts": [
-            "Was I truthful today — to myself and to others? Where did I shade or hide the truth, and why?",
+            "Was I truthful today — to myself and to others?",
             "What truth am I avoiding because it's uncomfortable to face?",
             "Was there a moment today when a small white lie felt easier? What was I protecting?",
             "How do I speak truth that is also kind and necessary, not just blunt?",
         ],
-        "prompt":   'Was I truthful today — to myself and to others? Where did I shade or hide the truth, and why?',
-                    "Where did I shade or hide the truth, and why?",
-        "quote":    "A heart filled with <strong>noble emotions</strong> like kindness, "
-                    "compassion, mercy, truthfulness, honesty — such a heart is called a "
-                    "<strong>pure heart</strong>.",
+        "quote": "A heart filled with <strong>noble emotions</strong> like kindness, compassion, mercy, truthfulness, honesty — such a heart is called a <strong>pure heart</strong>.",
     },
     {
-        "value":    "dānam",
-        "english":  "Charity / Generosity",
+        "value":      "dānam",
+        "english":    "Charity / Generosity",
         "devanagari": "दानम्",
-        "verse":    "BG 16.1",
+        "verse":      "BG 16.1",
         "definition": "The spirit of giving — of time, attention, resources, knowledge, kindness.",
-        "teaching": "True dāna is given without expectation of return, at the right time, "
-                    "to the right person, in the right way. Dāna purifies the giver as much "
-                    "as it helps the receiver. The act of giving releases attachment.",
+        "teaching":   "True dāna is given without expectation of return, at the right time, to the right person, in the right way. Dāna purifies the giver as much as it helps the receiver. The act of giving releases attachment.",
         "prompts": [
-            "How did I give today — of myself, my time, my resources? What is the inner motivation behind my giving?",
+            "How did I give today — of myself, my time, my resources?",
             "Did I give expecting something in return — recognition, gratitude, future reciprocation?",
             "Whom around me needs my time or attention more than my money?",
-            "What can I give today without telling anyone? What does silent giving feel like?",
+            "What can I give today without telling anyone?",
         ],
-        "prompt":   'How did I give today — of myself, my time, my resources? What is the inner motivation behind my giving?',
-                    "What is the inner motivation behind my giving?",
-        "quote":    "Whatever you may offer — it doesn't matter. What Bhagavān sees is "
-                    "the <strong>devotion</strong> with which you offer.",
+        "quote": "Whatever you may offer — it doesn't matter. What Bhagavān sees is the <strong>devotion</strong> with which you offer.",
     },
     {
-        "value":    "tapas",
-        "english":  "Austerity / Discipline",
+        "value":      "tapas",
+        "english":    "Austerity / Discipline",
         "devanagari": "तपस्",
-        "verse":    "BG 16.1",
+        "verse":      "BG 16.1",
         "definition": "Voluntary discipline of body, speech, and mind for spiritual growth.",
-        "teaching": "Tapas is not self-torture. It is the conscious choice to undertake "
-                    "discipline that purifies and strengthens. It includes regularity in practice, "
-                    "moderation in eating and speech, and gentleness in thought. Tapas burns away "
-                    "the dross of impurities.",
+        "teaching":   "Tapas is not self-torture. It is the conscious choice to undertake discipline that purifies and strengthens. It includes regularity in practice, moderation in eating and speech, and gentleness in thought.",
         "prompts": [
-            "What sādhana did I undertake today? Where did I choose discipline over comfort?",
-            "What small daily discipline can I commit to this week — silence, fasting, study, service?",
+            "What sādhana did I undertake today?",
+            "What small daily discipline can I commit to this week?",
             "Where am I being indulgent in a way that weakens rather than serves me?",
             "What discomfort can I welcome today as a teacher rather than resist as an enemy?",
         ],
-        "prompt":   'What sādhana did I undertake today? Where did I choose discipline over comfort?',
-                    "Where did I choose discipline over comfort?",
-        "quote":    "Reforming oneself is like <strong>chiselling a stone</strong> to perfection!",
+        "quote": "Reforming oneself is like <strong>chiselling a stone</strong> to perfection!",
     },
 ]
 
 
 def get_today_value():
-    """Pick today's value AND today's prompt — both rotate daily."""
+    """Pick today's value AND today's prompt — both rotate."""
     today_ordinal = date.today().toordinal()
-    value_idx = today_ordinal % len(DAILY_VALUES)
-    # Cycle through 4 prompts within each value, also rotating across days
-    prompt_idx = (today_ordinal // len(DAILY_VALUES)) % 4
+    value_idx     = today_ordinal % len(DAILY_VALUES)
+    prompt_idx    = (today_ordinal // len(DAILY_VALUES)) % 4
     return DAILY_VALUES[value_idx], value_idx, prompt_idx
 
 
 def get_prompt(value: dict, prompt_idx: int) -> str:
-    """Get the prompt for today, or fallback to single prompt."""
-    prompts = value.get("prompts", [value.get("prompt", "")])
+    prompts = value.get("prompts", [])
     if not prompts:
-        return value.get("prompt", "")
+        return ""
     return prompts[prompt_idx % len(prompts)]
 
 
-# ── CSS ────────────────────────────────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
+# Page CSS — Royal Maroon
+# ══════════════════════════════════════════════════════════════════════════════
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,600&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap');
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#1A0F0A;color:#F5E6C8;}
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#2A0F0F;color:#F5E6C8;}
 h1,h2,h3{font-family:'Playfair Display',serif!important;color:#D4AF37!important;}
-div[data-testid="stSidebar"]{background:linear-gradient(180deg,#2C1810,#4A2818)!important;border-right:2px solid #5C3820;}
+div[data-testid="stSidebar"]{background:linear-gradient(180deg,#4A1F1F,#6A2828)!important;border-right:2px solid #D4AF37;}
 div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important;}
-.stButton>button{background:linear-gradient(135deg,#FF8C42,#FFB07A);color:white!important;
+.stButton>button{background:linear-gradient(135deg,#C0392B,#E74C3C);color:white!important;
     border:none;border-radius:8px;font-weight:700;padding:.6rem 1.4rem;transition:all .3s;}
-.stButton>button:hover{background:linear-gradient(135deg,#D4AF37,#FF8C42);transform:translateY(-2px);}
+.stButton>button:hover{background:linear-gradient(135deg,#8B1A1A,#C0392B);transform:translateY(-2px);}
 
 .page-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;
     color:#D4AF37;text-align:center;margin:.5rem 0 .2rem;}
 .page-subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;
-    color:#FF8C42;text-align:center;font-size:1.15rem;margin-bottom:2rem;}
+    color:#FFD89A;text-align:center;font-size:1.15rem;margin-bottom:2rem;}
 .date-badge{text-align:center;font-family:'Lato',sans-serif;font-size:.85rem;
     color:#D4AF37;font-weight:700;letter-spacing:1.5px;margin-bottom:1.5rem;}
 
-.hero-value{background:linear-gradient(135deg,#2C1810 0%,#3D2418 50%,#2C1810 100%);
-    border:2px solid #5C3820;border-radius:20px;padding:3rem 2rem;text-align:center;
-    margin-bottom:2rem;box-shadow:0 4px 24px rgba(0,0,0,.10);position:relative;}
-.hero-value::before{content:"🪷";position:absolute;top:-20px;left:50%;transform:translateX(-50%);
-    background:#1A0F0A;border:2px solid #5C3820;border-radius:50%;width:50px;height:50px;
-    display:flex;align-items:center;justify-content:center;font-size:1.5rem;}
+.hero-value{background:linear-gradient(135deg,#4A1F1F,#5A2424);
+    border:2px solid #D4AF37;border-radius:20px;padding:3rem 2rem;text-align:center;
+    margin-bottom:2rem;box-shadow:0 4px 24px rgba(192,57,43,.20);position:relative;}
 .value-sanskrit{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:3.5rem;font-weight:700;color:#D4AF37;line-height:1.1;margin-bottom:.3rem;}
+    font-size:3.5rem;font-weight:700;color:#FFD89A;line-height:1.1;margin-bottom:.3rem;}
 .value-devanagari{font-family:'Cormorant Garamond',serif;font-size:1.8rem;
     color:#D4AF37;margin-bottom:.5rem;}
 .value-english{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;
-    color:#B8956B;margin-bottom:.5rem;}
+    color:#FFB07A;margin-bottom:.5rem;}
 .value-verse{font-family:'Lato',sans-serif;font-size:.85rem;color:#D4AF37;
     font-weight:700;letter-spacing:2px;text-transform:uppercase;}
 
-.content-card{background:#2C1810;border:1.5px solid #5C3820;border-radius:14px;
+.content-card{background:#4A1F1F;border:1.5px solid #8B3A2E;border-radius:14px;
     padding:1.8rem 2rem;margin-bottom:1.5rem;
-    box-shadow:0 2px 12px rgba(0,0,0,.06);}
+    box-shadow:0 2px 12px rgba(0,0,0,.3);}
 .card-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;
     color:#D4AF37;margin-bottom:.8rem;padding-bottom:.4rem;
-    border-bottom:1.5px solid #5C3820;display:flex;align-items:center;gap:.6rem;}
-.card-text{color:#F5E6C8;font-size:.95rem;line-height:1.85;
-    font-family:'Lato',sans-serif;}
+    border-bottom:1.5px solid #8B3A2E;display:flex;align-items:center;gap:.6rem;}
+.card-text{color:#F5E6C8;font-size:.95rem;line-height:1.85;font-family:'Lato',sans-serif;}
 .card-prompt{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.15rem;color:#F5E6C8;line-height:1.75;
-    padding:1rem 1.4rem;background:#2C1810;border-radius:10px;
+    font-size:1.15rem;color:#FFD89A;line-height:1.75;
+    padding:1rem 1.4rem;background:#5A2424;border-radius:10px;
     border-left:4px solid #D4AF37;}
 
-.swamiji-card{background:linear-gradient(135deg,#2C1810,#1A0F0A);
-    border:2px solid #5C3820;border-left:5px solid #FF8C42;
+.swamiji-card{background:linear-gradient(135deg,#4A1F1F,#2A0F0F);
+    border:2px solid #D4AF37;border-left:5px solid #C0392B;
     border-radius:0 14px 14px 0;padding:1.5rem 1.8rem;margin-bottom:1.5rem;
-    box-shadow:0 2px 12px rgba(0,0,0,.07);}
+    box-shadow:0 2px 12px rgba(192,57,43,.20);}
 .swamiji-text{font-family:'Cormorant Garamond',serif;font-style:italic;
     font-size:1.25rem;font-weight:700;color:#F5E6C8;line-height:1.7;text-align:center;}
 .swamiji-attr{font-family:'Playfair Display',serif;color:#FF8C42;
     font-size:1rem;font-weight:700;text-align:center;margin-top:.7rem;}
-
-.cta-card{background:linear-gradient(135deg,#2C1810,#3D2418);
-    border:2px solid #5C3820;border-radius:14px;padding:1.5rem;text-align:center;
-    margin-top:1rem;}
-.cta-text{font-family:'Cormorant Garamond',serif;font-style:italic;
-    color:#C9A961;font-size:1rem;margin-bottom:.8rem;}
 </style>
 """, unsafe_allow_html=True)
 
@@ -524,9 +410,12 @@ st.markdown('<div class="page-subtitle">A daily contemplation companion 🪷</di
 
 today_value, today_idx, prompt_idx = get_today_value()
 today_prompt = get_prompt(today_value, prompt_idx)
-st.markdown(f'<div class="date-badge">{date.today().strftime("%A, %B %d, %Y")} · '
-            f'Day {today_idx + 1} of {len(DAILY_VALUES)}</div>',
-            unsafe_allow_html=True)
+
+st.markdown(
+    f'<div class="date-badge">{date.today().strftime("%A, %B %d, %Y")} · '
+    f'Day {today_idx + 1} of {len(DAILY_VALUES)}</div>',
+    unsafe_allow_html=True,
+)
 
 # ── Hero — Today's Value ───────────────────────────────────────────────────────
 st.markdown(f"""
@@ -558,7 +447,7 @@ st.markdown(f"""
 st.markdown(f"""
 <div class="swamiji-card">
     <div class="swamiji-text">&ldquo;{today_value['quote']}&rdquo;</div>
-    <div class="swamiji-attr">— Swāmī Aparājitānandajī</div>
+    <div class="swamiji-attr">— Pūjya Swāmī Aparājitānandajī</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -570,15 +459,7 @@ st.markdown(f"""
 </div>
 """, unsafe_allow_html=True)
 
-# ── Call to Action ─────────────────────────────────────────────────────────────
-st.markdown("""
-<div class="cta-card">
-    <div class="cta-text">
-        Want to write your reflection on this value?
-    </div>
-</div>
-""", unsafe_allow_html=True)
-
+# ── Action Buttons ─────────────────────────────────────────────────────────────
 col1, col2 = st.columns(2)
 with col1:
     if st.button("📔 Open Reflection Journal", use_container_width=True):
@@ -591,31 +472,24 @@ with col2:
         )
         st.switch_page("pages/2_Indispensable_Values_QA.py")
 
-# ── Browse Other Values Section ───────────────────────────────────────────────
+# ── Browse Other Values ───────────────────────────────────────────────────────
 st.markdown("<br>", unsafe_allow_html=True)
 with st.expander("🌿 Explore another value"):
-    st.markdown(
-        "<p style='color:#C9A961;font-size:.9rem;margin-bottom:.8rem;'>"
-        "Browse all 20 values from Bhagavad Gītā Chapters 13 &amp; 16. "
-        "Click any to see its full contemplation.</p>",
-        unsafe_allow_html=True,
-    )
     cols = st.columns(2)
     for i, v in enumerate(DAILY_VALUES):
         with cols[i % 2]:
-            label = f"{v['value']} — {v['english']}"
-            if st.button(label, key=f"v_{i}", use_container_width=True):
+            if st.button(f"{v['value']} — {v['english']}",
+                         key=f"v_{i}", use_container_width=True):
                 st.session_state["selected_value_idx"] = i
                 st.rerun()
 
-# ── If a specific value was selected from browse ──────────────────────────────
+# ── Selected value view ────────────────────────────────────────────────────────
 if "selected_value_idx" in st.session_state:
     sel_idx = st.session_state["selected_value_idx"]
     if sel_idx != today_idx:
         sel = DAILY_VALUES[sel_idx]
+        sel_prompt = get_prompt(sel, prompt_idx)
         st.divider()
-        st.markdown(f"<h3 style='text-align:center;'>📖 {sel['value']} — {sel['english']}</h3>",
-                    unsafe_allow_html=True)
         st.markdown(f"""
         <div class="hero-value">
             <div class="value-sanskrit">{sel['value']}</div>
@@ -633,23 +507,13 @@ if "selected_value_idx" in st.session_state:
         </div>
         <div class="swamiji-card">
             <div class="swamiji-text">&ldquo;{sel['quote']}&rdquo;</div>
-            <div class="swamiji-attr">— Swāmī Aparājitānandajī</div>
+            <div class="swamiji-attr">— Pūjya Swāmī Aparājitānandajī</div>
         </div>
         <div class="content-card">
             <div class="card-title">✍️ Reflection Prompt</div>
-            <div class="card-prompt">{sel['prompt']}</div>
+            <div class="card-prompt">{sel_prompt}</div>
         </div>
         """, unsafe_allow_html=True)
         if st.button("🗙 Close this view"):
             del st.session_state["selected_value_idx"]
             st.rerun()
-
-# ── Footer ─────────────────────────────────────────────────────────────────────
-st.markdown("<br>", unsafe_allow_html=True)
-st.markdown("""
-<div style="text-align:center;color:#B8956B;font-size:.85rem;font-family:'Cormorant Garamond',serif;
-    font-style:italic;padding:1rem;border-top:1.5px solid #5C3820;margin-top:2rem;">
-    🪷 &nbsp; A new value appears each day. &nbsp; 🪷<br>
-    Spend a few moments today contemplating its meaning in your life.
-</div>
-""", unsafe_allow_html=True)

@@ -18,14 +18,14 @@ ASSETS = Path(__file__).parent.parent / "assets" / "images"
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,600&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap');
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#1A0F0A;color:#F5E6C8;}
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#2A0F0F;color:#F5E6C8;}
 h1,h2,h3{font-family:'Playfair Display',serif!important;color:#D4AF37!important;}
-div[data-testid="stSidebar"]{background:linear-gradient(180deg,#2C1810,#4A2818)!important;border-right:2px solid #D4AF37;}
+div[data-testid="stSidebar"]{background:linear-gradient(180deg,#4A1F1F,#6A2828)!important;border-right:2px solid #D4AF37;}
 div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important;}
 
 /* ── Hero — Om inside title box, all centered ── */
 .title-box{
-    background:linear-gradient(135deg,#2C1810,#3D2418);
+    background:linear-gradient(135deg,#4A1F1F,#5A2424);
     border:2px solid #D4AF37;border-radius:20px;
     padding:2.5rem 2rem 2rem;text-align:center;
     max-width:760px;margin:0 auto 2rem;
@@ -44,7 +44,7 @@ div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important
     color:#FFD89A;
     margin:.3rem 0;
 }
-.page-title span{color:#FF8C42;}
+.page-title span{color:#C0392B;}
 .diamonds{color:#D4AF37;font-size:1.2rem;letter-spacing:10px;margin:.8rem 0 0;}
 
 /* ── Centered section labels ── */
@@ -62,9 +62,9 @@ div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important
     object-fit:cover!important;
     object-position:top center!important;
     border:5px solid transparent!important;
-    background:linear-gradient(#1A0F0A,#1A0F0A) padding-box,
-               linear-gradient(135deg,#D4AF37,#FF8C42,#D4AF37,#FFD89A) border-box!important;
-    box-shadow:0 8px 30px rgba(255,140,66,.25)!important;
+    background:linear-gradient(#2A0F0F,#2A0F0F) padding-box,
+               linear-gradient(135deg,#D4AF37,#C0392B,#D4AF37,#FFD89A) border-box!important;
+    box-shadow:0 8px 30px rgba(192,57,43,.25)!important;
 }
 
 /* ── Photo captions — centered ── */
@@ -73,17 +73,17 @@ div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important
     color:#FFD89A;text-align:center;margin:1rem 0 .2rem;
 }
 .photo-title{
-    font-family:'Cormorant Garamond',serif;font-style:italic;color:#FF8C42;
+    font-family:'Cormorant Garamond',serif;font-style:italic;color:#C0392B;
     font-size:1rem;text-align:center;margin-bottom:.3rem;
 }
 .photo-sub{font-size:.85rem;color:#B8956B;font-style:italic;text-align:center;}
 
-.gold-line{border:none;border-top:1.5px solid #5C3820;
+.gold-line{border:none;border-top:1.5px solid #8B3A2E;
     margin:2rem auto;max-width:500px;}
 
 /* ── Gratitude text box ── */
 .gratitude-box{
-    background:#2C1810;border:1.5px solid #5C3820;border-left:5px solid #FF8C42;
+    background:#4A1F1F;border:1.5px solid #8B3A2E;border-left:5px solid #C0392B;
     border-radius:14px;padding:2rem 2.5rem;margin:1.5rem auto;max-width:760px;
     box-shadow:0 4px 16px rgba(0,0,0,.3);text-align:left;
 }
@@ -94,17 +94,17 @@ div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important
     font-size:1.05rem;color:#FFD89A;line-height:1.9;margin-bottom:.9rem;}
 
 /* ── Quotes ── */
-.swamiji-quote{background:#2C1810;border-left:5px solid #FF8C42;
+.swamiji-quote{background:#4A1F1F;border-left:5px solid #C0392B;
     border-radius:0 14px 14px 0;padding:1.3rem 1.8rem;margin:1rem auto;max-width:760px;
     font-family:'Cormorant Garamond',serif;font-style:italic;
     font-size:1.1rem;font-weight:700;color:#F5E6C8;line-height:1.8;
     box-shadow:0 2px 8px rgba(0,0,0,.3);}
 .swamiji-quote-attr{font-family:'Playfair Display',serif;font-style:normal;
-    font-size:.95rem;font-weight:700;color:#FF8C42;margin-top:.6rem;}
+    font-size:.95rem;font-weight:700;color:#C0392B;margin-top:.6rem;}
 
 /* ── Mantra box ── */
 .mantra-box{
-    background:linear-gradient(135deg,#2C1810,#3D2418);
+    background:linear-gradient(135deg,#4A1F1F,#5A2424);
     border:2px solid #D4AF37;border-radius:14px;
     padding:1.8rem 2rem;margin:1.5rem auto;max-width:760px;text-align:center;
 }
@@ -168,7 +168,7 @@ with ca:
                     unsafe_allow_html=True)
 
 st.markdown('''
-<div class="photo-name">Swāmī Aparājitānandajī</div>
+<div class="photo-name">Pūjya Swāmī Aparājitānandajī</div>
 <div class="photo-title">Chinmaya Mission</div>
 ''', unsafe_allow_html=True)
 
@@ -178,7 +178,7 @@ st.markdown('''<div class="gratitude-box">
     <div class="gratitude-para">With deep reverence and devotion, we offer our humble
     pranāms and heartfelt gratitude to <strong>Pūjya Gurudev Swāmī Chinmayānandajī</strong>,
     whose tireless vision brought the light of Vedanta to millions of seekers across the world.</div>
-    <div class="gratitude-para">To <strong>Swāmī Aparājitānandajī</strong>, we offer sincere
+    <div class="gratitude-para">To <strong>Pūjya Swāmī Aparājitānandajī</strong>, we offer sincere
     gratitude for his extraordinary ability to unfold the profound truths of Vedānta with
     remarkable clarity and simplicity. His tireless dedication inspires deeper inquiry,
     reflection, and understanding in every seeker.</div>
@@ -209,7 +209,7 @@ st.markdown('''<div class="mantra-box">
     <div class="mantra-meaning">Lead me from untruth to Truth · From darkness to Light<br>
     From mortality to Immortality · Om Peace Peace Peace</div>
 </div>
-<div style="text-align:center;margin-top:1rem;color:#FF8C42;
+<div style="text-align:center;margin-top:1rem;color:#C0392B;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;">
     🪷 &nbsp; Hari Om &nbsp; 🪷
 </div>''', unsafe_allow_html=True)
