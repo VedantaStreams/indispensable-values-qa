@@ -37,7 +37,13 @@ DAILY_VALUES = [
                     "has seen the infinite Self and recognizes the same Self in all beings. "
                     "True humility arises from the understanding that whatever talents or "
                     "accomplishments we possess have been given by Īśvara.",
-        "prompt":   "Reflect: Where did I seek recognition or praise today? "
+        "prompts": [
+            "Where did I seek recognition or praise today? Can I dedicate my actions and accomplishments to the Lord?",
+            "When did I feel offended that someone didn't acknowledge me? What does this reveal about my ego?",
+            "Whose contribution did I overlook or take for granted today? How can I express gratitude?",
+            "If no one was watching, would I still do my good deeds with the same energy? Why or why not?",
+        ],
+        "prompt":   'Where did I seek recognition or praise today? Can I dedicate my actions and accomplishments to the Lord?',
                     "Can I dedicate my actions and accomplishments to the Lord?",
         "quote":    "Reforming oneself is like <strong>chiselling a stone</strong> to perfection!",
     },
@@ -51,7 +57,13 @@ DAILY_VALUES = [
         "teaching": "Where there is dambha (hypocrisy/show), there is a gap between what we "
                     "are inside and what we project outside. The seeker walks a path of "
                     "inner-outer alignment — being the same in private as in public.",
-        "prompt":   "Reflect: Where am I projecting an image rather than being authentic? "
+        "prompts": [
+            "Where am I projecting an image rather than being authentic? How can I bring my outer behavior in alignment with my inner truth?",
+            "Did I exaggerate my achievements or spiritual practices to impress someone today?",
+            "In which relationship do I feel I must wear a mask? What would happen if I removed it?",
+            "Where in my social media or conversations do I display rather than simply share?",
+        ],
+        "prompt":   'Where am I projecting an image rather than being authentic? How can I bring my outer behavior in alignment with my inner truth?',
                     "How can I bring my outer behavior in alignment with my inner truth?",
         "quote":    "<strong>True happiness</strong> shouldn't be because of! "
                     "<strong>True happiness</strong> should be in spite of!",
@@ -65,7 +77,13 @@ DAILY_VALUES = [
         "teaching": "Ahiṃsā is not merely avoiding physical violence. It includes harsh words, "
                     "cutting remarks, hateful thoughts, and indifference to others' suffering. "
                     "It is positive love and compassion, not just the absence of cruelty.",
-        "prompt":   "Reflect: Did I cause hurt today — by word, action, or thought? "
+        "prompts": [
+            "Did I cause hurt today — by word, action, or thought? How can I practice greater tenderness in all my relationships?",
+            "When did I speak harshly today? What was happening inside me at that moment?",
+            "Whose pain did I notice today, and how did I respond — with compassion or indifference?",
+            "Am I being harsh with myself in any way? Where can I extend kindness inward first?",
+        ],
+        "prompt":   'Did I cause hurt today — by word, action, or thought? How can I practice greater tenderness in all my relationships?',
                     "How can I practice greater tenderness in all my relationships?",
         "quote":    "A heart filled with <strong>noble emotions</strong> like kindness, "
                     "compassion, mercy, truthfulness, honesty — such a heart is called a "
@@ -80,7 +98,13 @@ DAILY_VALUES = [
         "teaching": "Kṣānti is not weakness or suppression. It is the strength to remain "
                     "unaffected when wronged, knowing that anger only burns the one who holds it. "
                     "The mighty one is not who can strike back, but who can forgive.",
-        "prompt":   "Reflect: What tested my patience today? Did I respond with peace "
+        "prompts": [
+            "What tested my patience today? Did I respond with peace or with reactivity? What can I forgive today?",
+            "Whom have I not yet forgiven? What is the cost of holding on to this resentment?",
+            "When I was wronged today, did I react or respond? What helps me pause before reacting?",
+            "What story am I telling myself about a past hurt? Is there another way to see it?",
+        ],
+        "prompt":   'What tested my patience today? Did I respond with peace or with reactivity? What can I forgive today?',
                     "or with reactivity? What can I forgive today?",
         "quote":    "Rate your <strong>spiritual progress</strong> with the "
                     "<strong>intensity of Peace</strong> which you experience.",
@@ -94,7 +118,13 @@ DAILY_VALUES = [
         "teaching": "Ārjavam is the simplicity of one whose inner and outer lives are unified. "
                     "What is thought is spoken; what is spoken is acted upon. There is no "
                     "duplicity, no hidden agenda, no double-dealing.",
-        "prompt":   "Reflect: Were my thoughts, words, and deeds aligned today? "
+        "prompts": [
+            "Were my thoughts, words, and deeds aligned today? Where did I take the easy crooked path instead of the simple straight one?",
+            "Was there a moment today where I said one thing but meant another? Why?",
+            "Where am I complicating something that could be simple — in relationships, in choices, in speech?",
+            "What untold truth, if spoken simply and kindly, would bring relief to my heart?",
+        ],
+        "prompt":   'Were my thoughts, words, and deeds aligned today? Where did I take the easy crooked path instead of the simple straight one?',
                     "Where did I take the easy crooked path instead of the simple straight one?",
         "quote":    "God resides in the hearts of all. But only those <strong>blessed ones</strong> "
                     "who have kept their <strong>heart pure</strong> can experience it.",
@@ -109,7 +139,13 @@ DAILY_VALUES = [
                     "Upāsana means 'sitting near' — not just physically, but with surrender, "
                     "attentiveness, and a heart ready to receive. Without a Guru, the scriptures "
                     "remain mere words.",
-        "prompt":   "Reflect: How am I honoring my teachers — past and present? "
+        "prompts": [
+            "How am I honoring my teachers — past and present? What teaching am I currently studying and applying?",
+            "Which of Swamiji's teachings has touched me most deeply this week? How am I living it?",
+            "Whom can I think of as my teacher in daily life — colleagues, family, even challenges?",
+            "If I had ten minutes with my Guru today, what would I want to ask or share?",
+        ],
+        "prompt":   'How am I honoring my teachers — past and present? What teaching am I currently studying and applying?',
                     "What teaching am I currently studying and applying?",
         "quote":    "Remember, in life, the <strong>only permanent relationship</strong> "
                     "is our relationship with <strong>God</strong>.",
@@ -123,7 +159,13 @@ DAILY_VALUES = [
         "teaching": "External cleanliness reflects inner cleanliness. The mind cleansed of "
                     "raga (attachment), dveṣa (aversion), and ahaṅkāra (ego) becomes a fit "
                     "vessel for higher knowledge. As Swamiji teaches — God resides in a pure heart.",
-        "prompt":   "Reflect: What is the state of my mind today — clear or cluttered? "
+        "prompts": [
+            "What is the state of my mind today — clear or cluttered? What thoughts can I release to invite more purity?",
+            "What media, conversations, or environments influenced my inner state today? Which felt purifying?",
+            "Is there a corner of my home, life, or mind that needs cleansing? Where shall I begin?",
+            "How did my external environment affect my internal state today, or vice versa?",
+        ],
+        "prompt":   'What is the state of my mind today — clear or cluttered? What thoughts can I release to invite more purity?',
                     "What thoughts can I release to invite more purity?",
         "quote":    "God is not someone who can be seen through the naked eyes. "
                     "He is someone who can be experienced in a <strong>pure heart</strong>.",
@@ -137,7 +179,13 @@ DAILY_VALUES = [
         "teaching": "The path is long and the obstacles many. Sthairyam is the inner resolve "
                     "that says — 'I will continue, whatever may come.' It is not enthusiasm "
                     "of a moment but the quiet determination of a lifetime.",
-        "prompt":   "Reflect: Did I waver in my practice today? What strengthens my resolve? "
+        "prompts": [
+            "Did I waver in my practice today? What strengthens my resolve? What weakens it, and how can I guard against that?",
+            "What spiritual practice have I been inconsistent with lately? What's the smallest step to resume?",
+            "When I felt like giving up today, what kept me going? Can I trust that strength tomorrow?",
+            "Where am I demanding quick results when steady practice is what's needed?",
+        ],
+        "prompt":   'Did I waver in my practice today? What strengthens my resolve? What weakens it, and how can I guard against that?',
                     "What weakens it, and how can I guard against that?",
         "quote":    "Reforming oneself is like <strong>chiselling a stone</strong> to perfection!",
     },
@@ -151,7 +199,13 @@ DAILY_VALUES = [
                     "Ātma-vinigraha is the conscious choice to direct them inward, "
                     "toward the Self. Not by suppression, but by wisdom — knowing that "
                     "lasting joy is within, not in fleeting objects.",
-        "prompt":   "Reflect: Where did my senses pull me today? Did I respond with "
+        "prompts": [
+            "Where did my senses pull me today? Did I respond with awareness or impulsively? What am I learning about my impulses?",
+            "Which sense-craving keeps returning despite knowing it doesn't truly satisfy?",
+            "When did I act mindfully today, and when did I act on autopilot?",
+            "What single sense-pleasure am I willing to moderate this week as a form of tapas?",
+        ],
+        "prompt":   'Where did my senses pull me today? Did I respond with awareness or impulsively? What am I learning about my impulses?',
                     "awareness or impulsively? What am I learning about my impulses?",
         "quote":    "Rate your <strong>spiritual progress</strong> with the "
                     "<strong>intensity of Peace</strong> which you experience.",
@@ -165,7 +219,13 @@ DAILY_VALUES = [
         "teaching": "Vairāgya is not hatred of the world or escapism. It is the wisdom to "
                     "engage fully with life without being enslaved by its objects. "
                     "Like a lotus untouched by water — present yet free.",
-        "prompt":   "Reflect: What do I cling to that brings me anxiety? "
+        "prompts": [
+            "What do I cling to that brings me anxiety? Can I love fully without grasping?",
+            "What sense-pleasure am I overestimating right now? What does my experience actually show?",
+            "If I lost what I'm most attached to, who would I still be?",
+            "Where is my mind running to throughout the day? What is it seeking that it cannot find there?",
+        ],
+        "prompt":   'What do I cling to that brings me anxiety? Can I love fully without grasping?',
                     "Can I love fully without grasping?",
         "quote":    "<strong>True happiness</strong> shouldn't be because of! "
                     "<strong>True happiness</strong> should be in spite of!",
@@ -179,7 +239,13 @@ DAILY_VALUES = [
         "teaching": "The 'I' that takes credit, fears criticism, and seeks to be special — "
                     "that is ahaṅkāra. The Self (Ātman) needs no recognition because it is "
                     "already complete. Anahaṅkāra is the natural ease of one who knows this.",
-        "prompt":   "Reflect: Where did my ego assert itself today? "
+        "prompts": [
+            "Where did my ego assert itself today? Can I see the witness Self behind the ego's movements?",
+            "When did I take personal credit for what was really a collective effort or Īśvara's grace?",
+            "What criticism stung me today? What does that reveal about my self-image?",
+            "Can I do one small act today without anyone knowing — purely for the joy of it?",
+        ],
+        "prompt":   "Where did my ego assert itself today? Can I see the witness Self behind the ego's movements?",
                     "Can I see the witness Self behind the ego's movements?",
         "quote":    "God resides in the hearts of all. But only those <strong>blessed ones</strong> "
                     "who have kept their <strong>heart pure</strong> can experience it.",
@@ -193,7 +259,13 @@ DAILY_VALUES = [
         "teaching": "Asakti does not mean cold detachment. It means the freedom that allows "
                     "us to love deeply without dependence. We hold our relationships and "
                     "responsibilities with open hands, not clenched fists.",
-        "prompt":   "Reflect: What attachment is causing me suffering? "
+        "prompts": [
+            "What attachment is causing me suffering? Can I hold this lightly while still loving completely?",
+            "Where is my happiness conditional on someone else behaving a certain way?",
+            "What possession, relationship, or role do I cling to as my identity?",
+            "Can I love someone fully today without expecting anything in return?",
+        ],
+        "prompt":   'What attachment is causing me suffering? Can I hold this lightly while still loving completely?',
                     "Can I hold this lightly while still loving completely?",
         "quote":    "Remember, in life, the <strong>only permanent relationship</strong> "
                     "is our relationship with <strong>God</strong>.",
@@ -207,7 +279,13 @@ DAILY_VALUES = [
         "teaching": "Sama-citta is not indifference. It is the inner stability of one who "
                     "knows that situations come and go, but the Self remains. Both praise "
                     "and criticism are received with the same calm presence.",
-        "prompt":   "Reflect: Was I equally accepting of pleasant and unpleasant events today? "
+        "prompts": [
+            "Was I equally accepting of pleasant and unpleasant events today? Where did I lose my inner balance, and what helped restore it?",
+            "What event today disturbed me most? Where did the disturbance actually arise — outside or within?",
+            "Can I trace one situation where I was elated and one where I was depressed? What lay beneath both?",
+            "What would my day look like if I greeted every event — pleasant or not — as a teacher?",
+        ],
+        "prompt":   'Was I equally accepting of pleasant and unpleasant events today? Where did I lose my inner balance, and what helped restore it?',
                     "Where did I lose my inner balance, and what helped restore it?",
         "quote":    "Rate your <strong>spiritual progress</strong> with the "
                     "<strong>intensity of Peace</strong> which you experience.",
@@ -221,7 +299,13 @@ DAILY_VALUES = [
         "teaching": "Bhakti is not emotional excitement. It is the steady flow of love and "
                     "remembrance of God in all moments — in joy and sorrow, success and failure. "
                     "Like oil poured continuously, unbroken, unswerving.",
-        "prompt":   "Reflect: How did I remember the Divine today? "
+        "prompts": [
+            "How did I remember the Divine today? What practices help me stay connected throughout the day?",
+            "When was I most aware of the Lord's presence today? When did I forget?",
+            "What single act today can I offer up as worship — cooking, walking, listening?",
+            "If God walked into my room right now, what would I want to say or simply feel?",
+        ],
+        "prompt":   'How did I remember the Divine today? What practices help me stay connected throughout the day?',
                     "What practices help me stay connected throughout the day?",
         "quote":    "Whatever you may offer — it doesn't matter. What Bhagavān sees is "
                     "the <strong>devotion</strong> with which you offer.",
@@ -235,7 +319,13 @@ DAILY_VALUES = [
         "teaching": "Viveka is the prime faculty of the seeker. Everything in this world is "
                     "transient — relationships, success, body itself. Only the Self is eternal. "
                     "The wise person constantly turns the mind toward the imperishable.",
-        "prompt":   "Reflect: Where did I confuse the temporary with the permanent today? "
+        "prompts": [
+            "Where did I confuse the temporary with the permanent today? What is unchanging in my experience right now?",
+            "What am I treating as a problem to be solved that is actually the nature of the world to be accepted?",
+            "If everything in this world is changing, what within me is the unchanging witness?",
+            "What did I assume was real today that, on reflection, was just a thought or projection?",
+        ],
+        "prompt":   'Where did I confuse the temporary with the permanent today? What is unchanging in my experience right now?',
                     "What is unchanging in my experience right now?",
         "quote":    "That which is <strong>infinite, all-pervading</strong> cannot have a form. "
                     "But for the sake of the devotee, Bhagawān <strong>takes up a form</strong>.",
@@ -249,7 +339,13 @@ DAILY_VALUES = [
         "teaching": "Fear arises from a sense of separation — from God, from the Self, from "
                     "the wholeness of existence. The realized one is fearless because they "
                     "know nothing can be lost — the Self is forever full and eternal.",
-        "prompt":   "Reflect: What fear is holding me back today? "
+        "prompts": [
+            "What fear is holding me back today? What would I do if I knew I was truly safe and supported?",
+            "What is the worst-case scenario I'm imagining? Even then, would the Self be untouched?",
+            "Where is my fear pretending to be wisdom or caution?",
+            "What truth do I know but am afraid to act upon?",
+        ],
+        "prompt":   'What fear is holding me back today? What would I do if I knew I was truly safe and supported?',
                     "What would I do if I knew I was truly safe and supported?",
         "quote":    "Remember, in life, the <strong>only permanent relationship</strong> "
                     "is our relationship with <strong>God</strong>.",
@@ -263,7 +359,13 @@ DAILY_VALUES = [
         "teaching": "When the mind is pure, it reflects the Self clearly — like a polished mirror "
                     "reflecting the sun. Sattvic qualities — clarity, peace, contentment — emerge "
                     "naturally. The grossness of rajas and tamas falls away.",
-        "prompt":   "Reflect: What thoughts dominated my mind today — peaceful, restless, or dull? "
+        "prompts": [
+            "What thoughts dominated my mind today — peaceful, restless, or dull? What can I do to cultivate more sattva tomorrow?",
+            "What did I consume today — food, media, conversations — and what state of mind did it produce?",
+            "Which of my habits foster clarity, and which dull or agitate my mind?",
+            "What sattvic practice can I add tomorrow — silence, study, prayer, sattvic food, nature?",
+        ],
+        "prompt":   'What thoughts dominated my mind today — peaceful, restless, or dull? What can I do to cultivate more sattva tomorrow?',
                     "What can I do to cultivate more sattva tomorrow?",
         "quote":    "God is not someone who can be seen through the naked eyes. "
                     "He is someone who can be experienced in a <strong>pure heart</strong>.",
@@ -277,7 +379,13 @@ DAILY_VALUES = [
         "teaching": "Satyam is not blunt truth-telling. The scriptures say: truth that hurts "
                     "is not satyam in its highest sense. Speak truth that is beneficial, kind, "
                     "and necessary. And above all — be truthful with yourself.",
-        "prompt":   "Reflect: Was I truthful today — to myself and to others? "
+        "prompts": [
+            "Was I truthful today — to myself and to others? Where did I shade or hide the truth, and why?",
+            "What truth am I avoiding because it's uncomfortable to face?",
+            "Was there a moment today when a small white lie felt easier? What was I protecting?",
+            "How do I speak truth that is also kind and necessary, not just blunt?",
+        ],
+        "prompt":   'Was I truthful today — to myself and to others? Where did I shade or hide the truth, and why?',
                     "Where did I shade or hide the truth, and why?",
         "quote":    "A heart filled with <strong>noble emotions</strong> like kindness, "
                     "compassion, mercy, truthfulness, honesty — such a heart is called a "
@@ -292,7 +400,13 @@ DAILY_VALUES = [
         "teaching": "True dāna is given without expectation of return, at the right time, "
                     "to the right person, in the right way. Dāna purifies the giver as much "
                     "as it helps the receiver. The act of giving releases attachment.",
-        "prompt":   "Reflect: How did I give today — of myself, my time, my resources? "
+        "prompts": [
+            "How did I give today — of myself, my time, my resources? What is the inner motivation behind my giving?",
+            "Did I give expecting something in return — recognition, gratitude, future reciprocation?",
+            "Whom around me needs my time or attention more than my money?",
+            "What can I give today without telling anyone? What does silent giving feel like?",
+        ],
+        "prompt":   'How did I give today — of myself, my time, my resources? What is the inner motivation behind my giving?',
                     "What is the inner motivation behind my giving?",
         "quote":    "Whatever you may offer — it doesn't matter. What Bhagavān sees is "
                     "the <strong>devotion</strong> with which you offer.",
@@ -307,7 +421,13 @@ DAILY_VALUES = [
                     "discipline that purifies and strengthens. It includes regularity in practice, "
                     "moderation in eating and speech, and gentleness in thought. Tapas burns away "
                     "the dross of impurities.",
-        "prompt":   "Reflect: What sādhana did I undertake today? "
+        "prompts": [
+            "What sādhana did I undertake today? Where did I choose discipline over comfort?",
+            "What small daily discipline can I commit to this week — silence, fasting, study, service?",
+            "Where am I being indulgent in a way that weakens rather than serves me?",
+            "What discomfort can I welcome today as a teacher rather than resist as an enemy?",
+        ],
+        "prompt":   'What sādhana did I undertake today? Where did I choose discipline over comfort?',
                     "Where did I choose discipline over comfort?",
         "quote":    "Reforming oneself is like <strong>chiselling a stone</strong> to perfection!",
     },
@@ -315,9 +435,20 @@ DAILY_VALUES = [
 
 
 def get_today_value():
-    """Pick today's value based on day of year — rotates daily."""
-    idx = date.today().toordinal() % len(DAILY_VALUES)
-    return DAILY_VALUES[idx], idx
+    """Pick today's value AND today's prompt — both rotate daily."""
+    today_ordinal = date.today().toordinal()
+    value_idx = today_ordinal % len(DAILY_VALUES)
+    # Cycle through 4 prompts within each value, also rotating across days
+    prompt_idx = (today_ordinal // len(DAILY_VALUES)) % 4
+    return DAILY_VALUES[value_idx], value_idx, prompt_idx
+
+
+def get_prompt(value: dict, prompt_idx: int) -> str:
+    """Get the prompt for today, or fallback to single prompt."""
+    prompts = value.get("prompts", [value.get("prompt", "")])
+    if not prompts:
+        return value.get("prompt", "")
+    return prompts[prompt_idx % len(prompts)]
 
 
 # ── CSS ────────────────────────────────────────────────────────────────────────
@@ -391,7 +522,8 @@ st.markdown('<div class="page-title">Value of the Day</div>', unsafe_allow_html=
 st.markdown('<div class="page-subtitle">A daily contemplation companion 🪷</div>',
             unsafe_allow_html=True)
 
-today_value, today_idx = get_today_value()
+today_value, today_idx, prompt_idx = get_today_value()
+today_prompt = get_prompt(today_value, prompt_idx)
 st.markdown(f'<div class="date-badge">{date.today().strftime("%A, %B %d, %Y")} · '
             f'Day {today_idx + 1} of {len(DAILY_VALUES)}</div>',
             unsafe_allow_html=True)
@@ -434,7 +566,7 @@ st.markdown(f"""
 st.markdown(f"""
 <div class="content-card">
     <div class="card-title">✍️ Today's Reflection</div>
-    <div class="card-prompt">{today_value['prompt']}</div>
+    <div class="card-prompt">{today_prompt}</div>
 </div>
 """, unsafe_allow_html=True)
 

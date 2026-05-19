@@ -157,8 +157,8 @@ st.markdown('''
         <span class="feat-dot">❖</span>
     </div>
     <div class="hero-verse">
-        "amānitvam adambhitvam ahiṃsā kṣāntir ārjavam ācāryopāsanaṁ
-        śaucaṁ sthairyam ātmavinigrahaḥ" — Bhagavad Gītā 13.7
+        "amānitvam adambhitvam ahiṃsā kṣāntir ārjavam..." — Bhagavad Gītā 13.7–11<br>
+        "abhayaṁ sattva-saṁśuddhiḥ jñāna-yoga-vyavasthitiḥ..." — Bhagavad Gītā 16.1–3
     </div>
 </div>
 ''', unsafe_allow_html=True)
@@ -172,7 +172,9 @@ render_page_quote(
 st.markdown('''
 <div class="intro-block">
     <p><strong>Indispensable Values Q&amp;A</strong> is a RAG-based AI study companion
-    inspired by the timeless wisdom of the Bhagavad Gītā, Chapter 13, as unfolded by
+    inspired by the timeless wisdom of the Bhagavad Gītā — Chapters <strong>13</strong>
+    (the 20 indispensable values, jñāna sādhana) and <strong>16</strong>
+    (daivī sampat &amp; āsurī sampat — divine and demoniac qualities) — as unfolded by
     <strong>Pūjya Swāmī Aparājitānandajī</strong>. Created for sincere seekers and
     students of Vedānta, the app invites you to explore questions on values, inner growth,
     relationships, discipline, and spiritual living through the lens of Swamiji's
@@ -231,11 +233,25 @@ for col, (icon, title, desc) in zip([c1,c2,c3], cards):
 
 c4, c5, c6 = st.columns(3)
 cards2 = [
+    ("🪷","Value of the Day","Daily contemplation on one of the 20 indispensable values with reflection prompt."),
+    ("📔","Reflection Journal","A private journal to write your reflections on Swamiji's teachings."),
+    ("📚","Source Library","Browse all indexed sources — discourses, books, and articles."),
+]
+for col, (icon, title, desc) in zip([c4,c5,c6], cards2):
+    with col:
+        st.markdown(f'''<div class="nav-card">
+            <div class="nav-card-icon">{icon}</div>
+            <div class="nav-card-title">{title}</div>
+            <div class="nav-card-desc">{desc}</div>
+        </div>''', unsafe_allow_html=True)
+
+c7, c8, c9 = st.columns(3)
+cards3 = [
     ("✨","About the App","What this app does, how it works, and what makes it unique."),
     ("❓","FAQ","Frequently asked questions about the app, answers, and knowledge base."),
     ("📱","Get the App","How to access, share, and add the app to your phone."),
 ]
-for col, (icon, title, desc) in zip([c4,c5,c6], cards2):
+for col, (icon, title, desc) in zip([c7,c8,c9], cards3):
     with col:
         st.markdown(f'''<div class="nav-card">
             <div class="nav-card-icon">{icon}</div>

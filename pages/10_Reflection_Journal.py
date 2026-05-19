@@ -49,130 +49,258 @@ VALUE_PROMPTS = [
     {
         "value": "amānitvam",
         "english": "Humility",
-        "prompt": "When did I feel proud or seek recognition today? "
+        "prompts": [
+            "When did I feel proud or seek recognition today? Can I see this as an opportunity to practice humility?",
+            "Whose contribution did I overlook today? How can I appreciate them more?",
+            "If no one was watching, would my actions today have been the same?",
+            "What does my reaction to being ignored or criticized reveal about my ego?",
+        ],
+        "prompt":   'When did I feel proud or seek recognition today? Can I see this as an opportunity to practice humility?',
                   "Can I see this as an opportunity to practice humility?",
     },
     {
         "value": "adambhitvam",
         "english": "Absence of hypocrisy",
-        "prompt": "Where in my life is my outer behaviour different from my "
+        "prompts": [
+            "Where in my life is my outer behaviour different from my inner thoughts? How can I move toward inner-outer alignment?",
+            "Did I exaggerate or embellish anything today to impress someone?",
+            "In which area of my life am I wearing a mask? What would happen if I removed it?",
+            "Where do I display my achievements rather than simply being content with them?",
+        ],
+        "prompt":   'Where in my life is my outer behaviour different from my inner thoughts? How can I move toward inner-outer alignment?',
                   "inner thoughts? How can I move toward inner-outer alignment?",
     },
     {
         "value": "ahiṃsā",
         "english": "Non-injury",
-        "prompt": "Did I cause hurt today — by word, thought, or deed? "
+        "prompts": [
+            "Did I cause hurt today — by word, thought, or deed? How can I practice gentleness with myself and others?",
+            "Whose pain did I notice today? How did I respond?",
+            "Am I being harsh with myself in any way today?",
+            "When did I speak unkindly today? What was beneath that unkindness?",
+        ],
+        "prompt":   'Did I cause hurt today — by word, thought, or deed? How can I practice gentleness with myself and others?',
                   "How can I practice gentleness with myself and others?",
     },
     {
         "value": "kṣāntiḥ",
         "english": "Forbearance",
-        "prompt": "What tested my patience today? Did I forgive easily, "
+        "prompts": [
+            "What tested my patience today? Did I forgive easily, or did I hold on to the hurt?",
+            "Whom have I not yet fully forgiven? What is the cost of holding that resentment?",
+            "When was I provoked today? Did I pause before reacting?",
+            "What old hurt am I still carrying? Can I release a small piece of it today?",
+        ],
+        "prompt":   'What tested my patience today? Did I forgive easily, or did I hold on to the hurt?',
                   "or did I hold on to the hurt?",
     },
     {
         "value": "ārjavam",
         "english": "Simplicity",
-        "prompt": "Were my thoughts, words, and actions in alignment today? "
+        "prompts": [
+            "Were my thoughts, words, and actions in alignment today? Where did I complicate what could have been simple?",
+            "Where did I say one thing but mean another?",
+            "What truth, spoken simply and kindly, would lighten my heart?",
+            "Where am I taking a crooked path when a straight one is available?",
+        ],
+        "prompt":   'Were my thoughts, words, and actions in alignment today? Where did I complicate what could have been simple?',
                   "Where did I complicate what could have been simple?",
     },
     {
         "value": "ācāryopāsanam",
         "english": "Devotion to teacher",
-        "prompt": "How did I honour my teachers — past or present — today? "
+        "prompts": [
+            "How did I honour my teachers — past or present — today? What teaching am I currently reflecting upon?",
+            "Which of Swamiji's teachings touched me most deeply this week? How am I living it?",
+            "If I had ten minutes with my Guru today, what would I most want to ask?",
+            "Who in my life teaches me through their being, not just their words?",
+        ],
+        "prompt":   'How did I honour my teachers — past or present — today? What teaching am I currently reflecting upon?',
                   "What teaching am I currently reflecting upon?",
     },
     {
         "value": "śaucam",
         "english": "Purity",
-        "prompt": "How is the state of my mind today — clear or cluttered? "
+        "prompts": [
+            "How is the state of my mind today — clear or cluttered? What can I let go of to invite more purity?",
+            "What media, conversations, or environments influenced my inner state today?",
+            "Is there an area of my home, life, or mind that needs cleansing? Where shall I begin?",
+            "What thought-pattern is muddying my mind that I can release?",
+        ],
+        "prompt":   'How is the state of my mind today — clear or cluttered? What can I let go of to invite more purity?',
                   "What can I let go of to invite more purity?",
     },
     {
         "value": "sthairyam",
         "english": "Steadfastness",
-        "prompt": "Did I waver in my sādhana today? What kept me going, "
+        "prompts": [
+            "Did I waver in my sādhana today? What kept me going, or what made me give up?",
+            "What spiritual practice have I been inconsistent with? What's the smallest step to resume?",
+            "When did I feel like giving up today? What gave me strength to continue?",
+            "Where am I demanding quick results when steady effort is what's needed?",
+        ],
+        "prompt":   'Did I waver in my sādhana today? What kept me going, or what made me give up?',
                   "or what made me give up?",
     },
     {
         "value": "ātmavinigrahaḥ",
         "english": "Self-control",
-        "prompt": "Where did my senses pull me today? How did I respond — "
+        "prompts": [
+            "Where did my senses pull me today? How did I respond — with awareness or reactively?",
+            "Which sense-craving keeps returning despite knowing it doesn't satisfy?",
+            "When did I act mindfully today versus on autopilot?",
+            "What one sense-pleasure can I gently moderate this week?",
+        ],
+        "prompt":   'Where did my senses pull me today? How did I respond — with awareness or reactively?',
                   "with awareness or reactively?",
     },
     {
         "value": "vairāgyam",
         "english": "Dispassion",
-        "prompt": "What did I cling to today — possessions, opinions, outcomes? "
+        "prompts": [
+            "What did I cling to today — possessions, opinions, outcomes? Can I sit with the freedom of holding things lightly?",
+            "Where am I overestimating a sense-pleasure? What does my experience really show?",
+            "If I lost what I'm most attached to, who would I still be?",
+            "What is my mind chasing today that it cannot find there?",
+        ],
+        "prompt":   'What did I cling to today — possessions, opinions, outcomes? Can I sit with the freedom of holding things lightly?',
                   "Can I sit with the freedom of holding things lightly?",
     },
     {
         "value": "anahaṅkāra",
         "english": "Absence of ego",
-        "prompt": "Where did my sense of 'I' assert itself today? "
+        "prompts": [
+            "Where did my sense of 'I' assert itself today? Can I see the Self that observes the ego?",
+            "Where did I claim credit that was really collective effort or Īśvara's grace?",
+            "What criticism stung me today? What does that reveal about my self-image?",
+            "Can I do a small kind act today without anyone knowing?",
+        ],
+        "prompt":   "Where did my sense of 'I' assert itself today? Can I see the Self that observes the ego?",
                   "Can I see the Self that observes the ego?",
     },
     {
         "value": "asaktiḥ",
         "english": "Non-attachment",
-        "prompt": "What am I attached to that brings me anxiety? "
+        "prompts": [
+            "What am I attached to that brings me anxiety? Can I love without clinging today?",
+            "Where is my happiness conditional on someone behaving a certain way?",
+            "What role or identity am I clinging to as 'me'?",
+            "Can I love someone today without expecting anything in return?",
+        ],
+        "prompt":   'What am I attached to that brings me anxiety? Can I love without clinging today?',
                   "Can I love without clinging today?",
     },
     {
         "value": "samacittatvam",
         "english": "Equanimity",
-        "prompt": "Was I equally accepting of pleasant and unpleasant events today? "
+        "prompts": [
+            "Was I equally accepting of pleasant and unpleasant events today? Where did I lose my balance?",
+            "What disturbed me most today? Where did the disturbance actually arise — outside or within?",
+            "What moment of elation and what moment of low did I have today? What lay beneath both?",
+            "What if I greeted every event today as a teacher?",
+        ],
+        "prompt":   'Was I equally accepting of pleasant and unpleasant events today? Where did I lose my balance?',
                   "Where did I lose my balance?",
     },
     {
         "value": "bhakti avyabhicāriṇī",
         "english": "Unswerving devotion",
-        "prompt": "How did I remember the Divine today? "
+        "prompts": [
+            "How did I remember the Divine today? What deepens my devotion?",
+            "When was I most aware of the Lord's presence today? When did I forget?",
+            "What single act today can I offer up as worship?",
+            "If God walked into my room right now, what would I want to feel or say?",
+        ],
+        "prompt":   'How did I remember the Divine today? What deepens my devotion?',
                   "What deepens my devotion?",
     },
     {
         "value": "viveka",
         "english": "Discrimination",
-        "prompt": "Where did I confuse the real with the unreal today? "
+        "prompts": [
+            "Where did I confuse the real with the unreal today? What is permanent, what is fleeting?",
+            "What am I treating as a problem when it's just the nature of the world?",
+            "What within me is the unchanging witness amid all change?",
+            "What did I assume was real today that, on reflection, was just thought?",
+        ],
+        "prompt":   'Where did I confuse the real with the unreal today? What is permanent, what is fleeting?',
                   "What is permanent, what is fleeting?",
     },
     {
         "value": "abhayaṁ",
         "english": "Fearlessness (BG 16.1)",
-        "prompt": "What fear is holding me back today? "
+        "prompts": [
+            "What fear is holding me back today? What would I do if I were not afraid?",
+            "What is my worst-case scenario? Even then, would my essential Self be untouched?",
+            "Where is fear masquerading as wisdom or caution?",
+            "What truth do I know but am afraid to act upon?",
+        ],
+        "prompt":   'What fear is holding me back today? What would I do if I were not afraid?',
                   "What would I do if I were not afraid?",
     },
     {
         "value": "sattva-saṁśuddhiḥ",
         "english": "Purity of mind (BG 16.1)",
-        "prompt": "What thoughts dominated my mind today — sattvic, rajasic, "
+        "prompts": [
+            "What thoughts dominated my mind today — sattvic, rajasic, or tamasic? How can I cultivate more sattva?",
+            "What did I consume today — food, media, conversations — and what mental state did it produce?",
+            "Which habits foster clarity in me, and which dull or agitate me?",
+            "What sattvic practice can I add tomorrow — silence, study, prayer, sattvic food, time in nature?",
+        ],
+        "prompt":   'What thoughts dominated my mind today — sattvic, rajasic, or tamasic? How can I cultivate more sattva?',
                   "or tamasic? How can I cultivate more sattva?",
     },
     {
         "value": "satyam",
         "english": "Truthfulness (BG 16.2)",
-        "prompt": "Was I truthful today — to myself and others? "
+        "prompts": [
+            "Was I truthful today — to myself and others? Where did I stretch or hide the truth?",
+            "What truth am I avoiding because it's uncomfortable to face?",
+            "When did a small white lie feel easier today? What was I protecting?",
+            "How can I speak truth that is also kind and necessary?",
+        ],
+        "prompt":   'Was I truthful today — to myself and others? Where did I stretch or hide the truth?',
                   "Where did I stretch or hide the truth?",
     },
     {
         "value": "dānam",
         "english": "Charity (BG 16.1)",
-        "prompt": "How did I give today — of my time, attention, resources? "
+        "prompts": [
+            "How did I give today — of my time, attention, resources? What is the spirit behind my giving?",
+            "Did I give expecting something in return today — recognition, gratitude, reciprocity?",
+            "Whom near me needs my time more than my money?",
+            "What can I give silently today, without telling anyone?",
+        ],
+        "prompt":   'How did I give today — of my time, attention, resources? What is the spirit behind my giving?',
                   "What is the spirit behind my giving?",
     },
     {
         "value": "tapas",
         "english": "Austerity (BG 16.1)",
-        "prompt": "What sādhana did I undertake today? "
+        "prompts": [
+            "What sādhana did I undertake today? Where did I choose discipline over comfort?",
+            "What small daily discipline can I commit to this week?",
+            "Where am I being indulgent in a way that weakens me?",
+            "What discomfort can I welcome today as a teacher?",
+        ],
+        "prompt":   'What sādhana did I undertake today? Where did I choose discipline over comfort?',
                   "Where did I choose discipline over comfort?",
     },
 ]
 
 
 def get_today_value():
-    """Pick today's value based on day of year (rotates daily)."""
-    idx = date.today().toordinal() % len(VALUE_PROMPTS)
-    return VALUE_PROMPTS[idx]
+    """Pick today's value AND rotate through prompts daily."""
+    today_ordinal = date.today().toordinal()
+    idx = today_ordinal % len(VALUE_PROMPTS)
+    # Each value gets 4 day-cycles, then moves to next prompt
+    cycle = (today_ordinal // len(VALUE_PROMPTS)) % 4
+    value_copy = dict(VALUE_PROMPTS[idx])
+    # If multi-prompts exist, rotate; else use single
+    prompts = value_copy.get("prompts")
+    if prompts:
+        value_copy["prompt"] = prompts[cycle % len(prompts)]
+    return value_copy
 
 
 # ── Page CSS ───────────────────────────────────────────────────────────────────
