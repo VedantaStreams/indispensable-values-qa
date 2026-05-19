@@ -18,15 +18,15 @@ ASSETS = Path(__file__).parent.parent / "assets" / "images"
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,600&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap');
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#FFF8F0;color:#2C1810;}
-h1,h2,h3{font-family:'Playfair Display',serif!important;color:#8B4513!important;}
-div[data-testid="stSidebar"]{background:linear-gradient(180deg,#FFFFFF,#FFD9A8)!important;border-right:2px solid #8B4513;}
-div[data-testid="stSidebar"] *{color:#2C1810!important;font-weight:600!important;}
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#E8F4F6;color:#1A3A45;}
+h1,h2,h3{font-family:'Playfair Display',serif!important;color:#0A4A58!important;}
+div[data-testid="stSidebar"]{background:linear-gradient(180deg,#FFFFFF,#A8D8E0)!important;border-right:2px solid #0A4A58;}
+div[data-testid="stSidebar"] *{color:#1A3A45!important;font-weight:600!important;}
 
 /* ── Hero — Om inside title box, all centered ── */
 .title-box{
-    background:linear-gradient(135deg,#FFFFFF,#FFEDD9);
-    border:2px solid #8B4513;border-radius:20px;
+    background:linear-gradient(135deg,#FFFFFF,#D0EDF1);
+    border:2px solid #0A4A58;border-radius:20px;
     padding:2.5rem 2rem 2rem;text-align:center;
     max-width:760px;margin:0 auto 2rem;
     box-shadow:0 4px 24px rgba(0,0,0,.4);
@@ -34,23 +34,23 @@ div[data-testid="stSidebar"] *{color:#2C1810!important;font-weight:600!important
 .title-om{
     width:75px;height:75px;border-radius:14px;
     object-fit:contain;
-    border:2px solid #8B4513;
+    border:2px solid #0A4A58;
     box-shadow:0 4px 16px rgba(212,175,55,.20);
     margin-bottom:1.2rem;
 }
 .page-title{
     font-family:'Playfair Display',serif;
     font-size:2.4rem;font-weight:800;
-    color:#8B4513;
+    color:#1A7A8C;
     margin:.3rem 0;
 }
-.page-title span{color:#E67E22;}
-.diamonds{color:#8B4513;font-size:1.2rem;letter-spacing:10px;margin:.8rem 0 0;}
+.page-title span{color:#1A7A8C;}
+.diamonds{color:#0A4A58;font-size:1.2rem;letter-spacing:10px;margin:.8rem 0 0;}
 
 /* ── Centered section labels ── */
 .section-label{
     font-family:'Lato',sans-serif;font-size:.75rem;font-weight:700;
-    letter-spacing:4px;color:#8B4513;text-transform:uppercase;
+    letter-spacing:4px;color:#0A4A58;text-transform:uppercase;
     margin:2rem 0 1rem;text-align:center;
 }
 
@@ -62,55 +62,55 @@ div[data-testid="stSidebar"] *{color:#2C1810!important;font-weight:600!important
     object-fit:cover!important;
     object-position:top center!important;
     border:5px solid transparent!important;
-    background:linear-gradient(#FFF8F0,#FFF8F0) padding-box,
-               linear-gradient(135deg,#E67E22,#8B1A2A,#8B4513,#E67E22) border-box!important;
-    box-shadow:0 8px 30px rgba(230,126,34,.25)!important;
+    background:linear-gradient(#E8F4F6,#E8F4F6) padding-box,
+               linear-gradient(135deg,#0A4A58,#1A7A8C,#0A4A58,#1A7A8C) border-box!important;
+    box-shadow:0 8px 30px rgba(26,122,140,.25)!important;
 }
 
 /* ── Photo captions — centered ── */
 .photo-name{
     font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;
-    color:#8B4513;text-align:center;margin:1rem 0 .2rem;
+    color:#1A7A8C;text-align:center;margin:1rem 0 .2rem;
 }
 .photo-title{
-    font-family:'Cormorant Garamond',serif;font-style:italic;color:#E67E22;
+    font-family:'Cormorant Garamond',serif;font-style:italic;color:#1A7A8C;
     font-size:1rem;text-align:center;margin-bottom:.3rem;
 }
 .photo-sub{font-size:.85rem;color:#B8956B;font-style:italic;text-align:center;}
 
-.gold-line{border:none;border-top:1.5px solid #FFCC80;
+.gold-line{border:none;border-top:1.5px solid #88C5D0;
     margin:2rem auto;max-width:500px;}
 
 /* ── Gratitude text box ── */
 .gratitude-box{
-    background:#FFFFFF;border:1.5px solid #FFCC80;border-left:5px solid #E67E22;
+    background:#FFFFFF;border:1.5px solid #88C5D0;border-left:5px solid #1A7A8C;
     border-radius:14px;padding:2rem 2.5rem;margin:1.5rem auto;max-width:760px;
     box-shadow:0 4px 16px rgba(0,0,0,.3);text-align:left;
 }
 .gratitude-title{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;
-    color:#8B4513;margin-bottom:1rem;text-align:center;}
-.gratitude-para{color:#2C1810;font-size:.95rem;line-height:1.9;margin-bottom:.9rem;}
+    color:#1A7A8C;margin-bottom:1rem;text-align:center;}
+.gratitude-para{color:#1A3A45;font-size:.95rem;line-height:1.9;margin-bottom:.9rem;}
 .gratitude-italic{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.05rem;color:#8B4513;line-height:1.9;margin-bottom:.9rem;}
+    font-size:1.05rem;color:#1A7A8C;line-height:1.9;margin-bottom:.9rem;}
 
 /* ── Quotes ── */
-.swamiji-quote{background:#FFFFFF;border-left:5px solid #E67E22;
+.swamiji-quote{background:#FFFFFF;border-left:5px solid #1A7A8C;
     border-radius:0 14px 14px 0;padding:1.3rem 1.8rem;margin:1rem auto;max-width:760px;
     font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.1rem;font-weight:700;color:#2C1810;line-height:1.8;
+    font-size:1.1rem;font-weight:700;color:#1A3A45;line-height:1.8;
     box-shadow:0 2px 8px rgba(0,0,0,.3);}
 .swamiji-quote-attr{font-family:'Playfair Display',serif;font-style:normal;
-    font-size:.95rem;font-weight:700;color:#E67E22;margin-top:.6rem;}
+    font-size:.95rem;font-weight:700;color:#1A7A8C;margin-top:.6rem;}
 
 /* ── Mantra box ── */
 .mantra-box{
-    background:linear-gradient(135deg,#FFFFFF,#FFEDD9);
-    border:2px solid #8B4513;border-radius:14px;
+    background:linear-gradient(135deg,#FFFFFF,#D0EDF1);
+    border:2px solid #0A4A58;border-radius:14px;
     padding:1.8rem 2rem;margin:1.5rem auto;max-width:760px;text-align:center;
 }
 .mantra-text{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.2rem;color:#8B4513;line-height:2.2;font-weight:600;}
-.mantra-meaning{color:#5C3820;font-size:.88rem;margin-top:.8rem;font-style:italic;}
+    font-size:1.2rem;color:#1A7A8C;line-height:2.2;font-weight:600;}
+.mantra-meaning{color:#3A5C68;font-size:.88rem;margin-top:.8rem;font-style:italic;}
 
 /* No blank under images */
 [data-testid="stImage"]{margin-bottom:-1rem!important;padding-bottom:0!important;}
@@ -209,7 +209,7 @@ st.markdown('''<div class="mantra-box">
     <div class="mantra-meaning">Lead me from untruth to Truth · From darkness to Light<br>
     From mortality to Immortality · Om Peace Peace Peace</div>
 </div>
-<div style="text-align:center;margin-top:1rem;color:#E67E22;
+<div style="text-align:center;margin-top:1rem;color:#1A7A8C;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;">
     🪷 &nbsp; Hari Om &nbsp; 🪷
 </div>''', unsafe_allow_html=True)

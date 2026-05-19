@@ -15,7 +15,7 @@ _OM_CSS = """
 .om-symbol-center img {
     width:60px; height:60px; border-radius:12px;
     object-fit:contain;
-    border:2px solid #FFCC80;
+    border:2px solid #88C5D0;
     box-shadow:0 2px 10px rgba(0,0,0,.10);
 }
 .page-quote-block {
@@ -26,7 +26,7 @@ _OM_CSS = """
     font-style:italic;
     font-size:1.45rem;
     font-weight:700;
-    color:#2C1810;
+    color:#1A3A45;
     line-height:1.75;
     padding:0 1.5rem;
 }
@@ -36,7 +36,7 @@ _OM_CSS = """
     font-style:normal;
     font-size:1.05rem;
     font-weight:700;
-    color:#E67E22;
+    color:#1A7A8C;
     letter-spacing:.3px;
     margin-top:.7rem;
 }

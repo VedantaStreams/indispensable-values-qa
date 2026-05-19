@@ -36,21 +36,21 @@ st.markdown("""
     display:block!important;
 }
 
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#FFF8F0;color:#2C1810;}
-h1,h2,h3{font-family:'Playfair Display',serif!important;color:#8B4513!important;}
-div[data-testid="stSidebar"]{background:linear-gradient(180deg,#FFFFFF,#FFD9A8)!important;border-right:2px solid #FFCC80;}
-div[data-testid="stSidebar"] *{color:#2C1810!important;font-weight:600!important;}
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#E8F4F6;color:#1A3A45;}
+h1,h2,h3{font-family:'Playfair Display',serif!important;color:#0A4A58!important;}
+div[data-testid="stSidebar"]{background:linear-gradient(180deg,#FFFFFF,#A8D8E0)!important;border-right:2px solid #88C5D0;}
+div[data-testid="stSidebar"] *{color:#1A3A45!important;font-weight:600!important;}
 
-.page-header{background:linear-gradient(135deg,#FFFFFF,#FFEDD9);border:2px solid #FFCC80;border-radius:18px;padding:2.5rem;text-align:center;margin-bottom:2rem;box-shadow:0 4px 20px rgba(0,0,0,.08);}
-.page-header-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#8B4513;}
-.page-header-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:#E67E22;}
+.page-header{background:linear-gradient(135deg,#FFFFFF,#D0EDF1);border:2px solid #88C5D0;border-radius:18px;padding:2.5rem;text-align:center;margin-bottom:2rem;box-shadow:0 4px 20px rgba(0,0,0,.08);}
+.page-header-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#0A4A58;}
+.page-header-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:#1A7A8C;}
 
-.faq-q{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:#8B4513;margin-bottom:.5rem;}
-.faq-a{color:#2C1810;font-size:.93rem;line-height:1.85;margin-bottom:0;}
-.faq-a em{color:#5C3820;font-style:italic;}
-.faq-a strong{color:#8B4513;}
+.faq-q{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:#0A4A58;margin-bottom:.5rem;}
+.faq-a{color:#1A3A45;font-size:.93rem;line-height:1.85;margin-bottom:0;}
+.faq-a em{color:#3A5C68;font-style:italic;}
+.faq-a strong{color:#0A4A58;}
 
-.section-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#8B4513;margin:2rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid #FFCC80;}
+.section-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#0A4A58;margin:2rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid #88C5D0;}
 </style>
 """, unsafe_allow_html=True)
 
@@ -210,7 +210,7 @@ for section, questions in faqs.items():
 # ── Footer ─────────────────────────────────────────────────────────────────────
 st.markdown("""
 <div style="text-align:center;margin-top:2.5rem;padding:1.5rem;
-    border-top:2px solid #FFCC80;color:#B8956B;
+    border-top:2px solid #88C5D0;color:#B8956B;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.95rem;">
     🪷 &nbsp; Still have a question? Use the Q&amp;A page — Swamiji's teachings may have the answer! &nbsp; 🪷
 </div>
