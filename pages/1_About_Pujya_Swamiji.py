@@ -36,10 +36,10 @@ st.markdown("""
     display:block!important;
 }
 
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#F8F9F5;color:#1A3A28;}
-h1,h2,h3{font-family:'Playfair Display',serif!important;color:#2A5C3A!important;}
-div[data-testid="stSidebar"]{background:linear-gradient(180deg,#EDF3EC,#E0EBE2)!important;border-right:2px solid #B8D4BC;}
-div[data-testid="stSidebar"] *{color:#2A4A38!important;font-weight:600!important;}
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#1A0F0A;color:#F5E6C8;}
+h1,h2,h3{font-family:'Playfair Display',serif!important;color:#D4AF37!important;}
+div[data-testid="stSidebar"]{background:linear-gradient(180deg,#2C1810,#4A2818)!important;border-right:2px solid #5C3820;}
+div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important;}
 
 /* ── Pink-gold border on photo ── */
 [data-testid="stImage"] img {
@@ -48,61 +48,61 @@ div[data-testid="stSidebar"] *{color:#2A4A38!important;font-weight:600!important
     object-position:top center!important;
     border:5px solid transparent!important;
     background:linear-gradient(white,white) padding-box,
-               linear-gradient(135deg,#B8D4BC,#8B6914,#4A7C59,#B8D4BC) border-box!important;
-    box-shadow:0 8px 30px rgba(74,124,89,.20)!important;
+               linear-gradient(135deg,#D4AF37,#FF8C42,#D4AF37,#FFD89A) border-box!important;
+    box-shadow:0 8px 30px rgba(0,0,0,.20)!important;
 }
 
-.page-header{background:linear-gradient(135deg,#EDF3EC,#E4EDE4);border:2px solid #B8D4BC;
+.page-header{background:linear-gradient(135deg,#2C1810,#3D2418);border:2px solid #5C3820;
     border-radius:18px;padding:2.5rem;text-align:center;margin-bottom:2rem;
-    box-shadow:0 4px 20px rgba(74,124,89,.08);}
-.page-header-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#2A5C3A;}
-.page-header-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:#4A7C59;}
+    box-shadow:0 4px 20px rgba(0,0,0,.08);}
+.page-header-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#D4AF37;}
+.page-header-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:#FF8C42;}
 
-.bio-name{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:#2A5C3A;
+.bio-name{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:#D4AF37;
     text-align:center;margin:.8rem 0 .1rem;}
-.bio-title{font-family:'Cormorant Garamond',serif;font-style:italic;color:#4A7C59;
+.bio-title{font-family:'Cormorant Garamond',serif;font-style:italic;color:#FF8C42;
     font-size:1rem;text-align:center;}
-.bio-loc{font-size:.85rem;color:#4A6B54;text-align:center;margin:.1rem 0;}
+.bio-loc{font-size:.85rem;color:#B8956B;text-align:center;margin:.1rem 0;}
 
-.bio-card{background:white;border:2px solid #B8D4BC;border-radius:16px;padding:2rem;
-    box-shadow:0 4px 16px rgba(74,124,89,.08);margin-bottom:1.5rem;}
-.bio-para{color:#1A3A28;font-size:.97rem;line-height:1.9;margin-bottom:.9rem;}
+.bio-card{background:#2C1810;border:2px solid #5C3820;border-radius:16px;padding:2rem;
+    box-shadow:0 4px 16px rgba(0,0,0,.08);margin-bottom:1.5rem;}
+.bio-para{color:#F5E6C8;font-size:.97rem;line-height:1.9;margin-bottom:.9rem;}
 .bio-para:last-child{margin-bottom:0;}
 
-.quote-block{background:linear-gradient(135deg,#EDF3EC,#F8F9F5);border-left:5px solid #4A7C59;
+.quote-block{background:linear-gradient(135deg,#2C1810,#1A0F0A);border-left:5px solid #FF8C42;
     border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.2rem 0;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;
-    color:#2A5C3A;line-height:1.8;}
+    color:#D4AF37;line-height:1.8;}
 
-.swamiji-quote{background:linear-gradient(135deg,#EDF3EC,#F8F9F5);border-left:5px solid #4A7C59;
+.swamiji-quote{background:linear-gradient(135deg,#2C1810,#1A0F0A);border-left:5px solid #FF8C42;
     border-radius:0 14px 14px 0;padding:1.2rem 1.8rem;margin:1rem 0;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;
-    color:#2A4A38;line-height:1.8;box-shadow:0 2px 8px rgba(74,124,89,.07);}
+    color:#F5E6C8;line-height:1.8;box-shadow:0 2px 8px rgba(0,0,0,.07);}
 .swamiji-quote-attr{font-family:'Playfair Display',serif;font-style:normal;font-size:.95rem;
-    font-weight:700;color:#4A7C59;letter-spacing:.3px;margin-top:.6rem;}
+    font-weight:700;color:#FF8C42;letter-spacing:.3px;margin-top:.6rem;}
 
-.tag{display:inline-block;background:#EDF3EC;border:1.5px solid #B8D4BC;color:#2A5C3A;
+.tag{display:inline-block;background:#2C1810;border:1.5px solid #5C3820;color:#D4AF37;
     border-radius:20px;padding:.25rem .85rem;font-size:.85rem;margin:.2rem;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;}
 
-.milestone{display:flex;align-items:flex-start;gap:1rem;background:white;
-    border:1.5px solid #B8D4BC;border-radius:12px;padding:1.1rem 1.4rem;
-    margin-bottom:.8rem;box-shadow:0 2px 8px rgba(74,124,89,.05);}
+.milestone{display:flex;align-items:flex-start;gap:1rem;background:#2C1810;
+    border:1.5px solid #5C3820;border-radius:12px;padding:1.1rem 1.4rem;
+    margin-bottom:.8rem;box-shadow:0 2px 8px rgba(0,0,0,.05);}
 .milestone-year{font-family:'Playfair Display',serif;font-size:1rem;font-weight:800;
-    color:#4A7C59;min-width:58px;}
-.milestone-text{color:#1A3A28;font-size:.92rem;line-height:1.65;}
+    color:#FF8C42;min-width:58px;}
+.milestone-text{color:#F5E6C8;font-size:.92rem;line-height:1.65;}
 
-.value-section{background:white;border:1.5px solid #B8D4BC;border-radius:14px;padding:1.8rem;
-    margin-bottom:1rem;box-shadow:0 2px 10px rgba(74,124,89,.06);}
+.value-section{background:#2C1810;border:1.5px solid #5C3820;border-radius:14px;padding:1.8rem;
+    margin-bottom:1rem;box-shadow:0 2px 10px rgba(0,0,0,.06);}
 .value-section-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;
-    color:#2A5C3A;margin-bottom:.8rem;padding-bottom:.4rem;border-bottom:1.5px solid #B8D4BC;}
+    color:#D4AF37;margin-bottom:.8rem;padding-bottom:.4rem;border-bottom:1.5px solid #5C3820;}
 .value-item{display:flex;align-items:flex-start;margin-bottom:.55rem;}
-.value-bullet{color:#4A7C59;font-size:1rem;margin-right:.6rem;flex-shrink:0;}
-.value-text{color:#1A3A28;font-size:.9rem;line-height:1.6;}
-.value-name{font-weight:700;color:#2A5C3A;font-family:'Cormorant Garamond',serif;font-style:italic;}
+.value-bullet{color:#FF8C42;font-size:1rem;margin-right:.6rem;flex-shrink:0;}
+.value-text{color:#F5E6C8;font-size:.9rem;line-height:1.6;}
+.value-name{font-weight:700;color:#D4AF37;font-family:'Cormorant Garamond',serif;font-style:italic;}
 
 .section-title{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;
-    color:#2A5C3A;margin:2rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid #B8D4BC;}
+    color:#D4AF37;margin:2rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid #5C3820;}
 </style>
 """, unsafe_allow_html=True)
 
@@ -132,12 +132,12 @@ with col_photo:
     <div class="bio-name">Swāmī Aparājitānandajī</div>
     <div class="bio-title">Chinmaya Mission</div>
     <div style="font-family:'Cormorant Garamond',serif;font-style:italic;
-        color:#3A5040;font-size:.92rem;text-align:center;margin:.2rem 0;">
+        color:#C9A961;font-size:.92rem;text-align:center;margin:.2rem 0;">
         Chinmaya Mission Chicago</div>
-    <div style="font-size:.85rem;color:#4A6B54;text-align:center;margin:.1rem 0;">
+    <div style="font-size:.85rem;color:#B8956B;text-align:center;margin:.1rem 0;">
         Yamunotri Center</div>
     <div style="font-size:.82rem;text-align:center;margin:.3rem 0;">
-        <a href="mailto:swamiaparajitananda@gmail.com" style="color:#4A7C59;
+        <a href="mailto:swamiaparajitananda@gmail.com" style="color:#FF8C42;
         text-decoration:none;">swamiaparajitananda@gmail.com</a>
     </div>
     <div style="text-align:center;margin-top:.6rem;">
@@ -253,9 +253,9 @@ with col2:
 # ── Footer ────────────────────────────────────────────────────────────────────
 st.markdown("""
 <div style="text-align:center;margin-top:2rem;padding:1.5rem;
-    border-top:2px solid #B8D4BC;color:#4A6B54;
+    border-top:2px solid #5C3820;color:#B8956B;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.95rem;
-    background:linear-gradient(135deg,#EDF3EC,#F8F9F5);border-radius:12px;">
+    background:linear-gradient(135deg,#2C1810,#1A0F0A);border-radius:12px;">
     🪷 &nbsp; Hari Om &nbsp; 🪷 <br>
     <em>We are blessed to have Swāmī Aparājitānandajī's teachings illumine our path.</em>
 </div>

@@ -37,26 +37,26 @@ inject_global_css()
 # ── Page CSS ───────────────────────────────────────────────────────────────────
 st.markdown("""
 <style>
-.swamiji-quote{background:linear-gradient(135deg,#EDF3EC,#F8F9F5);border-left:5px solid #4A7C59;border-radius:0 14px 14px 0;padding:1rem 1.5rem;margin:.8rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:#2A4A38;line-height:1.7;}
-.swamiji-quote-attr{font-family:'Lato',sans-serif;font-style:normal;font-size:.75rem;font-weight:700;color:#4A7C59;letter-spacing:.5px;margin-top:.4rem;}
+.swamiji-quote{background:linear-gradient(135deg,#2C1810,#1A0F0A);border-left:5px solid #FF8C42;border-radius:0 14px 14px 0;padding:1rem 1.5rem;margin:.8rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:#F5E6C8;line-height:1.7;}
+.swamiji-quote-attr{font-family:'Lato',sans-serif;font-style:normal;font-size:.75rem;font-weight:700;color:#FF8C42;letter-spacing:.5px;margin-top:.4rem;}
 .qa-header {
-    background: linear-gradient(135deg, #EDF3EC 0%, #E4EDE4 50%, #EFF4EF 100%);
-    border: 2px solid #B8D4BC;
+    background: linear-gradient(135deg, #2C1810 0%, #3D2418 50%, #2C1810 100%);
+    border: 2px solid #5C3820;
     border-radius: 18px;
     padding: 2rem 2.2rem;
     margin-bottom: 1.5rem;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(74,124,89,.08);
+    box-shadow: 0 4px 20px rgba(0,0,0,.08);
 }
 .qa-header-title {
     font-family: 'Playfair Display', serif;
     font-size: 2.2rem;
     font-weight: 800;
-    color: #2A5C3A;
+    color: #D4AF37;
     margin-bottom: 0.3rem;
 }
 .qa-header-sub {
-    color: #4A7C59;
+    color: #FF8C42;
     font-style: italic;
     font-size: 1rem;
     font-family: 'Cormorant Garamond', serif;
@@ -68,8 +68,8 @@ st.markdown("""
     margin-bottom: 1rem;
 }
 .user-bubble {
-    background: linear-gradient(135deg, #4A7C59, #6A9E78);
-    border: 1px solid #B8D4BC;
+    background: linear-gradient(135deg, #FF8C42, #FFB07A);
+    border: 1px solid #5C3820;
     border-radius: 16px 16px 4px 16px;
     padding: 0.85rem 1.15rem;
     margin: 0.5rem 0 0.5rem 18%;
@@ -78,12 +78,12 @@ st.markdown("""
     line-height: 1.6;
 }
 .bot-bubble {
-    background: white;
-    border: 1.5px solid #B8D4BC;
+    background: #2C1810;
+    border: 1.5px solid #5C3820;
     border-radius: 4px 16px 16px 16px;
     padding: 1rem 1.3rem;
     margin: 0.5rem 18% 0.5rem 0;
-    color: #1A3A28;
+    color: #F5E6C8;
     font-size: 0.93rem;
     line-height: 1.75;
 }
@@ -94,15 +94,15 @@ st.markdown("""
     margin-bottom: 0.3rem;
     opacity: 0.85;
 }
-.user-label { color: #4A7C59; text-align: right; }
-.bot-label  { color: #2A5C3A; }
+.user-label { color: #FF8C42; text-align: right; }
+.bot-label  { color: #D4AF37; }
 .sample-q {
-    background: #EDF3EC;
-    border: 1.5px solid #B8D4BC;
+    background: #2C1810;
+    border: 1.5px solid #5C3820;
     border-radius: 10px;
     padding: 0.6rem 1rem;
     font-size: 0.85rem;
-    color: #2A5C3A;
+    color: #D4AF37;
     cursor: pointer;
     margin-bottom: 0.4rem;
     transition: background 0.2s;
@@ -240,13 +240,13 @@ st.divider()
 # ── 20 Starter Questions ──────────────────────────────────────────────────────
 if not st.session_state.messages:
     st.markdown("""
-    <div style="background:#EDF3EC;border:1.5px solid #B8D4BC;border-radius:12px;
-        padding:1rem 1.4rem;margin-bottom:1rem;border-left:5px solid #4A7C59;">
+    <div style="background:#2C1810;border:1.5px solid #5C3820;border-radius:12px;
+        padding:1rem 1.4rem;margin-bottom:1rem;border-left:5px solid #FF8C42;">
         <div style="font-family:'Playfair Display',serif;font-weight:700;
-            color:#2A5C3A;font-size:1.05rem;margin-bottom:.3rem;">
+            color:#D4AF37;font-size:1.05rem;margin-bottom:.3rem;">
             ✨ Starter Questions
         </div>
-        <div style="font-size:.88rem;color:#3A5040;line-height:1.6;">
+        <div style="font-size:.88rem;color:#C9A961;line-height:1.6;">
             New to the app? Click any question below to begin your inquiry.
             Questions are drawn from <strong>Bhagavad Gītā Chapters 13 &amp; 16</strong>
             — the divine and demoniac qualities Swamiji unfolds in his discourses.

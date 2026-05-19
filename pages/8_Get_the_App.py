@@ -36,35 +36,35 @@ st.markdown("""
     display:block!important;
 }
 
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#F8F9F5;color:#1A3A28;}
-h1,h2,h3{font-family:'Playfair Display',serif!important;color:#2A5C3A!important;}
-div[data-testid="stSidebar"]{background:linear-gradient(180deg,#EDF3EC,#E0EBE2)!important;border-right:2px solid #B8D4BC;}
-div[data-testid="stSidebar"] *{color:#2A4A38!important;font-weight:600!important;}
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#1A0F0A;color:#F5E6C8;}
+h1,h2,h3{font-family:'Playfair Display',serif!important;color:#D4AF37!important;}
+div[data-testid="stSidebar"]{background:linear-gradient(180deg,#2C1810,#4A2818)!important;border-right:2px solid #5C3820;}
+div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important;}
 
-.page-header{background:linear-gradient(135deg,#EDF3EC,#E4EDE4);border:2px solid #B8D4BC;border-radius:18px;padding:2.5rem;text-align:center;margin-bottom:2rem;box-shadow:0 4px 20px rgba(74,124,89,.08);}
-.page-header-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#2A5C3A;}
-.page-header-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:#4A7C59;}
+.page-header{background:linear-gradient(135deg,#2C1810,#3D2418);border:2px solid #5C3820;border-radius:18px;padding:2.5rem;text-align:center;margin-bottom:2rem;box-shadow:0 4px 20px rgba(0,0,0,.08);}
+.page-header-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#D4AF37;}
+.page-header-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:#FF8C42;}
 
-.access-card{background:white;border:2px solid #B8D4BC;border-radius:16px;padding:2rem;margin-bottom:1.5rem;box-shadow:0 4px 16px rgba(74,124,89,.07);text-align:center;}
+.access-card{background:#2C1810;border:2px solid #5C3820;border-radius:16px;padding:2rem;margin-bottom:1.5rem;box-shadow:0 4px 16px rgba(0,0,0,.07);text-align:center;}
 .access-icon{font-size:3rem;margin-bottom:.8rem;}
-.access-title{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:#2A5C3A;margin-bottom:.5rem;}
-.access-desc{color:#1A3A28;font-size:.93rem;line-height:1.8;margin-bottom:1rem;}
-.access-url{background:#EDF3EC;border:1.5px solid #B8D4BC;border-radius:10px;padding:.8rem 1.2rem;font-family:'Lato',monospace;font-size:.9rem;color:#2A5C3A;font-weight:700;letter-spacing:.3px;margin-bottom:.8rem;}
+.access-title{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:#D4AF37;margin-bottom:.5rem;}
+.access-desc{color:#F5E6C8;font-size:.93rem;line-height:1.8;margin-bottom:1rem;}
+.access-url{background:#2C1810;border:1.5px solid #5C3820;border-radius:10px;padding:.8rem 1.2rem;font-family:'Lato',monospace;font-size:.9rem;color:#D4AF37;font-weight:700;letter-spacing:.3px;margin-bottom:.8rem;}
 
-.step-card{display:flex;align-items:flex-start;gap:1rem;background:#EDF3EC;border:1.5px solid #B8D4BC;border-radius:12px;padding:1rem 1.3rem;margin-bottom:.7rem;}
-.step-num{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:#4A7C59;min-width:36px;}
-.step-text{color:#1A3A28;font-size:.92rem;line-height:1.65;}
+.step-card{display:flex;align-items:flex-start;gap:1rem;background:#2C1810;border:1.5px solid #5C3820;border-radius:12px;padding:1rem 1.3rem;margin-bottom:.7rem;}
+.step-num{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:#FF8C42;min-width:36px;}
+.step-text{color:#F5E6C8;font-size:.92rem;line-height:1.65;}
 
-.section-card{background:white;border:1.5px solid #B8D4BC;border-radius:14px;padding:1.8rem;margin-bottom:1.5rem;box-shadow:0 2px 10px rgba(74,124,89,.06);}
-.section-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#2A5C3A;margin:2rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid #B8D4BC;}
-.body-para{color:#1A3A28;font-size:.95rem;line-height:1.9;margin-bottom:.9rem;}
+.section-card{background:#2C1810;border:1.5px solid #5C3820;border-radius:14px;padding:1.8rem;margin-bottom:1.5rem;box-shadow:0 2px 10px rgba(0,0,0,.06);}
+.section-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#D4AF37;margin:2rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid #5C3820;}
+.body-para{color:#F5E6C8;font-size:.95rem;line-height:1.9;margin-bottom:.9rem;}
 
 .platform-item{display:flex;align-items:center;gap:.8rem;margin-bottom:.7rem;}
 .platform-icon{font-size:1.5rem;flex-shrink:0;}
-.platform-text{color:#1A3A28;font-size:.92rem;line-height:1.6;}
-.platform-text strong{color:#2A5C3A;}
+.platform-text{color:#F5E6C8;font-size:.92rem;line-height:1.6;}
+.platform-text strong{color:#D4AF37;}
 
-.coming-soon{display:inline-block;background:#EDF3EC;border:1.5px solid #B8D4BC;color:#4A7C59;border-radius:20px;padding:.2rem .8rem;font-size:.78rem;font-weight:700;margin-left:.5rem;vertical-align:middle;}
+.coming-soon{display:inline-block;background:#2C1810;border:1.5px solid #5C3820;color:#FF8C42;border-radius:20px;padding:.2rem .8rem;font-size:.78rem;font-weight:700;margin-left:.5rem;vertical-align:middle;}
 </style>
 """, unsafe_allow_html=True)
 
@@ -97,7 +97,7 @@ with col1:
         </div>
         <div class="access-url">Coming Soon</div>
         <div style="font-family:'Cormorant Garamond',serif;font-style:italic;
-            font-size:.88rem;color:#4A6B54;">
+            font-size:.88rem;color:#B8956B;">
             The app will be accessible at a dedicated URL once deployed.
         </div>
     </div>
@@ -114,7 +114,7 @@ with col2:
             add it to your Home Screen as a shortcut.
         </div>
         <div style="margin-top:.8rem;font-family:'Cormorant Garamond',serif;
-            font-style:italic;font-size:.9rem;color:#3A5040;">
+            font-style:italic;font-size:.9rem;color:#C9A961;">
             On iPhone: Open in Safari → Share → Add to Home Screen<br>
             On Android: Open in Chrome → Menu → Add to Home Screen
         </div>
@@ -225,7 +225,7 @@ st.markdown("""
 # ── Footer ─────────────────────────────────────────────────────────────────────
 st.markdown("""
 <div style="text-align:center;margin-top:2rem;padding:1.5rem;
-    border-top:2px solid #B8D4BC;color:#4A6B54;
+    border-top:2px solid #5C3820;color:#B8956B;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.95rem;">
     🪷 &nbsp; Hari Om &nbsp; 🪷 <br>
     <em>May this tool serve every sincere seeker on the path of knowledge.</em>

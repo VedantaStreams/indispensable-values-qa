@@ -455,63 +455,63 @@ def get_prompt(value: dict, prompt_idx: int) -> str:
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,600&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap');
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#F8F9F5;color:#1A3A28;}
-h1,h2,h3{font-family:'Playfair Display',serif!important;color:#2A5C3A!important;}
-div[data-testid="stSidebar"]{background:linear-gradient(180deg,#EDF3EC,#E0EBE2)!important;border-right:2px solid #B8D4BC;}
-div[data-testid="stSidebar"] *{color:#2A4A38!important;font-weight:600!important;}
-.stButton>button{background:linear-gradient(135deg,#4A7C59,#6A9E78);color:white!important;
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#1A0F0A;color:#F5E6C8;}
+h1,h2,h3{font-family:'Playfair Display',serif!important;color:#D4AF37!important;}
+div[data-testid="stSidebar"]{background:linear-gradient(180deg,#2C1810,#4A2818)!important;border-right:2px solid #5C3820;}
+div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important;}
+.stButton>button{background:linear-gradient(135deg,#FF8C42,#FFB07A);color:white!important;
     border:none;border-radius:8px;font-weight:700;padding:.6rem 1.4rem;transition:all .3s;}
-.stButton>button:hover{background:linear-gradient(135deg,#2A5C3A,#4A7C59);transform:translateY(-2px);}
+.stButton>button:hover{background:linear-gradient(135deg,#D4AF37,#FF8C42);transform:translateY(-2px);}
 
 .page-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;
-    color:#2A5C3A;text-align:center;margin:.5rem 0 .2rem;}
+    color:#D4AF37;text-align:center;margin:.5rem 0 .2rem;}
 .page-subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;
-    color:#4A7C59;text-align:center;font-size:1.15rem;margin-bottom:2rem;}
+    color:#FF8C42;text-align:center;font-size:1.15rem;margin-bottom:2rem;}
 .date-badge{text-align:center;font-family:'Lato',sans-serif;font-size:.85rem;
-    color:#8B6914;font-weight:700;letter-spacing:1.5px;margin-bottom:1.5rem;}
+    color:#D4AF37;font-weight:700;letter-spacing:1.5px;margin-bottom:1.5rem;}
 
-.hero-value{background:linear-gradient(135deg,#EDF3EC 0%,#E4EDE4 50%,#EFF4EF 100%);
-    border:2px solid #B8D4BC;border-radius:20px;padding:3rem 2rem;text-align:center;
-    margin-bottom:2rem;box-shadow:0 4px 24px rgba(74,124,89,.10);position:relative;}
+.hero-value{background:linear-gradient(135deg,#2C1810 0%,#3D2418 50%,#2C1810 100%);
+    border:2px solid #5C3820;border-radius:20px;padding:3rem 2rem;text-align:center;
+    margin-bottom:2rem;box-shadow:0 4px 24px rgba(0,0,0,.10);position:relative;}
 .hero-value::before{content:"🪷";position:absolute;top:-20px;left:50%;transform:translateX(-50%);
-    background:#F8F9F5;border:2px solid #B8D4BC;border-radius:50%;width:50px;height:50px;
+    background:#1A0F0A;border:2px solid #5C3820;border-radius:50%;width:50px;height:50px;
     display:flex;align-items:center;justify-content:center;font-size:1.5rem;}
 .value-sanskrit{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:3.5rem;font-weight:700;color:#2A5C3A;line-height:1.1;margin-bottom:.3rem;}
+    font-size:3.5rem;font-weight:700;color:#D4AF37;line-height:1.1;margin-bottom:.3rem;}
 .value-devanagari{font-family:'Cormorant Garamond',serif;font-size:1.8rem;
-    color:#8B6914;margin-bottom:.5rem;}
+    color:#D4AF37;margin-bottom:.5rem;}
 .value-english{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;
-    color:#4A6B54;margin-bottom:.5rem;}
-.value-verse{font-family:'Lato',sans-serif;font-size:.85rem;color:#8B6914;
+    color:#B8956B;margin-bottom:.5rem;}
+.value-verse{font-family:'Lato',sans-serif;font-size:.85rem;color:#D4AF37;
     font-weight:700;letter-spacing:2px;text-transform:uppercase;}
 
-.content-card{background:white;border:1.5px solid #B8D4BC;border-radius:14px;
+.content-card{background:#2C1810;border:1.5px solid #5C3820;border-radius:14px;
     padding:1.8rem 2rem;margin-bottom:1.5rem;
-    box-shadow:0 2px 12px rgba(74,124,89,.06);}
+    box-shadow:0 2px 12px rgba(0,0,0,.06);}
 .card-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;
-    color:#2A5C3A;margin-bottom:.8rem;padding-bottom:.4rem;
-    border-bottom:1.5px solid #B8D4BC;display:flex;align-items:center;gap:.6rem;}
-.card-text{color:#1A3A28;font-size:.95rem;line-height:1.85;
+    color:#D4AF37;margin-bottom:.8rem;padding-bottom:.4rem;
+    border-bottom:1.5px solid #5C3820;display:flex;align-items:center;gap:.6rem;}
+.card-text{color:#F5E6C8;font-size:.95rem;line-height:1.85;
     font-family:'Lato',sans-serif;}
 .card-prompt{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.15rem;color:#2A4A38;line-height:1.75;
-    padding:1rem 1.4rem;background:#EDF3EC;border-radius:10px;
-    border-left:4px solid #8B6914;}
+    font-size:1.15rem;color:#F5E6C8;line-height:1.75;
+    padding:1rem 1.4rem;background:#2C1810;border-radius:10px;
+    border-left:4px solid #D4AF37;}
 
-.swamiji-card{background:linear-gradient(135deg,#EDF3EC,#F8F9F5);
-    border:2px solid #B8D4BC;border-left:5px solid #4A7C59;
+.swamiji-card{background:linear-gradient(135deg,#2C1810,#1A0F0A);
+    border:2px solid #5C3820;border-left:5px solid #FF8C42;
     border-radius:0 14px 14px 0;padding:1.5rem 1.8rem;margin-bottom:1.5rem;
-    box-shadow:0 2px 12px rgba(74,124,89,.07);}
+    box-shadow:0 2px 12px rgba(0,0,0,.07);}
 .swamiji-text{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.25rem;font-weight:700;color:#2A4A38;line-height:1.7;text-align:center;}
-.swamiji-attr{font-family:'Playfair Display',serif;color:#4A7C59;
+    font-size:1.25rem;font-weight:700;color:#F5E6C8;line-height:1.7;text-align:center;}
+.swamiji-attr{font-family:'Playfair Display',serif;color:#FF8C42;
     font-size:1rem;font-weight:700;text-align:center;margin-top:.7rem;}
 
-.cta-card{background:linear-gradient(135deg,#EDF3EC,#E4EDE4);
-    border:2px solid #B8D4BC;border-radius:14px;padding:1.5rem;text-align:center;
+.cta-card{background:linear-gradient(135deg,#2C1810,#3D2418);
+    border:2px solid #5C3820;border-radius:14px;padding:1.5rem;text-align:center;
     margin-top:1rem;}
 .cta-text{font-family:'Cormorant Garamond',serif;font-style:italic;
-    color:#3A5040;font-size:1rem;margin-bottom:.8rem;}
+    color:#C9A961;font-size:1rem;margin-bottom:.8rem;}
 </style>
 """, unsafe_allow_html=True)
 
@@ -582,7 +582,7 @@ st.markdown("""
 col1, col2 = st.columns(2)
 with col1:
     if st.button("📔 Open Reflection Journal", use_container_width=True):
-        st.switch_page("pages/10_Reflection_Journal.py")
+        st.switch_page("pages/3_Reflection_Journal.py")
 with col2:
     if st.button("💬 Ask About This Value", use_container_width=True):
         st.session_state["pending_question"] = (
@@ -595,7 +595,7 @@ with col2:
 st.markdown("<br>", unsafe_allow_html=True)
 with st.expander("🌿 Explore another value"):
     st.markdown(
-        "<p style='color:#3A5040;font-size:.9rem;margin-bottom:.8rem;'>"
+        "<p style='color:#C9A961;font-size:.9rem;margin-bottom:.8rem;'>"
         "Browse all 20 values from Bhagavad Gītā Chapters 13 &amp; 16. "
         "Click any to see its full contemplation.</p>",
         unsafe_allow_html=True,
@@ -647,8 +647,8 @@ if "selected_value_idx" in st.session_state:
 # ── Footer ─────────────────────────────────────────────────────────────────────
 st.markdown("<br>", unsafe_allow_html=True)
 st.markdown("""
-<div style="text-align:center;color:#4A6B54;font-size:.85rem;font-family:'Cormorant Garamond',serif;
-    font-style:italic;padding:1rem;border-top:1.5px solid #B8D4BC;margin-top:2rem;">
+<div style="text-align:center;color:#B8956B;font-size:.85rem;font-family:'Cormorant Garamond',serif;
+    font-style:italic;padding:1rem;border-top:1.5px solid #5C3820;margin-top:2rem;">
     🪷 &nbsp; A new value appears each day. &nbsp; 🪷<br>
     Spend a few moments today contemplating its meaning in your life.
 </div>

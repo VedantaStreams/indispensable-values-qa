@@ -307,51 +307,51 @@ def get_today_value():
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap');
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#F8F9F5;color:#1A3A28;}
-h1,h2,h3{font-family:'Playfair Display',serif!important;color:#2A5C3A!important;}
-div[data-testid="stSidebar"]{background:linear-gradient(180deg,#EDF3EC,#E0EBE2)!important;border-right:2px solid #B8D4BC;}
-div[data-testid="stSidebar"] *{color:#2A4A38!important;font-weight:600!important;}
-.stButton>button{background:linear-gradient(135deg,#4A7C59,#6A9E78);color:white!important;
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#1A0F0A;color:#F5E6C8;}
+h1,h2,h3{font-family:'Playfair Display',serif!important;color:#D4AF37!important;}
+div[data-testid="stSidebar"]{background:linear-gradient(180deg,#2C1810,#4A2818)!important;border-right:2px solid #5C3820;}
+div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important;}
+.stButton>button{background:linear-gradient(135deg,#FF8C42,#FFB07A);color:white!important;
     border:none;border-radius:8px;font-weight:700;padding:.6rem 1.4rem;transition:all .3s;}
-.stButton>button:hover{background:linear-gradient(135deg,#2A5C3A,#4A7C59);transform:translateY(-2px);}
+.stButton>button:hover{background:linear-gradient(135deg,#D4AF37,#FF8C42);transform:translateY(-2px);}
 
-.page-header{background:linear-gradient(135deg,#EDF3EC,#E4EDE4);border:2px solid #B8D4BC;
+.page-header{background:linear-gradient(135deg,#2C1810,#3D2418);border:2px solid #5C3820;
     border-radius:18px;padding:2rem;text-align:center;margin-bottom:1.5rem;
-    box-shadow:0 4px 20px rgba(74,124,89,.08);}
-.page-header-title{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:800;color:#2A5C3A;}
+    box-shadow:0 4px 20px rgba(0,0,0,.08);}
+.page-header-title{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:800;color:#D4AF37;}
 .page-header-sub{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.1rem;color:#4A7C59;}
+    font-size:1.1rem;color:#FF8C42;}
 
-.value-card{background:linear-gradient(135deg,#EDF3EC,#F8F9F5);
-    border:2px solid #B8D4BC;border-left:5px solid #4A7C59;
+.value-card{background:linear-gradient(135deg,#2C1810,#1A0F0A);
+    border:2px solid #5C3820;border-left:5px solid #FF8C42;
     border-radius:14px;padding:1.8rem 2rem;margin-bottom:1.5rem;
-    box-shadow:0 2px 12px rgba(74,124,89,.07);}
+    box-shadow:0 2px 12px rgba(0,0,0,.07);}
 .value-sanskrit{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.8rem;font-weight:700;color:#2A5C3A;margin-bottom:.2rem;}
-.value-english{font-family:'Lato',sans-serif;font-size:.95rem;color:#4A7C59;
+    font-size:1.8rem;font-weight:700;color:#D4AF37;margin-bottom:.2rem;}
+.value-english{font-family:'Lato',sans-serif;font-size:.95rem;color:#FF8C42;
     font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:1rem;}
 .value-prompt{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.15rem;color:#1A3A28;line-height:1.7;
-    padding:1rem 1.2rem;background:white;border-radius:10px;
-    border-left:3px solid #8B6914;}
+    font-size:1.15rem;color:#F5E6C8;line-height:1.7;
+    padding:1rem 1.2rem;background:#2C1810;border-radius:10px;
+    border-left:3px solid #D4AF37;}
 
-.entry-card{background:white;border:1.5px solid #B8D4BC;border-radius:12px;
+.entry-card{background:#2C1810;border:1.5px solid #5C3820;border-radius:12px;
     padding:1.2rem 1.5rem;margin-bottom:1rem;
-    box-shadow:0 2px 8px rgba(74,124,89,.05);}
-.entry-date{font-family:'Playfair Display',serif;font-weight:700;color:#2A5C3A;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);}
+.entry-date{font-family:'Playfair Display',serif;font-weight:700;color:#D4AF37;
     font-size:.95rem;margin-bottom:.3rem;}
 .entry-value{font-family:'Cormorant Garamond',serif;font-style:italic;
-    color:#4A7C59;font-size:.9rem;margin-bottom:.5rem;}
-.entry-text{color:#1A3A28;font-size:.92rem;line-height:1.7;white-space:pre-wrap;}
+    color:#FF8C42;font-size:.9rem;margin-bottom:.5rem;}
+.entry-text{color:#F5E6C8;font-size:.92rem;line-height:1.7;white-space:pre-wrap;}
 
 .section-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;
-    color:#2A5C3A;margin:1.5rem 0 1rem;padding-bottom:.4rem;
-    border-bottom:2px solid #B8D4BC;}
+    color:#D4AF37;margin:1.5rem 0 1rem;padding-bottom:.4rem;
+    border-bottom:2px solid #5C3820;}
 
-.stTextArea textarea{border:1.5px solid #B8D4BC!important;border-radius:10px!important;
+.stTextArea textarea{border:1.5px solid #5C3820!important;border-radius:10px!important;
     font-family:'Cormorant Garamond',serif!important;font-size:1.05rem!important;
-    color:#1A3A28!important;background:#F8F9F5!important;}
-.stTextArea textarea:focus{border-color:#4A7C59!important;}
+    color:#F5E6C8!important;background:#1A0F0A!important;}
+.stTextArea textarea:focus{border-color:#FF8C42!important;}
 </style>
 """, unsafe_allow_html=True)
 
@@ -535,8 +535,8 @@ with tab_browse:
                 unsafe_allow_html=True)
 
     st.markdown("""
-    <div style="background:#EDF3EC;border-left:4px solid #4A7C59;border-radius:10px;
-        padding:1rem 1.4rem;margin-bottom:1.2rem;font-size:.9rem;color:#3A5040;">
+    <div style="background:#2C1810;border-left:4px solid #FF8C42;border-radius:10px;
+        padding:1rem 1.4rem;margin-bottom:1.2rem;font-size:.9rem;color:#C9A961;">
         Each value has a reflection prompt to guide your inner inquiry.
         Click any value below to write a reflection on it.
     </div>
@@ -546,15 +546,15 @@ with tab_browse:
         st.markdown(f"""
         <div class="entry-card">
             <div style="font-family:'Cormorant Garamond',serif;font-style:italic;
-                font-size:1.3rem;font-weight:700;color:#2A5C3A;">
+                font-size:1.3rem;font-weight:700;color:#D4AF37;">
                 {v['value']}
             </div>
-            <div style="font-family:'Lato',sans-serif;font-size:.85rem;color:#4A7C59;
+            <div style="font-family:'Lato',sans-serif;font-size:.85rem;color:#FF8C42;
                 font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:.5rem;">
                 {v['english']}
             </div>
             <div style="font-family:'Cormorant Garamond',serif;font-style:italic;
-                color:#1A3A28;font-size:1rem;line-height:1.7;">
+                color:#F5E6C8;font-size:1rem;line-height:1.7;">
                 "{v['prompt']}"
             </div>
         </div>
