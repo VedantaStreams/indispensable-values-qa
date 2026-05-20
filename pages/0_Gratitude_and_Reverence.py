@@ -17,15 +17,15 @@ ASSETS = Path(__file__).parent.parent / "assets" / "images"
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,600&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap');
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#E8F4F6;color:#1A3A45;}
-h1,h2,h3{font-family:'Playfair Display',serif!important;color:#0A4A58!important;}
-div[data-testid="stSidebar"]{background:linear-gradient(180deg,#FFFFFF,#A8D8E0)!important;border-right:2px solid #0A4A58;}
-div[data-testid="stSidebar"] *{color:#1A3A45!important;font-weight:600!important;}
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#E8F4F6;color:#0A1E28;font-weight:500;}
+h1,h2,h3{font-family:'Playfair Display',serif!important;color:#062E3A!important;font-weight:800!important;}
+div[data-testid="stSidebar"]{background:linear-gradient(180deg,#FFFFFF,#A8D8E0)!important;border-right:2px solid #062E3A;}
+div[data-testid="stSidebar"] *{color:#0A1E28!important;font-weight:600!important;}
 
 /* ── Full-width hero (matches Home) ── */
 .hero-block{
     background:linear-gradient(135deg,#FFFFFF 0%,#D0EDF1 50%,#A8D8E0 100%);
-    border:2px solid #0A4A58;border-radius:20px;
+    border:2px solid #062E3A;border-radius:20px;
     padding:2.5rem 3rem 2rem;text-align:center;
     margin-bottom:1.5rem;
     box-shadow:0 4px 24px rgba(26,122,140,.20);
@@ -33,32 +33,32 @@ div[data-testid="stSidebar"] *{color:#1A3A45!important;font-weight:600!important
 }
 .om-box{
     background:linear-gradient(135deg,#FFFFFF,#D0EDF1);
-    border:2px solid #0A4A58;border-radius:16px;
+    border:2px solid #062E3A;border-radius:16px;
     width:90px;height:90px;
     display:inline-flex;align-items:center;justify-content:center;
     margin-bottom:.8rem;
     box-shadow:0 4px 16px rgba(212,175,55,.20);
 }
 .om-img{width:70px;height:70px;object-fit:contain;border-radius:10px;}
-.hero-title{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:800;line-height:1.2;margin-bottom:.3rem;color:#0A4A58;}
+.hero-title{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:800;line-height:1.2;margin-bottom:.3rem;color:#062E3A;}
 .hero-title .accent{color:#FF8C42;}
-.diamonds{color:#0A4A58;font-size:1.2rem;letter-spacing:10px;margin:.5rem 0 0;}
+.diamonds{color:#062E3A;font-size:1.2rem;letter-spacing:10px;margin:.5rem 0 0;}
 
 /* ── Mantra box ── */
 .mantra-box{
     background:linear-gradient(135deg,#FFFFFF,#D0EDF1);
-    border:2px solid #0A4A58;border-radius:14px;
+    border:2px solid #062E3A;border-radius:14px;
     padding:1.8rem 2rem;margin:1.5rem auto;text-align:center;
     width:100%;
 }
 .mantra-text{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.2rem;color:#0A4A58;line-height:2.2;font-weight:600;}
-.mantra-meaning{color:#3A5C68;font-size:.88rem;margin-top:.8rem;font-style:italic;}
+    font-size:1.2rem;color:#062E3A;line-height:2.2;font-weight:600;}
+.mantra-meaning{color:#1A3A45;font-size:.88rem;margin-top:.8rem;font-style:italic;}
 
 /* ── Section labels — centered ── */
 .section-label{
     font-family:'Lato',sans-serif;font-size:.75rem;font-weight:700;
-    letter-spacing:4px;color:#0A4A58;text-transform:uppercase;
+    letter-spacing:4px;color:#062E3A;text-transform:uppercase;
     margin:2.5rem 0 1.5rem;text-align:center;
 }
 
@@ -73,19 +73,19 @@ div[data-testid="stSidebar"] *{color:#1A3A45!important;font-weight:600!important
     object-position:top center;
     border:5px solid transparent;
     background:linear-gradient(#E8F4F6,#E8F4F6) padding-box,
-               linear-gradient(135deg,#0A4A58,#1A7A8C,#0A4A58,#0A4A58) border-box;
+               linear-gradient(135deg,#062E3A,#0D5C6B,#062E3A,#062E3A) border-box;
     box-shadow:0 8px 30px rgba(26,122,140,.25);
     display:block;margin:0 auto;
 }
 .photo-name{
     font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;
-    color:#0A4A58;margin:1.2rem 0 .3rem;text-align:center;
+    color:#062E3A;margin:1.2rem 0 .3rem;text-align:center;
 }
 .photo-title{
     font-family:'Cormorant Garamond',serif;font-style:italic;color:#FF8C42;
     font-size:1rem;text-align:center;margin-bottom:.2rem;
 }
-.photo-sub{font-size:.9rem;color:#3A5C68;font-style:italic;text-align:center;}
+.photo-sub{font-size:.9rem;color:#1A3A45;font-style:italic;text-align:center;}
 
 /* For st.image based Aparajitananda — perfect circle, centered */
 [data-testid="stImage"] img {
@@ -96,7 +96,7 @@ div[data-testid="stSidebar"] *{color:#1A3A45!important;font-weight:600!important
     object-position:top center!important;
     border:5px solid transparent!important;
     background:linear-gradient(#E8F4F6,#E8F4F6) padding-box,
-               linear-gradient(135deg,#0A4A58,#1A7A8C,#0A4A58,#0A4A58) border-box!important;
+               linear-gradient(135deg,#062E3A,#0D5C6B,#062E3A,#062E3A) border-box!important;
     box-shadow:0 8px 30px rgba(26,122,140,.25)!important;
     margin:0 auto!important;
     display:block!important;
@@ -108,21 +108,21 @@ div[data-testid="stSidebar"] *{color:#1A3A45!important;font-weight:600!important
 
 /* ── Gratitude text ── */
 .gratitude-box{
-    background:#FFFFFF;border:1.5px solid #88C5D0;border-left:5px solid #1A7A8C;
+    background:#FFFFFF;border:1.5px solid #88C5D0;border-left:5px solid #0D5C6B;
     border-radius:14px;padding:2rem 2.5rem;margin:1.5rem 0;
     box-shadow:0 4px 16px rgba(26,122,140,.08);
 }
 .gratitude-title{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;
-    color:#0A4A58;margin-bottom:1rem;text-align:center;}
-.gratitude-para{color:#1A3A45;font-size:.95rem;line-height:1.9;margin-bottom:.9rem;}
+    color:#062E3A;margin-bottom:1rem;text-align:center;}
+.gratitude-para{color:#0A1E28;font-size:.95rem;line-height:1.9;margin-bottom:.9rem;}
 .gratitude-italic{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.05rem;color:#0A4A58;line-height:1.9;margin-bottom:.9rem;}
+    font-size:1.05rem;color:#062E3A;line-height:1.9;margin-bottom:.9rem;}
 
 /* ── Quotes ── */
-.swamiji-quote{background:#FFFFFF;border-left:5px solid #1A7A8C;
+.swamiji-quote{background:#FFFFFF;border-left:5px solid #0D5C6B;
     border-radius:0 14px 14px 0;padding:1.3rem 1.8rem;margin:1rem 0;
     font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.1rem;font-weight:700;color:#1A3A45;line-height:1.8;
+    font-size:1.1rem;font-weight:700;color:#0A1E28;line-height:1.8;
     box-shadow:0 2px 8px rgba(26,122,140,.08);}
 .swamiji-quote-attr{font-family:'Playfair Display',serif;font-style:normal;
     font-size:.95rem;font-weight:700;color:#FF8C42;margin-top:.6rem;}

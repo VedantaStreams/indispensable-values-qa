@@ -32,12 +32,12 @@ inject_global_css()
 # ── Page CSS ───────────────────────────────────────────────────────────────────
 st.markdown("""
 <style>
-.swamiji-quote{background:linear-gradient(135deg,#FFFFFF,#E8F4F6);border-left:5px solid #1A7A8C;border-radius:0 14px 14px 0;padding:1rem 1.5rem;margin:.8rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:#1A3A45;line-height:1.7;}
-.swamiji-quote-attr{font-family:'Lato',sans-serif;font-style:normal;font-size:.75rem;font-weight:700;color:#1A7A8C;letter-spacing:.5px;margin-top:.4rem;}
+.swamiji-quote{background:linear-gradient(135deg,#FFFFFF,#E8F4F6);border-left:5px solid #0D5C6B;border-radius:0 14px 14px 0;padding:1rem 1.5rem;margin:.8rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:#0A1E28;line-height:1.7;}
+.swamiji-quote-attr{font-family:'Lato',sans-serif;font-style:normal;font-size:.75rem;font-weight:700;color:#0D5C6B;letter-spacing:.5px;margin-top:.4rem;}
 
 .om-box-qa {
     background:linear-gradient(135deg,#FFFFFF,#D0EDF1);
-    border:2px solid #0A4A58;border-radius:16px;
+    border:2px solid #062E3A;border-radius:16px;
     width:90px;height:90px;
     display:inline-flex;align-items:center;justify-content:center;
     margin-bottom:.8rem;
@@ -58,11 +58,11 @@ st.markdown("""
     font-family: 'Playfair Display', serif;
     font-size: 2.2rem;
     font-weight: 800;
-    color: #0A4A58;
+    color: #062E3A;
     margin-bottom: 0.3rem;
 }
 .qa-header-sub {
-    color: #1A7A8C;
+    color: #0D5C6B;
     font-style: italic;
     font-size: 1rem;
     font-family: 'Cormorant Garamond', serif;
@@ -71,8 +71,8 @@ st.markdown("""
 /* Starter question buttons — Royal Maroon */
 .stButton > button {
     background: linear-gradient(135deg, #FFFFFF, #D0EDF1) !important;
-    color: #0A4A58 !important;
-    border: 1.5px solid #0A4A58 !important;
+    color: #062E3A !important;
+    border: 1.5px solid #062E3A !important;
     border-radius: 10px !important;
     font-weight: 600 !important;
     padding: 0.6rem 1rem !important;
@@ -86,9 +86,9 @@ st.markdown("""
     min-height: 3rem !important;
 }
 .stButton > button:hover {
-    background: linear-gradient(135deg, #1A7A8C, #2C95A8) !important;
+    background: linear-gradient(135deg, #0D5C6B, #2C95A8) !important;
     color: white !important;
-    border-color: #0A4A58 !important;
+    border-color: #062E3A !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 4px 12px rgba(26,122,140,0.3) !important;
 }
@@ -99,7 +99,7 @@ st.markdown("""
     margin-bottom: 1rem;
 }
 .user-bubble {
-    background: linear-gradient(135deg, #1A7A8C, #2C95A8);
+    background: linear-gradient(135deg, #0D5C6B, #2C95A8);
     border: 1px solid #88C5D0;
     border-radius: 16px 16px 4px 16px;
     padding: 0.85rem 1.15rem;
@@ -114,7 +114,7 @@ st.markdown("""
     border-radius: 4px 16px 16px 16px;
     padding: 1rem 1.3rem;
     margin: 0.5rem 18% 0.5rem 0;
-    color: #1A3A45;
+    color: #0A1E28;
     font-size: 0.93rem;
     line-height: 1.75;
 }
@@ -125,15 +125,15 @@ st.markdown("""
     margin-bottom: 0.3rem;
     opacity: 0.85;
 }
-.user-label { color: #1A7A8C; text-align: right; }
-.bot-label  { color: #0A4A58; }
+.user-label { color: #0D5C6B; text-align: right; }
+.bot-label  { color: #062E3A; }
 .sample-q {
     background: #FFFFFF;
     border: 1.5px solid #88C5D0;
     border-radius: 10px;
     padding: 0.6rem 1rem;
     font-size: 0.85rem;
-    color: #0A4A58;
+    color: #062E3A;
     cursor: pointer;
     margin-bottom: 0.4rem;
     transition: background 0.2s;
@@ -274,12 +274,12 @@ st.divider()
 if not st.session_state.messages:
     st.markdown("""
     <div style="background:#FFFFFF;border:1.5px solid #88C5D0;border-radius:12px;
-        padding:1rem 1.4rem;margin-bottom:1rem;border-left:5px solid #1A7A8C;">
+        padding:1rem 1.4rem;margin-bottom:1rem;border-left:5px solid #0D5C6B;">
         <div style="font-family:'Playfair Display',serif;font-weight:700;
-            color:#0A4A58;font-size:1.05rem;margin-bottom:.3rem;">
+            color:#062E3A;font-size:1.05rem;margin-bottom:.3rem;">
             ✨ Starter Questions
         </div>
-        <div style="font-size:.88rem;color:#3A5C68;line-height:1.6;">
+        <div style="font-size:.88rem;color:#1A3A45;line-height:1.6;">
             New to the app? Click any question below to begin your inquiry.
             Questions are drawn from <strong>Bhagavad Gītā Chapters 13 &amp; 16</strong>
             — the divine and demoniac qualities Swamiji unfolds in his discourses.

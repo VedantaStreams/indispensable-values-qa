@@ -287,51 +287,51 @@ def get_today_value():
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap');
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#E8F4F6;color:#1A3A45;}
-h1,h2,h3{font-family:'Playfair Display',serif!important;color:#0A4A58!important;}
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#E8F4F6;color:#0A1E28;font-weight:500;}
+h1,h2,h3{font-family:'Playfair Display',serif!important;color:#062E3A!important;font-weight:800!important;}
 div[data-testid="stSidebar"]{background:linear-gradient(180deg,#FFFFFF,#A8D8E0)!important;border-right:2px solid #88C5D0;}
-div[data-testid="stSidebar"] *{color:#1A3A45!important;font-weight:600!important;}
-.stButton>button{background:linear-gradient(135deg,#1A7A8C,#2C95A8);color:white!important;
+div[data-testid="stSidebar"] *{color:#0A1E28!important;font-weight:600!important;}
+.stButton>button{background:linear-gradient(135deg,#0D5C6B,#2C95A8);color:white!important;
     border:none;border-radius:8px;font-weight:700;padding:.6rem 1.4rem;transition:all .3s;}
-.stButton>button:hover{background:linear-gradient(135deg,#0A4A58,#1A7A8C);transform:translateY(-2px);}
+.stButton>button:hover{background:linear-gradient(135deg,#062E3A,#0D5C6B);transform:translateY(-2px);}
 
 .page-header{background:linear-gradient(135deg,#FFFFFF,#D0EDF1);border:2px solid #88C5D0;
     border-radius:18px;padding:2rem;text-align:center;margin-bottom:1.5rem;
     box-shadow:0 4px 20px rgba(0,0,0,.08);}
-.page-header-title{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:800;color:#0A4A58;}
+.page-header-title{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:800;color:#062E3A;}
 .page-header-sub{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.1rem;color:#1A7A8C;}
+    font-size:1.1rem;color:#0D5C6B;}
 
 .value-card{background:linear-gradient(135deg,#FFFFFF,#E8F4F6);
-    border:2px solid #88C5D0;border-left:5px solid #1A7A8C;
+    border:2px solid #88C5D0;border-left:5px solid #0D5C6B;
     border-radius:14px;padding:1.8rem 2rem;margin-bottom:1.5rem;
     box-shadow:0 2px 12px rgba(0,0,0,.07);}
 .value-sanskrit{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.8rem;font-weight:700;color:#0A4A58;margin-bottom:.2rem;}
-.value-english{font-family:'Lato',sans-serif;font-size:.95rem;color:#1A7A8C;
+    font-size:1.8rem;font-weight:700;color:#062E3A;margin-bottom:.2rem;}
+.value-english{font-family:'Lato',sans-serif;font-size:.95rem;color:#0D5C6B;
     font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:1rem;}
 .value-prompt{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.15rem;color:#1A3A45;line-height:1.7;
+    font-size:1.15rem;color:#0A1E28;line-height:1.7;
     padding:1rem 1.2rem;background:#FFFFFF;border-radius:10px;
-    border-left:3px solid #0A4A58;}
+    border-left:3px solid #062E3A;}
 
 .entry-card{background:#FFFFFF;border:1.5px solid #88C5D0;border-radius:12px;
     padding:1.2rem 1.5rem;margin-bottom:1rem;
     box-shadow:0 2px 8px rgba(0,0,0,.05);}
-.entry-date{font-family:'Playfair Display',serif;font-weight:700;color:#0A4A58;
+.entry-date{font-family:'Playfair Display',serif;font-weight:700;color:#062E3A;
     font-size:.95rem;margin-bottom:.3rem;}
 .entry-value{font-family:'Cormorant Garamond',serif;font-style:italic;
-    color:#1A7A8C;font-size:.9rem;margin-bottom:.5rem;}
-.entry-text{color:#1A3A45;font-size:.92rem;line-height:1.7;white-space:pre-wrap;}
+    color:#0D5C6B;font-size:.9rem;margin-bottom:.5rem;}
+.entry-text{color:#0A1E28;font-size:.93rem;line-height:1.7;font-weight:500;white-space:pre-wrap;}
 
 .section-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;
-    color:#0A4A58;margin:1.5rem 0 1rem;padding-bottom:.4rem;
+    color:#062E3A;margin:1.5rem 0 1rem;padding-bottom:.4rem;
     border-bottom:2px solid #88C5D0;}
 
 .stTextArea textarea{border:1.5px solid #88C5D0!important;border-radius:10px!important;
     font-family:'Cormorant Garamond',serif!important;font-size:1.05rem!important;
-    color:#1A3A45!important;background:#E8F4F6!important;}
-.stTextArea textarea:focus{border-color:#1A7A8C!important;}
+    color:#0A1E28!important;background:#E8F4F6!important;}
+.stTextArea textarea:focus{border-color:#0D5C6B!important;}
 </style>
 """, unsafe_allow_html=True)
 
@@ -521,8 +521,8 @@ with tab_browse:
                 unsafe_allow_html=True)
 
     st.markdown("""
-    <div style="background:#FFFFFF;border-left:4px solid #1A7A8C;border-radius:10px;
-        padding:1rem 1.4rem;margin-bottom:1.2rem;font-size:.9rem;color:#3A5C68;">
+    <div style="background:#FFFFFF;border-left:4px solid #0D5C6B;border-radius:10px;
+        padding:1rem 1.4rem;margin-bottom:1.2rem;font-size:.9rem;color:#1A3A45;">
         Each value has a reflection prompt to guide your inner inquiry.
         Click any value below to write a reflection on it.
     </div>
@@ -532,15 +532,15 @@ with tab_browse:
         st.markdown(f"""
         <div class="entry-card">
             <div style="font-family:'Cormorant Garamond',serif;font-style:italic;
-                font-size:1.3rem;font-weight:700;color:#0A4A58;">
+                font-size:1.3rem;font-weight:700;color:#062E3A;">
                 {v['value']}
             </div>
-            <div style="font-family:'Lato',sans-serif;font-size:.85rem;color:#1A7A8C;
+            <div style="font-family:'Lato',sans-serif;font-size:.85rem;color:#0D5C6B;
                 font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:.5rem;">
                 {v['english']}
             </div>
             <div style="font-family:'Cormorant Garamond',serif;font-style:italic;
-                color:#1A3A45;font-size:1rem;line-height:1.7;">
+                color:#0A1E28;font-size:1rem;line-height:1.7;">
                 "{v['prompt']}"
             </div>
         </div>

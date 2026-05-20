@@ -36,21 +36,21 @@ st.markdown("""
     display:block!important;
 }
 
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#E8F4F6;color:#1A3A45;}
-h1,h2,h3{font-family:'Playfair Display',serif!important;color:#0A4A58!important;}
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#E8F4F6;color:#0A1E28;font-weight:500;}
+h1,h2,h3{font-family:'Playfair Display',serif!important;color:#062E3A!important;font-weight:800!important;}
 div[data-testid="stSidebar"]{background:linear-gradient(180deg,#FFFFFF,#A8D8E0)!important;border-right:2px solid #88C5D0;}
-div[data-testid="stSidebar"] *{color:#1A3A45!important;font-weight:600!important;}
+div[data-testid="stSidebar"] *{color:#0A1E28!important;font-weight:600!important;}
 
 .page-header{background:linear-gradient(135deg,#FFFFFF,#D0EDF1);border:2px solid #88C5D0;border-radius:18px;padding:2.5rem;text-align:center;margin-bottom:2rem;box-shadow:0 4px 20px rgba(0,0,0,.08);}
-.page-header-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#0A4A58;}
-.page-header-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:#1A7A8C;}
+.page-header-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:#062E3A;}
+.page-header-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:#0D5C6B;}
 
-.faq-q{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:#0A4A58;margin-bottom:.5rem;}
-.faq-a{color:#1A3A45;font-size:.93rem;line-height:1.85;margin-bottom:0;}
-.faq-a em{color:#3A5C68;font-style:italic;}
-.faq-a strong{color:#0A4A58;}
+.faq-q{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:#062E3A;margin-bottom:.5rem;}
+.faq-a{color:#0A1E28;font-size:.93rem;line-height:1.85;margin-bottom:0;}
+.faq-a em{color:#1A3A45;font-style:italic;}
+.faq-a strong{color:#062E3A;}
 
-.section-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#0A4A58;margin:2rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid #88C5D0;}
+.section-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#062E3A;margin:2rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid #88C5D0;}
 </style>
 """, unsafe_allow_html=True)
 

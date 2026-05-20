@@ -351,51 +351,51 @@ def get_prompt(value: dict, prompt_idx: int) -> str:
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,600&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap');
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#E8F4F6;color:#1A3A45;}
-h1,h2,h3{font-family:'Playfair Display',serif!important;color:#0A4A58!important;}
-div[data-testid="stSidebar"]{background:linear-gradient(180deg,#FFFFFF,#A8D8E0)!important;border-right:2px solid #0A4A58;}
-div[data-testid="stSidebar"] *{color:#1A3A45!important;font-weight:600!important;}
-.stButton>button{background:linear-gradient(135deg,#1A7A8C,#2C95A8);color:white!important;
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#E8F4F6;color:#0A1E28;font-weight:500;}
+h1,h2,h3{font-family:'Playfair Display',serif!important;color:#062E3A!important;font-weight:800!important;}
+div[data-testid="stSidebar"]{background:linear-gradient(180deg,#FFFFFF,#A8D8E0)!important;border-right:2px solid #062E3A;}
+div[data-testid="stSidebar"] *{color:#0A1E28!important;font-weight:600!important;}
+.stButton>button{background:linear-gradient(135deg,#0D5C6B,#2C95A8);color:white!important;
     border:none;border-radius:8px;font-weight:700;padding:.6rem 1.4rem;transition:all .3s;}
-.stButton>button:hover{background:linear-gradient(135deg,#0A4A58,#1A7A8C);transform:translateY(-2px);}
+.stButton>button:hover{background:linear-gradient(135deg,#062E3A,#0D5C6B);transform:translateY(-2px);}
 
 .page-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;
-    color:#0A4A58;text-align:center;margin:.5rem 0 .2rem;}
+    color:#062E3A;text-align:center;margin:.5rem 0 .2rem;}
 .page-subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;
-    color:#0A4A58;text-align:center;font-size:1.15rem;margin-bottom:2rem;}
+    color:#062E3A;text-align:center;font-size:1.15rem;margin-bottom:2rem;}
 .date-badge{text-align:center;font-family:'Lato',sans-serif;font-size:.85rem;
-    color:#0A4A58;font-weight:700;letter-spacing:1.5px;margin-bottom:1.5rem;}
+    color:#062E3A;font-weight:700;letter-spacing:1.5px;margin-bottom:1.5rem;}
 
 .hero-value{background:linear-gradient(135deg,#FFFFFF,#D0EDF1);
-    border:2px solid #0A4A58;border-radius:20px;padding:3rem 2rem;text-align:center;
+    border:2px solid #062E3A;border-radius:20px;padding:3rem 2rem;text-align:center;
     margin-bottom:2rem;box-shadow:0 4px 24px rgba(26,122,140,.20);position:relative;}
 .value-sanskrit{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:3.5rem;font-weight:700;color:#0A4A58;line-height:1.1;margin-bottom:.3rem;}
+    font-size:3.5rem;font-weight:700;color:#062E3A;line-height:1.1;margin-bottom:.3rem;}
 .value-devanagari{font-family:'Cormorant Garamond',serif;font-size:1.8rem;
-    color:#0A4A58;margin-bottom:.5rem;}
+    color:#062E3A;margin-bottom:.5rem;}
 .value-english{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;
     color:#FF8C42;margin-bottom:.5rem;}
-.value-verse{font-family:'Lato',sans-serif;font-size:.85rem;color:#0A4A58;
+.value-verse{font-family:'Lato',sans-serif;font-size:.85rem;color:#062E3A;
     font-weight:700;letter-spacing:2px;text-transform:uppercase;}
 
 .content-card{background:#FFFFFF;border:1.5px solid #88C5D0;border-radius:14px;
     padding:1.8rem 2rem;margin-bottom:1.5rem;
     box-shadow:0 2px 12px rgba(26,122,140,.08);}
 .card-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;
-    color:#0A4A58;margin-bottom:.8rem;padding-bottom:.4rem;
+    color:#062E3A;margin-bottom:.8rem;padding-bottom:.4rem;
     border-bottom:1.5px solid #88C5D0;display:flex;align-items:center;gap:.6rem;}
-.card-text{color:#1A3A45;font-size:.95rem;line-height:1.85;font-family:'Lato',sans-serif;}
+.card-text{color:#0A1E28;font-size:.95rem;line-height:1.85;font-weight:500;font-family:'Lato',sans-serif;}
 .card-prompt{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.15rem;color:#0A4A58;line-height:1.75;
+    font-size:1.15rem;color:#062E3A;line-height:1.75;
     padding:1rem 1.4rem;background:#D0EDF1;border-radius:10px;
-    border-left:4px solid #0A4A58;}
+    border-left:4px solid #062E3A;}
 
 .swamiji-card{background:linear-gradient(135deg,#FFFFFF,#E8F4F6);
-    border:2px solid #0A4A58;border-left:5px solid #1A7A8C;
+    border:2px solid #062E3A;border-left:5px solid #0D5C6B;
     border-radius:0 14px 14px 0;padding:1.5rem 1.8rem;margin-bottom:1.5rem;
     box-shadow:0 2px 12px rgba(26,122,140,.20);}
 .swamiji-text{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.25rem;font-weight:700;color:#1A3A45;line-height:1.7;text-align:center;}
+    font-size:1.25rem;font-weight:700;color:#0A1E28;line-height:1.7;text-align:center;}
 .swamiji-attr{font-family:'Playfair Display',serif;color:#FF8C42;
     font-size:1rem;font-weight:700;text-align:center;margin-top:.7rem;}
 </style>

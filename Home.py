@@ -21,12 +21,12 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Lato:wght@300;400;700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap');
 
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#E8F4F6;color:#1A3A45;}
-h1,h2,h3,h4{font-family:'Playfair Display',serif!important;color:#0A4A58!important;}
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#E8F4F6;color:#0A1E28;font-weight:500;}
+h1,h2,h3,h4{font-family:'Playfair Display',serif!important;color:#062E3A!important;}
 div[data-testid="stSidebar"]{background:linear-gradient(180deg,#FFFFFF,#A8D8E0)!important;border-right:2px solid #88C5D0;}
-div[data-testid="stSidebar"] *{color:#1A3A45!important;font-weight:600!important;}
-.stButton>button{background:linear-gradient(135deg,#1A7A8C,#2C95A8);color:white!important;border:none;border-radius:8px;font-weight:700;padding:.6rem 1.4rem;transition:all .3s;}
-.stButton>button:hover{background:linear-gradient(135deg,#0A4A58,#1A7A8C);transform:translateY(-2px);}
+div[data-testid="stSidebar"] *{color:#0A1E28!important;font-weight:600!important;}
+.stButton>button{background:linear-gradient(135deg,#0D5C6B,#2C95A8);color:white!important;border:none;border-radius:8px;font-weight:700;padding:.6rem 1.4rem;transition:all .3s;}
+.stButton>button:hover{background:linear-gradient(135deg,#062E3A,#0D5C6B);transform:translateY(-2px);}
 
 /* ── Hero — full width ── */
 .hero-block{
@@ -47,35 +47,35 @@ div[data-testid="stSidebar"] *{color:#1A3A45!important;font-weight:600!important
 }
 .om-img{width:70px;height:70px;object-fit:contain;border-radius:10px;}
 .hero-title{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:800;line-height:1.2;margin-bottom:.3rem;}
-.hero-accent{color:#1A7A8C;}.hero-dark{color:#1A3A45;}
-.hero-skt{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:#1A7A8C;margin-bottom:.2rem;}
+.hero-accent{color:#0D5C6B;}.hero-dark{color:#0A1E28;}
+.hero-skt{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:#0D5C6B;margin-bottom:.2rem;}
 .hero-deva{font-size:1rem;color:#B8956B;font-family:'Cormorant Garamond',serif;}
 .hero-meaning{font-size:.88rem;color:#B8956B;font-style:italic;font-family:'Cormorant Garamond',serif;margin-bottom:1rem;}
 .features-row{display:flex;align-items:center;justify-content:center;gap:.5rem;flex-wrap:wrap;margin:.5rem 0;}
-.feat-dot{color:#1A7A8C;font-size:1rem;}.feat-tag{font-size:.82rem;color:#3A5C68;font-weight:700;letter-spacing:.3px;}
-.hero-verse{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.93rem;color:#0A4A58;
+.feat-dot{color:#0D5C6B;font-size:1rem;}.feat-tag{font-size:.82rem;color:#1A3A45;font-weight:700;letter-spacing:.3px;}
+.hero-verse{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.93rem;color:#062E3A;
     margin-top:.8rem;padding:.6rem 1.5rem;background:rgba(0,0,0,.06);
-    border-radius:10px;border-left:3px solid #1A7A8C;display:inline-block;text-align:left;}
+    border-radius:10px;border-left:3px solid #0D5C6B;display:inline-block;text-align:left;}
 
 /* ── Intro text ── */
 .intro-block{
     background:#FFFFFF;border:1.5px solid #88C5D0;
-    border-left:5px solid #1A7A8C;
+    border-left:5px solid #0D5C6B;
     border-radius:0 14px 14px 0;
     padding:1.8rem 2.2rem;margin:1.5rem 0;
     box-shadow:0 2px 12px rgba(0,0,0,.06);
     font-family:'Lato',sans-serif;
 }
-.intro-block p{color:#1A3A45;font-size:.97rem;line-height:1.95;margin-bottom:.9rem;}
+.intro-block p{color:#0A1E28;font-size:.97rem;line-height:1.95;margin-bottom:.9rem;}
 .intro-block p:last-child{margin-bottom:0;}
 
 /* ── Quotes ── */
-.swamiji-quote{background:linear-gradient(135deg,#FFFFFF,#E8F4F6);border-left:5px solid #1A7A8C;
+.swamiji-quote{background:linear-gradient(135deg,#FFFFFF,#E8F4F6);border-left:5px solid #0D5C6B;
     border-radius:0 14px 14px 0;padding:1.2rem 1.8rem;margin:1rem 0;
-    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;font-weight:700;color:#1A3A45;line-height:1.8;
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;font-weight:700;color:#0A1E28;line-height:1.8;
     box-shadow:0 2px 8px rgba(0,0,0,.07);}
 .swamiji-quote-attr{font-family:'Playfair Display',serif;font-style:normal;font-size:.95rem;
-    font-weight:700;color:#1A7A8C;letter-spacing:.3px;margin-top:.6rem;}
+    font-weight:700;color:#0D5C6B;letter-spacing:.3px;margin-top:.6rem;}
 
 /* ── Value pills — clean grid layout ── */
 .value-pills{
@@ -86,7 +86,7 @@ div[data-testid="stSidebar"] *{color:#1A3A45!important;font-weight:600!important
     margin:1rem auto 1.5rem;
 }
 .value-pill{
-    background:#D0EDF1;border:1.5px solid #0A4A58;color:#0A4A58;
+    background:#D0EDF1;border:1.5px solid #062E3A;color:#062E3A;
     border-radius:20px;padding:.4rem .6rem;font-size:.82rem;
     text-align:center;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;
@@ -95,16 +95,16 @@ div[data-testid="stSidebar"] *{color:#1A3A45!important;font-weight:600!important
 /* ── Nav cards ── */
 .nav-card{background:#FFFFFF;border:1.5px solid #88C5D0;border-radius:14px;padding:1.4rem 1.2rem;
     margin-bottom:1rem;box-shadow:0 2px 10px rgba(0,0,0,.06);transition:all .3s;height:100%;}
-.nav-card:hover{border-color:#1A7A8C;box-shadow:0 6px 20px rgba(0,0,0,.14);transform:translateY(-3px);}
+.nav-card:hover{border-color:#0D5C6B;box-shadow:0 6px 20px rgba(0,0,0,.14);transform:translateY(-3px);}
 .nav-card-icon{font-size:2rem;margin-bottom:.5rem;}
-.nav-card-title{font-family:'Playfair Display',serif;color:#0A4A58;font-size:1.05rem;font-weight:700;margin-bottom:.4rem;}
-.nav-card-desc{color:#3A5C68;font-size:.86rem;line-height:1.6;}
+.nav-card-title{font-family:'Playfair Display',serif;color:#062E3A;font-size:1.05rem;font-weight:700;margin-bottom:.4rem;}
+.nav-card-desc{color:#1A3A45;font-size:.86rem;line-height:1.6;font-weight:600;color:#0A1E28;}
 
 /* ── Stats ── */
 .stat-card{background:#FFFFFF;border:1.5px solid #88C5D0;border-radius:12px;padding:1.1rem;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.06);}
-.stat-number{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:800;color:#1A7A8C;}
-.stat-label{color:#3A5C68;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-top:.2rem;}
-.section-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#0A4A58;
+.stat-number{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:800;color:#0D5C6B;}
+.stat-label{color:#1A3A45;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-top:.2rem;}
+.section-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#062E3A;
     margin:1.5rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid #88C5D0;}
 
 /* ── Visitor bar ── */
@@ -112,8 +112,8 @@ div[data-testid="stSidebar"] *{color:#1A3A45!important;font-weight:600!important
     background:linear-gradient(135deg,#FFFFFF,#E8F4F6);border:1.5px solid #88C5D0;
     border-radius:12px;padding:.8rem 1.5rem;margin:1rem 0;flex-wrap:wrap;}
 .visitor-stat{text-align:center;}
-.visitor-num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:800;color:#1A7A8C;}
-.visitor-lbl{font-size:.72rem;font-weight:700;color:#3A5C68;text-transform:uppercase;letter-spacing:.5px;}
+.visitor-num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:800;color:#0D5C6B;}
+.visitor-lbl{font-size:.72rem;font-weight:700;color:#1A3A45;text-transform:uppercase;letter-spacing:.5px;}
 
 /* ── Gurudev bottom ── */
 .gurudev-bottom{text-align:center;margin:2.5rem auto 1rem;}
@@ -122,13 +122,13 @@ div[data-testid="stSidebar"] *{color:#1A3A45!important;font-weight:600!important
     object-fit:cover;object-position:top center;
     border:5px solid transparent;
     background:linear-gradient(white,white) padding-box,
-               linear-gradient(135deg,#0A4A58,#1A7A8C,#0A4A58,#0A4A58) border-box;
+               linear-gradient(135deg,#062E3A,#0D5C6B,#062E3A,#062E3A) border-box;
     box-shadow:0 8px 30px rgba(0,0,0,.20);
 }
 .gurudev-name{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;
-    color:#0A4A58;margin:.7rem 0 .1rem;}
+    color:#062E3A;margin:.7rem 0 .1rem;}
 .gurudev-sub{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:.95rem;color:#1A7A8C;}
+    font-size:.95rem;color:#0D5C6B;}
 
 /* ── Footer ── */
 .footer{text-align:center;color:#B8956B;font-size:.88rem;font-family:'Cormorant Garamond',serif;

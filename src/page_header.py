@@ -18,15 +18,15 @@ _OM_CSS = """
     border:2px solid #88C5D0;
     box-shadow:0 2px 10px rgba(0,0,0,.10);
 }
-.page-quote-block {
+.page-quote-block {color:#03202A;
     text-align:center;
     max-width:780px;
     margin:.5rem auto 1.8rem;
     font-family:'Cormorant Garamond', serif;
     font-style:italic;
     font-size:1.45rem;
-    font-weight:700;
-    color:#1A3A45;
+    font-weight:800;
+    color:#0A1E28;
     line-height:1.75;
     padding:0 1.5rem;
 }
@@ -35,8 +35,8 @@ _OM_CSS = """
     font-family:'Playfair Display', serif;
     font-style:normal;
     font-size:1.05rem;
-    font-weight:700;
-    color:#1A7A8C;
+    font-weight:800;
+    color:#0D5C6B;
     letter-spacing:.3px;
     margin-top:.7rem;
 }
@@ -62,7 +62,7 @@ def render_page_quote(quote_html: str) -> None:
     st.markdown(
         _OM_CSS + f'''<div class="page-quote-block">
         &ldquo;{quote_html}&rdquo;
-        <span class="page-quote-attr">— Swāmī Aparājitānandajī</span>
+        <span class="page-quote-attr">— Swāmī Aparājitānanda</span>
     </div>''',
         unsafe_allow_html=True,
     )
