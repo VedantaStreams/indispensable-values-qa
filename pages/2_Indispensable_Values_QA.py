@@ -288,37 +288,83 @@ if not st.session_state.messages:
     """, unsafe_allow_html=True)
 
     starter_themes = {
-        "🌱 Foundation": [
-            "What are the 20 Indispensable Values from Bhagavad Gītā Chapter 13?",
-            "Why are these values called 'indispensable' for spiritual progress?",
-            "What does *amānitvam* (humility) mean in Vedānta?",
-            "How is humility different from low self-esteem?",
+        "🌱 BG 16.01 — Nine Values": [
+            "What does *abhayam* (fearlessness) mean in Vedānta?",
+            "What is *sattva-saṁśuddhiḥ* (purity of being) and how do I cultivate it?",
+            "What is *jñāna-yoga-vyavasthitiḥ* — steadfastness in knowledge and yoga?",
+            "What role does *dānam* (giving) play in spiritual growth?",
+            "What is *damaḥ* (self-restraint) and how does it differ from suppression?",
+            "What is *yajñaḥ* (sacrifice / worship) in daily life?",
+            "What is *svādhyāyaḥ* (scriptural study) and why is it indispensable?",
+            "What does *tapas* (austerity) mean for a modern seeker?",
         ],
-        "❤️ Heart & Emotions": [
+        "🌸 BG 16.01 — Tenth Value": [
+            "What is *ārjavam* (straightforwardness / integrity)?",
+            "How does integrity in thought, word, and deed connect to spiritual progress?",
+        ],
+        "❤️ BG 16.02 — Eleven Values": [
             "What is true *ahiṃsā* (non-violence) in daily life?",
-            "How can I cultivate *kṣāntiḥ* (forbearance)?",
-            "What is the difference between forgiveness and weakness?",
-            "How do I deal with anger from a spiritual perspective?",
+            "What is *satyam* (truthfulness) and when is silence more truthful than speech?",
+            "What is *akrodhaḥ* (freedom from anger) and how do I cultivate it?",
+            "What is *tyāgaḥ* (renunciation) in the context of Chapter 16?",
+            "How do I develop *śāntiḥ* (inner peace) amid life's challenges?",
+            "What is *apaiśunam* (absence of fault-finding / non-slander)?",
+            "What is *dayā bhūteṣu* — compassion toward all beings?",
+            "What is *aloluptvam* (non-covetousness / freedom from greed)?",
+            "What is *mārdavam* (gentleness) and how is it different from weakness?",
+            "What is *hrīḥ* (modesty / sense of honour) in Vedānta?",
+            "What is *acāpalam* (steadiness / freedom from restlessness)?",
+        ],
+        "🔥 BG 16.03 — Six Values": [
+            "What is *tejaḥ* (vigour / radiance) as a spiritual quality?",
+            "What is *kṣamā* (forgiveness) and why is it a divine virtue?",
+            "What is *dhṛtiḥ* (fortitude / endurance) in spiritual life?",
+            "What is *śaucam* (inner and outer purity)?",
+            "What is *adrohaḥ* (absence of malice / non-hatred)?",
+            "What is *nātimānitā* (absence of excessive pride / humility)?",
         ],
         "🧘 Inner Discipline": [
-            "How do I practice *ātma-vinigraha* (self-control)?",
-            "What is the role of *vairāgya* (dispassion) in daily life?",
-            "How do I overcome attachment to results of my actions?",
-            "What is the right attitude toward success and failure?",
-        ],
-        "👤 Self & Ego": [
-            "What is *anahaṅkāra* and how do I let go of ego?",
-            "How is non-doership understood in Vedānta?",
-            "What is the difference between confidence and pride?",
+            "How are the 26 values of Chapter 16 different from the 20 values of Chapter 13?",
+            "Why are these values called 'indispensable' for spiritual progress?",
+            "Which of the 26 values is the hardest to cultivate and why?",
+            "How do I balance tapas (austerity) with enjoyment in daily life?",
             "What does Chapter 16 say about divine vs demoniac qualities?",
+            "How do I know if I am progressing in my spiritual values?",
         ],
         "💕 Devotion & Practice": [
-            "What is *bhakti avyabhicāriṇī* — unswerving devotion?",
-            "How do I deepen my relationship with God?",
-            "What is the right time and way to practice spiritual values?",
+            "How do I bring these 26 values into my daily routine?",
+            "Which value should I focus on first as a beginner?",
+            "How does Swamiji explain the link between values and meditation?",
+            "What is the relationship between values and Self-knowledge in Vedānta?",
+            "How do I maintain these values when I feel stressed or overwhelmed?",
             "How do I balance worldly responsibilities with spiritual life?",
         ],
     }
+
+    # ── 26 Values Quick-Reference ──────────────────────────────────────────────
+    st.markdown("""
+    <div style="background:#FFFFFF;border:1.5px solid #88C5D0;border-radius:14px;
+         padding:1.2rem 1.5rem;margin-bottom:1.2rem;">
+      <div style="font-family:'Playfair Display',serif;font-size:1.05rem;
+           font-weight:800;color:#062E3A;margin-bottom:.7rem;">
+        📖 The 26 Indispensable Values (BG 16.01–16.03)
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem .8rem;font-size:.88rem;">
+        <div><strong>BG 16.01</strong></div><div></div><div></div>
+        <div>1. abhayam</div><div>2. sattva-saṁśuddhiḥ</div><div>3. jñāna-yoga-vyavasthitiḥ</div>
+        <div>4. dānam</div><div>5. damaḥ</div><div>6. yajñaḥ</div>
+        <div>7. svādhyāyaḥ</div><div>8. tapas</div><div>9. ārjavam</div>
+        <div style="margin-top:.5rem"><strong>BG 16.02</strong></div><div></div><div></div>
+        <div>10. ahiṃsā</div><div>11. satyam</div><div>12. akrodhaḥ</div>
+        <div>13. tyāgaḥ</div><div>14. śāntiḥ</div><div>15. apaiśunam</div>
+        <div>16. dayā bhūteṣu</div><div>17. aloluptvam</div><div>18. mārdavam</div>
+        <div>19. hrīḥ</div><div>20. acāpalam</div><div></div>
+        <div style="margin-top:.5rem"><strong>BG 16.03</strong></div><div></div><div></div>
+        <div>21. tejaḥ</div><div>22. kṣamā</div><div>23. dhṛtiḥ</div>
+        <div>24. śaucam</div><div>25. adrohaḥ</div><div>26. nātimānitā</div>
+      </div>
+    </div>
+    """, unsafe_allow_html=True)
 
     for theme, questions in starter_themes.items():
         st.markdown(f"**{theme}**")

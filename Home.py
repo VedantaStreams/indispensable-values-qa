@@ -81,13 +81,13 @@ div[data-testid="stSidebar"] *{color:#0A1E28!important;font-weight:600!important
 .value-pills{
     display:grid;
     grid-template-columns:repeat(5,1fr);
-    gap:.5rem;
-    max-width:900px;
+    gap:.55rem;
+    max-width:960px;
     margin:1rem auto 1.5rem;
 }
 .value-pill{
     background:#D0EDF1;border:1.5px solid #062E3A;color:#062E3A;
-    border-radius:20px;padding:.4rem .6rem;font-size:.82rem;
+    border-radius:20px;padding:.5rem .7rem;font-size:.95rem;
     text-align:center;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;
 }
@@ -213,16 +213,19 @@ with col_q2:
 
 # ── Value Pills ────────────────────────────────────────────────────────────────
 st.markdown('''<div class="value-pills">
-    <span class="value-pill">amānitvam</span><span class="value-pill">adambhitvam</span>
-    <span class="value-pill">ahiṃsā</span><span class="value-pill">kṣāntiḥ</span>
-    <span class="value-pill">ārjavam</span><span class="value-pill">ācāryopāsanam</span>
-    <span class="value-pill">śaucam</span><span class="value-pill">sthairyam</span>
-    <span class="value-pill">ātmavinigrahaḥ</span><span class="value-pill">vairāgyam</span>
-    <span class="value-pill">anahaṅkāra</span><span class="value-pill">asaktiḥ</span>
-    <span class="value-pill">samacittatvam</span><span class="value-pill">bhakti</span>
-    <span class="value-pill">viveka</span><span class="value-pill">abhayaṁ</span>
-    <span class="value-pill">sattva-saṁśuddhiḥ</span><span class="value-pill">satyam</span>
-    <span class="value-pill">dānam</span><span class="value-pill">tapas</span>
+    <span class="value-pill">abhayam</span><span class="value-pill">sattva-saṁśuddhiḥ</span>
+    <span class="value-pill">jñāna-yoga-vyavasthitiḥ</span><span class="value-pill">dānam</span>
+    <span class="value-pill">damaḥ</span><span class="value-pill">yajñaḥ</span>
+    <span class="value-pill">svādhyāyaḥ</span><span class="value-pill">tapas</span>
+    <span class="value-pill">ārjavam</span><span class="value-pill">ahiṃsā</span>
+    <span class="value-pill">satyam</span><span class="value-pill">akrodhaḥ</span>
+    <span class="value-pill">tyāgaḥ</span><span class="value-pill">śāntiḥ</span>
+    <span class="value-pill">apaiśunam</span><span class="value-pill">dayā bhūteṣu</span>
+    <span class="value-pill">aloluptvam</span><span class="value-pill">mārdavam</span>
+    <span class="value-pill">hrīḥ</span><span class="value-pill">acāpalam</span>
+    <span class="value-pill">tejaḥ</span><span class="value-pill">kṣamā</span>
+    <span class="value-pill">dhṛtiḥ</span><span class="value-pill">śaucam</span>
+    <span class="value-pill">adrohaḥ</span><span class="value-pill">nātimānitā</span>
 </div>''', unsafe_allow_html=True)
 
 # ── Nav Cards ──────────────────────────────────────────────────────────────────
