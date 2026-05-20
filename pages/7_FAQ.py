@@ -73,7 +73,7 @@ faqs = {
             "What is the Indispensable Values Q&A app?",
             "It is an AI-powered study companion that answers questions about the "
             "Indispensable Values of Bhagavad Gītā Chapter 13, drawing exclusively from "
-            "the authentic teachings of <strong>Swāmī Aparājitānandajī</strong>. "
+            "the authentic teachings of <strong>Swāmī Aparājitānanda</strong>. "
             "It is not a general chatbot — every answer comes from Swamiji's actual talks, "
             "transcripts, and published writings."
         ),
@@ -87,8 +87,8 @@ faqs = {
         (
             "Is this app affiliated with Chinmaya Mission?",
             "This app is an independent initiative offered in reverence to "
-            "<strong>Pūjya Swāmī Chinmayānandajī</strong> and "
-            "<strong>Swāmī Aparājitānandajī</strong>. "
+            "<strong>Pūjya Swāmī Chinmayānanda</strong> and "
+            "<strong>Swāmī Aparājitānanda</strong>. "
             "It is not an official Chinmaya Mission product, but is built entirely "
             "from their authentic teachings and offered in the spirit of the Mission's vision."
         ),

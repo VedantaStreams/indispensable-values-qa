@@ -98,7 +98,7 @@ st.markdown("""
         that answers your questions about Bhagavad Gītā <strong>Chapters 13 and 16</strong> —
         the 20 indispensable values (jñāna sādhana) and the divine vs demoniac qualities
         (daivī sampat &amp; āsurī sampat) — drawing exclusively from the authentic
-        teachings of <strong>Swāmī Aparājitānandajī</strong>.
+        teachings of <strong>Swāmī Aparājitānanda</strong>.
     </div>
     <div class="body-para">
         Ask a question. Get a grounded answer — with the source cited, the scripture
@@ -249,7 +249,7 @@ st.markdown('<div class="section-title">What Is in the Knowledge Base?</div>',
 st.markdown("""
 <div class="section-card">
     <div class="body-para">
-        The knowledge base is built from Swāmī Aparājitānandajī's authentic teachings:
+        The knowledge base is built from Swāmī Aparājitānanda's authentic teachings:
     </div>
 """, unsafe_allow_html=True)
 
@@ -265,9 +265,9 @@ sources = [
     ("📖", "Indispensable Values — Book (2022)",
      "Swamiji's published book covering 37 values from BG Chapters 13 and 16 — 320 pages of authoritative teaching"),
     ("📖", "Gurudev's Quotes — Volumes I, II, III",
-     "Selected quotes from Pūjya Swāmī Chinmayānandajī compiled by Swāmī Aparājitānandajī"),
+     "Selected quotes from Pūjya Swāmī Chinmayānanda compiled by Swāmī Aparājitānanda"),
     ("📖", "Read Daily, Live Fully",
-     "Daily spiritual companion by Swāmī Aparājitānandajī for seekers"),
+     "Daily spiritual companion by Swāmī Aparājitānanda for seekers"),
 ]
 
 for icon, title, desc in sources:
@@ -311,7 +311,7 @@ st.markdown('''
     the devotee, Bhagawān takes up a form. Just like formless water takes a particular
     form when cooled below 0°. In the same way, formless God takes a form under the
     extreme devotion of devotees.&rdquo;
-    <div class="swamiji-quote-attr">— Swāmī Aparājitānandajī</div>
+    <div class="swamiji-quote-attr">— Swāmī Aparājitānanda</div>
 </div>
 ''', unsafe_allow_html=True)
 

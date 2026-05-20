@@ -148,7 +148,7 @@ with tab_overview:
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("**🎙️ 7 Discourses by Swāmī Aparājitānandajī**")
+    st.markdown("**🎙️ 7 Discourses by Swāmī Aparājitānanda**")
     bg13_discourses = [
         ("BG 13 — Discourse 1", "Introduction to Chapter 13 · Kṣetra–Kṣetrajña"),
         ("BG 13 — Discourse 2", "The Knower and the Field · Verses 1–6"),
@@ -183,7 +183,7 @@ with tab_overview:
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("**🎙️ 7 Discourses by Swāmī Aparājitānandajī**")
+    st.markdown("**🎙️ 7 Discourses by Swāmī Aparājitānanda**")
     bg16_discourses = [
         ("BG 16 — Discourse 1", "Introduction · Daivī vs Āsurī Sampat"),
         ("BG 16 — Discourse 2", "abhayaṁ, sattva-saṁśuddhiḥ, jñāna-yoga · Verse 1"),
@@ -205,18 +205,18 @@ with tab_overview:
     st.markdown("<br>", unsafe_allow_html=True)
 
     # ── Published Books ───────────────────────────────────────────────────────
-    st.markdown('<div class="section-card"><div class="section-title">📖 Published Works by Swāmī Aparājitānandajī</div>',
+    st.markdown('<div class="section-card"><div class="section-title">📖 Published Works by Swāmī Aparājitānanda</div>',
                 unsafe_allow_html=True)
 
     books = [
         ("Indispensable Values", "Central Chinmaya Mission Trust, 2022",
          "Detailed commentary on 37 values from Bhagavad Gītā Chapters 13 & 16"),
         ("Gurudev's Quotes — Volume I", "Compilation",
-         "Selected quotes from Pūjya Swāmī Chinmayānandajī"),
+         "Selected quotes from Pūjya Swāmī Chinmayānanda"),
         ("Gurudev's Quotes — Volume II", "Compilation",
-         "Selected quotes from Pūjya Swāmī Chinmayānandajī"),
+         "Selected quotes from Pūjya Swāmī Chinmayānanda"),
         ("Gurudev's Quotes — Volume III", "Compilation",
-         "Selected quotes from Pūjya Swāmī Chinmayānandajī"),
+         "Selected quotes from Pūjya Swāmī Chinmayānanda"),
         ("Read Daily, Live Fully", "Daily Companion",
          "A daily spiritual companion for seekers"),
     ]

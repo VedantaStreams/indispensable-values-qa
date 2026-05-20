@@ -362,7 +362,7 @@ div[data-testid="stSidebar"] *{color:#1A3A45!important;font-weight:600!important
 .page-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;
     color:#0A4A58;text-align:center;margin:.5rem 0 .2rem;}
 .page-subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;
-    color:#1A7A8C;text-align:center;font-size:1.15rem;margin-bottom:2rem;}
+    color:#0A4A58;text-align:center;font-size:1.15rem;margin-bottom:2rem;}
 .date-badge{text-align:center;font-family:'Lato',sans-serif;font-size:.85rem;
     color:#0A4A58;font-weight:700;letter-spacing:1.5px;margin-bottom:1.5rem;}
 
@@ -370,7 +370,7 @@ div[data-testid="stSidebar"] *{color:#1A3A45!important;font-weight:600!important
     border:2px solid #0A4A58;border-radius:20px;padding:3rem 2rem;text-align:center;
     margin-bottom:2rem;box-shadow:0 4px 24px rgba(26,122,140,.20);position:relative;}
 .value-sanskrit{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:3.5rem;font-weight:700;color:#1A7A8C;line-height:1.1;margin-bottom:.3rem;}
+    font-size:3.5rem;font-weight:700;color:#0A4A58;line-height:1.1;margin-bottom:.3rem;}
 .value-devanagari{font-family:'Cormorant Garamond',serif;font-size:1.8rem;
     color:#0A4A58;margin-bottom:.5rem;}
 .value-english{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;
@@ -380,13 +380,13 @@ div[data-testid="stSidebar"] *{color:#1A3A45!important;font-weight:600!important
 
 .content-card{background:#FFFFFF;border:1.5px solid #88C5D0;border-radius:14px;
     padding:1.8rem 2rem;margin-bottom:1.5rem;
-    box-shadow:0 2px 12px rgba(0,0,0,.3);}
+    box-shadow:0 2px 12px rgba(26,122,140,.08);}
 .card-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;
     color:#0A4A58;margin-bottom:.8rem;padding-bottom:.4rem;
     border-bottom:1.5px solid #88C5D0;display:flex;align-items:center;gap:.6rem;}
 .card-text{color:#1A3A45;font-size:.95rem;line-height:1.85;font-family:'Lato',sans-serif;}
 .card-prompt{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.15rem;color:#1A7A8C;line-height:1.75;
+    font-size:1.15rem;color:#0A4A58;line-height:1.75;
     padding:1rem 1.4rem;background:#D0EDF1;border-radius:10px;
     border-left:4px solid #0A4A58;}
 
@@ -447,7 +447,7 @@ st.markdown(f"""
 st.markdown(f"""
 <div class="swamiji-card">
     <div class="swamiji-text">&ldquo;{today_value['quote']}&rdquo;</div>
-    <div class="swamiji-attr">— Pūjya Swāmī Aparājitānandajī</div>
+    <div class="swamiji-attr">— Pūjya Swāmī Aparājitānanda</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -507,7 +507,7 @@ if "selected_value_idx" in st.session_state:
         </div>
         <div class="swamiji-card">
             <div class="swamiji-text">&ldquo;{sel['quote']}&rdquo;</div>
-            <div class="swamiji-attr">— Pūjya Swāmī Aparājitānandajī</div>
+            <div class="swamiji-attr">— Pūjya Swāmī Aparājitānanda</div>
         </div>
         <div class="content-card">
             <div class="card-title">✍️ Reflection Prompt</div>
