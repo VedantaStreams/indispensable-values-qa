@@ -16,12 +16,8 @@ APARAJITA = ASSETS / "swamiji_aparajitananda.jpg"
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,600&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap');
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#E8F4F6;color:#0A1E28;font-weight:500;}
-h1,h2,h3{font-family:'Playfair Display',serif!important;color:#062E3A!important;font-weight:800!important;}
-div[data-testid="stSidebar"]{background:linear-gradient(180deg,#FFFFFF,#A8D8E0)!important;border-right:2px solid #062E3A;}
-div[data-testid="stSidebar"] *{color:#0A1E28!important;font-weight:600!important;}
-.stButton>button{background:linear-gradient(135deg,#0D5C6B,#2C95A8);color:white!important;
-    border:none;border-radius:8px;font-weight:700;padding:.5rem 1.2rem;}
+html,body,[class*="css"]{font-family:'Lato',sans-serif;font-weight:500;}
+h1,h2,h3{font-family:'Playfair Display',serif!important;font-weight:800!important;}
 
 /* ── Hero — Om in box like other pages ── */
 .hero-block{
@@ -59,7 +55,7 @@ div[data-testid="stSidebar"] *{color:#0A1E28!important;font-weight:600!important
 .photo-wrapper{
     text-align:center;margin:0 auto 1.5rem;
 }
-.photo-circle{width:160px;height:160px;object-fit:cover;border-radius:16px;
+.photo-circle{width:130px;height:130px;object-fit:cover;border-radius:16px;
     border:4px solid #1A7A8C;box-shadow:0 4px 14px rgba(26,122,140,0.25);}
 .photo-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:#062E3A;
     text-align:center;margin:1rem 0 .2rem;}
