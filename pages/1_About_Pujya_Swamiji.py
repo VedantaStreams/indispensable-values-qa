@@ -61,9 +61,9 @@ div[data-testid="stSidebar"] *{color:#0A1E28!important;font-weight:600!important
 }
 .photo-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:#062E3A;
     text-align:center;margin:1rem 0 .2rem;}
-.photo-loc-main{font-family:'Cormorant Garamond',serif;font-style:italic;color:#FF8C42;
-    font-size:1.1rem;text-align:center;}
-.photo-loc-sub{font-size:.95rem;color:#1A3A45;text-align:center;margin:.1rem 0;}
+.photo-loc-main{font-family:'Lato',sans-serif;font-weight:700;color:#0D5C6B;
+    font-size:1.05rem;text-align:center;letter-spacing:.3px;}
+.photo-loc-sub{font-size:.85rem;color:#3A5C68;text-align:center;margin:.1rem 0;font-style:italic;}
 .photo-email{font-size:.88rem;text-align:center;margin:.4rem 0;}
 .photo-email a{color:#FF8C42;text-decoration:none;}
 .photo-tag{font-family:'Cormorant Garamond',serif;font-style:italic;
