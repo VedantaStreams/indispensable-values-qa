@@ -86,7 +86,7 @@ div[data-testid="stSidebar"] *{color:#062E3A!important;font-weight:700!important
     color:#062E3A;margin:1.2rem 0 .3rem;text-align:center;
 }
 .photo-title{font-family:'Cormorant Garamond',serif;font-style:italic;
-    color:#0D5C6B;font-size:1rem;text-align:center;margin-bottom:.2rem;font-weight:700;}
+    color:#0D5C6B;font-size:.9rem;text-align:center;margin-bottom:.2rem;font-weight:700;}
 .photo-sub{font-size:.9rem;color:#1A3A45;font-style:italic;text-align:center;font-weight:600;}
 
 .gold-line{border:none;border-top:1.5px solid #88C5D0;margin:2.5rem auto;max-width:500px;}
@@ -143,7 +143,7 @@ st.markdown('''<div class="mantra-box">
     नमामि चिन्मयं देवं सद्गुरुं ब्रह्मविद्वरम् ॥</div>
     <div class="mantra-roman">Samasta-jana-kalyāṇe nirataṁ karuṇāmayam |<br>
     Namāmi cinmayaṁ devaṁ sadguruṁ brahmavidvaram ||</div>
-    <div class="mantra-meaning">I bow to Cinmaya — the compassionate one ever engaged in the welfare of all,<br>
+    <div class="mantra-meaning">I bow to Chinmaya — the compassionate one ever engaged in the welfare of all,<br>
     the divine Sadguru, the foremost among knowers of Brahman.</div>
 </div>''', unsafe_allow_html=True)
 
