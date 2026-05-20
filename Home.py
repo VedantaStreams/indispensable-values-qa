@@ -211,8 +211,37 @@ with col_q2:
         <div class="swamiji-quote-attr">— Swāmī Aparājitānanda</div>
     </div>''', unsafe_allow_html=True)
 
-# ── Value Pills ────────────────────────────────────────────────────────────────
-st.markdown('''<div class="value-pills">
+# ── Value Pills — Ch.13 + Ch.16 ───────────────────────────────────────────────
+st.markdown('''
+<div style="text-align:center;margin:1rem 0 .4rem;">
+  <span style="font-family:\'Playfair Display\',serif;font-size:.92rem;font-weight:800;
+    color:#062E3A;background:#D0EDF1;padding:.3rem 1.1rem;
+    border-radius:20px;border:1.5px solid #062E3A;">
+    Bhagavad Gītā 13.7–11 &nbsp;·&nbsp; Jñāna Sādhana &nbsp;·&nbsp; 20 Values
+  </span>
+</div>
+<div class="value-pills">
+    <span class="value-pill">amānitvam</span><span class="value-pill">adambhitvam</span>
+    <span class="value-pill">ahiṃsā</span><span class="value-pill">kṣāntiḥ</span>
+    <span class="value-pill">ārjavam</span>
+    <span class="value-pill">ācāryopāsanam</span><span class="value-pill">śaucam</span>
+    <span class="value-pill">sthairyam</span><span class="value-pill">ātmavinigrahaḥ</span>
+    <span class="value-pill">indriyārtheṣu vairāgyam</span>
+    <span class="value-pill">anahaṅkāra</span><span class="value-pill">janma-mṛtyu darśanam</span>
+    <span class="value-pill">asaktiḥ</span><span class="value-pill">anabhiṣvaṅga</span>
+    <span class="value-pill">samacittatvam</span>
+    <span class="value-pill">bhakti avyabhicāriṇī</span><span class="value-pill">viviktadeśa-sevitvam</span>
+    <span class="value-pill">aratir janasaṃsadi</span><span class="value-pill">adhyātma-jñāna-nityatvam</span>
+    <span class="value-pill">tattva-jñānārtha-darśanam</span>
+</div>
+<div style="text-align:center;margin:1rem 0 .4rem;">
+  <span style="font-family:\'Playfair Display\',serif;font-size:.92rem;font-weight:800;
+    color:#062E3A;background:#D0EDF1;padding:.3rem 1.1rem;
+    border-radius:20px;border:1.5px solid #062E3A;">
+    Bhagavad Gītā 16.01–16.03 &nbsp;·&nbsp; Daivī Sampat &nbsp;·&nbsp; 26 Values
+  </span>
+</div>
+<div class="value-pills">
     <span class="value-pill">abhayam</span><span class="value-pill">sattva-saṁśuddhiḥ</span>
     <span class="value-pill">jñāna-yoga-vyavasthitiḥ</span><span class="value-pill">dānam</span>
     <span class="value-pill">damaḥ</span><span class="value-pill">yajñaḥ</span>

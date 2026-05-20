@@ -55,7 +55,7 @@ h1,h2,h3{font-family:'Playfair Display',serif!important;font-weight:800!importan
 .photo-wrapper{
     text-align:center;margin:0 auto 1.5rem;
 }
-.photo-circle{width:130px;height:130px;object-fit:cover;border-radius:16px;
+.photo-circle{width:200px;height:200px;object-fit:cover;border-radius:16px;
     border:4px solid #1A7A8C;box-shadow:0 4px 14px rgba(26,122,140,0.25);}
 .photo-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:#062E3A;
     text-align:center;margin:1rem 0 .2rem;}
@@ -263,54 +263,41 @@ st.markdown('''
 st.markdown('<div class="section-title">The 20 Indispensable Values — Bhagavad Gītā 13.7–11</div>',
             unsafe_allow_html=True)
 
-values_l = [
-    ("amānitvam","Humility — absence of pride"),
-    ("adambhitvam","Absence of hypocrisy and show-off"),
-    ("ahiṃsā","Non-injury in thought, word and deed"),
-    ("kṣāntiḥ","Forgiveness and forbearance"),
-    ("ārjavam","Simplicity"),
-    ("ācāryopāsanam","Devotion and service to one\'s teacher"),
-    ("śaucam","Purity of body and mind"),
-    ("sthairyam","Steadfastness"),
-    ("ātmavinigrahaḥ","Self-control over the senses"),
-    ("indriyārtheṣu vairāgyam","Dispassion towards sense objects"),
-]
-values_r = [
-    ("anahaṅkāra","Absence of ego"),
-    ("janma-mṛtyu darśanam","Seeing sorrow in birth, death, old age, disease"),
-    ("asaktiḥ","Non-attachment to people and things"),
-    ("anabhiṣvaṅga","Absence of blind attachment to family"),
-    ("samacittatvam","Equanimity"),
-    ("bhakti avyabhicāriṇī","Unswerving devotion to the Lord"),
-    ("viviktadeśa-sevitvam","Love of solitude for spiritual practice"),
-    ("aratir janasaṃsadi","Disinterest in worldly gatherings"),
-    ("adhyātma-jñāna-nityatvam","Constancy in spiritual knowledge"),
-    ("tattva-jñānārtha-darśanam","Seeing liberation as the goal of life"),
-]
-
-col1, col2 = st.columns(2)
-with col1:
-    st.markdown('<div class="value-section"><div class="value-section-title">Values 1–10</div>',
-                unsafe_allow_html=True)
-    for name, desc in values_l:
-        st.markdown(f"""<div class="value-item">
-            <div class="value-bullet">🪷</div>
-            <div class="value-text"><span class="value-name">{name}</span> — {desc}</div>
-        </div>""", unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
-
-with col2:
-    st.markdown('<div class="value-section"><div class="value-section-title">Values 11–20</div>',
-                unsafe_allow_html=True)
-    for name, desc in values_r:
-        st.markdown(f"""<div class="value-item">
-            <div class="value-bullet">🪷</div>
-            <div class="value-text"><span class="value-name">{name}</span> — {desc}</div>
-        </div>""", unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
+st.markdown('''
+<div class="bio-card">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+        <div class="value-section">
+            <div class="value-section-title">Values 1–10</div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">amānitvam</span> — Humility — absence of pride</div></div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">adambhitvam</span> — Absence of hypocrisy and show-off</div></div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">ahiṃsā</span> — Non-injury in thought, word and deed</div></div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">kṣāntiḥ</span> — Forgiveness and forbearance</div></div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">ārjavam</span> — Simplicity</div></div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">ācāryopāsanam</span> — Devotion and service to one&#39;s teacher</div></div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">śaucam</span> — Purity of body and mind</div></div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">sthairyam</span> — Steadfastness</div></div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">ātmavinigrahaḥ</span> — Self-control over the senses</div></div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">indriyārtheṣu vairāgyam</span> — Dispassion towards sense objects</div></div>
+        </div>
+        <div class="value-section">
+            <div class="value-section-title">Values 11–20</div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">anahaṅkāra</span> — Absence of ego</div></div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">janma-mṛtyu darśanam</span> — Seeing sorrow in birth, death, old age, disease</div></div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">asaktiḥ</span> — Non-attachment to people and things</div></div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">anabhiṣvaṅga</span> — Absence of blind attachment to family</div></div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">samacittatvam</span> — Equanimity</div></div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">bhakti avyabhicāriṇī</span> — Unswerving devotion to the Lord</div></div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">viviktadeśa-sevitvam</span> — Love of solitude for spiritual practice</div></div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">aratir janasaṃsadi</span> — Disinterest in worldly gatherings</div></div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">adhyātma-jñāna-nityatvam</span> — Constancy in spiritual knowledge</div></div>
+            <div class="value-item"><div class="value-bullet">🪷</div><div class="value-text"><span class="value-name">tattva-jñānārtha-darśanam</span> — Seeing liberation as the goal of life</div></div>
+        </div>
+    </div>
+</div>
+''', unsafe_allow_html=True)
 
 # ── 26 Chapter 16 Values ──────────────────────────────────────────────────────
-st.markdown('<div class="section-title">The 26 Values — Bhagavad Gītā Chapter 16 (Daivī Sampat)</div>',
+st.markdown('<div class="section-title">The 26 Indispensable Values — Bhagavad Gītā 16 (Daivī Sampat)</div>',
             unsafe_allow_html=True)
 
 st.markdown('''
