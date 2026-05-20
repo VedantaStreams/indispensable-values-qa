@@ -16,40 +16,41 @@ APARAJITA = ASSETS / "swamiji_aparajitananda.jpg"
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,600&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap');
-html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#2A0F0F;color:#F5E6C8;}
-h1,h2,h3{font-family:'Playfair Display',serif!important;color:#D4AF37!important;}
-div[data-testid="stSidebar"]{background:linear-gradient(180deg,#4A1F1F,#6A2828)!important;border-right:2px solid #D4AF37;}
-div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important;}
-.stButton>button{background:linear-gradient(135deg,#C0392B,#E74C3C);color:white!important;
+html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:#E8F4F6;color:#0A1E28;font-weight:500;}
+h1,h2,h3{font-family:'Playfair Display',serif!important;color:#062E3A!important;font-weight:800!important;}
+div[data-testid="stSidebar"]{background:linear-gradient(180deg,#FFFFFF,#A8D8E0)!important;border-right:2px solid #062E3A;}
+div[data-testid="stSidebar"] *{color:#0A1E28!important;font-weight:600!important;}
+.stButton>button{background:linear-gradient(135deg,#0D5C6B,#2C95A8);color:white!important;
     border:none;border-radius:8px;font-weight:700;padding:.5rem 1.2rem;}
 
 /* ── Hero — Om in box like other pages ── */
 .hero-block{
-    background:linear-gradient(135deg,#4A1F1F 0%,#5A2424 50%,#6A2828 100%);
-    border:2px solid #D4AF37;border-radius:20px;
+    background:linear-gradient(135deg,#FFFFFF 0%,#D0EDF1 50%,#A8D8E0 100%);
+    border:2px solid #062E3A;border-radius:20px;
     padding:2.5rem 3rem 2rem;text-align:center;
     margin-bottom:1.5rem;
-    box-shadow:0 4px 24px rgba(192,57,43,.20);
+    box-shadow:0 4px 24px rgba(26,122,140,.20);
     width:100%;
 }
 .om-box{
-    background:linear-gradient(135deg,#4A1F1F,#5A2424);
-    border:2px solid #D4AF37;border-radius:16px;
+    background:linear-gradient(135deg,#FFFFFF,#D0EDF1);
+    border:2px solid #062E3A;border-radius:16px;
     width:90px;height:90px;
     display:inline-flex;align-items:center;justify-content:center;
     margin-bottom:.8rem;
     box-shadow:0 4px 16px rgba(212,175,55,.20);
 }
 .om-img{width:70px;height:70px;object-fit:contain;border-radius:10px;}
-.hero-title{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:800;line-height:1.2;color:#D4AF37;margin-bottom:.3rem;}
+.hero-title{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:800;line-height:1.2;color:#062E3A;margin-bottom:.3rem;}
 .hero-title .accent{color:#FF8C42;}
 .hero-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:#FF8C42;}
+.hero-sub2{font-family:'Lato',sans-serif;font-size:.95rem;font-weight:700;color:#062E3A;letter-spacing:1px;margin-top:.3rem;}
 
 /* ── Centered quote below hero ── */
 .intro-quote{
     text-align:center;max-width:780px;margin:.5rem auto 1.8rem;
     font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.4rem;font-weight:700;color:#FFD89A;line-height:1.7;padding:0 1.5rem;
+    font-size:1.4rem;font-weight:700;color:#062E3A;line-height:1.7;padding:0 1.5rem;
 }
 .intro-quote-attr{display:block;font-family:'Playfair Display',serif;font-style:normal;
     font-size:1rem;font-weight:700;color:#FF8C42;margin-top:.7rem;}
@@ -58,61 +59,63 @@ div[data-testid="stSidebar"] *{color:#F5E6C8!important;font-weight:600!important
 .photo-wrapper{
     text-align:center;margin:0 auto 1.5rem;
 }
-.photo-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:#FFD89A;
+.photo-circle{width:160px;height:160px;object-fit:cover;border-radius:16px;
+    border:4px solid #1A7A8C;box-shadow:0 4px 14px rgba(26,122,140,0.25);}
+.photo-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:#062E3A;
     text-align:center;margin:1rem 0 .2rem;}
 .photo-loc-main{font-family:'Lato',sans-serif;font-weight:700;color:#0D5C6B;font-size:1.05rem;text-align:center;letter-spacing:.3px;}
 .photo-loc-sub{font-size:.85rem;color:#1A3A45;text-align:center;margin:.15rem 0;font-style:italic;font-weight:600;}
 .photo-email{font-size:.88rem;text-align:center;margin:.4rem 0;}
 .photo-email a{color:#FF8C42;text-decoration:none;}
 .photo-tag{font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.05rem;font-weight:700;color:#D4AF37;text-align:center;margin:.6rem 0;
-    padding:.4rem 1rem;background:#4A1F1F;display:inline-block;border-radius:20px;
-    border:1.5px solid #D4AF37;}
+    font-size:1.05rem;font-weight:700;color:#062E3A;text-align:center;margin:.6rem 0;
+    padding:.4rem 1rem;background:#FFFFFF;display:inline-block;border-radius:20px;
+    border:1.5px solid #062E3A;}
 
 
 
-.bio-card{background:#4A1F1F;border:1.5px solid #8B3A2E;border-radius:14px;padding:2rem;
-    box-shadow:0 4px 12px rgba(0,0,0,.3);margin-bottom:1.5rem;}
-.bio-para{color:#F5E6C8;font-size:.97rem;line-height:1.9;margin-bottom:.9rem;}
+.bio-card{background:#FFFFFF;border:1.5px solid #88C5D0;border-radius:14px;padding:2rem;
+    box-shadow:0 4px 12px rgba(26,122,140,.08);margin-bottom:1.5rem;}
+.bio-para{color:#0A1E28;font-size:.97rem;line-height:1.9;font-weight:500;margin-bottom:.9rem;}
 .bio-para:last-child{margin-bottom:0;}
 
-.quote-block{background:#4A1F1F;border-left:5px solid #C0392B;
+.quote-block{background:#FFFFFF;border-left:5px solid #0D5C6B;
     border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.2rem 0;
     font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;
-    color:#FFD89A;line-height:1.8;}
+    color:#062E3A;line-height:1.8;}
 
-.swamiji-quote{background:#4A1F1F;border-left:5px solid #C0392B;
+.swamiji-quote{background:#FFFFFF;border-left:5px solid #0D5C6B;
     border-radius:0 14px 14px 0;padding:1.2rem 1.8rem;margin:1rem 0;
     font-family:'Cormorant Garamond',serif;font-style:italic;
-    font-size:1.1rem;font-weight:700;color:#F5E6C8;line-height:1.8;}
+    font-size:1.1rem;font-weight:700;color:#0A1E28;line-height:1.8;}
 .swamiji-quote-attr{font-family:'Playfair Display',serif;font-style:normal;font-size:.95rem;
     font-weight:700;color:#FF8C42;margin-top:.6rem;}
 
-.section-title{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#D4AF37;
-    margin:2rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid #D4AF37;}
+.section-title{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#062E3A;
+    margin:2rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid #062E3A;}
 
-.milestone{display:flex;align-items:flex-start;gap:1rem;background:#4A1F1F;
-    border:1.5px solid #8B3A2E;border-radius:12px;padding:1.1rem 1.4rem;
+.milestone{display:flex;align-items:flex-start;gap:1rem;background:#FFFFFF;
+    border:1.5px solid #88C5D0;border-radius:12px;padding:1.1rem 1.4rem;
     margin-bottom:.8rem;}
 .milestone-year{font-family:'Playfair Display',serif;font-size:1rem;font-weight:800;
     color:#FF8C42;min-width:58px;}
-.milestone-text{color:#F5E6C8;font-size:.92rem;line-height:1.65;}
+.milestone-text{color:#0A1E28;font-size:.92rem;line-height:1.65;}
 
-.value-section{background:#4A1F1F;border:1.5px solid #8B3A2E;border-radius:14px;padding:1.8rem;
+.value-section{background:#FFFFFF;border:1.5px solid #88C5D0;border-radius:14px;padding:1.8rem;
     margin-bottom:1rem;}
 .value-section-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;
-    color:#D4AF37;margin-bottom:.8rem;padding-bottom:.4rem;border-bottom:1.5px solid #8B3A2E;}
+    color:#062E3A;margin-bottom:.8rem;padding-bottom:.4rem;border-bottom:1.5px solid #88C5D0;}
 .value-item{display:flex;align-items:flex-start;margin-bottom:.55rem;}
 .value-bullet{color:#FF8C42;font-size:1rem;margin-right:.6rem;flex-shrink:0;}
-.value-text{color:#F5E6C8;font-size:.9rem;line-height:1.6;}
-.value-name{font-weight:700;color:#FFD89A;font-family:'Cormorant Garamond',serif;font-style:italic;}
+.value-text{color:#0A1E28;font-size:.9rem;line-height:1.6;}
+.value-name{font-weight:700;color:#062E3A;font-family:'Cormorant Garamond',serif;font-style:italic;}
 
-.yt-card{background:#4A1F1F;border:1.5px solid #8B3A2E;border-left:5px solid #FF0000;
+.yt-card{background:#FFFFFF;border:1.5px solid #88C5D0;border-left:5px solid #CC0000;
     border-radius:10px;padding:1rem 1.4rem;margin-bottom:.8rem;
     display:flex;align-items:center;gap:1rem;}
 .yt-icon{font-size:1.8rem;}
 .yt-content{flex:1;}
-.yt-channel{font-family:'Playfair Display',serif;font-weight:700;color:#FFD89A;font-size:1rem;}
+.yt-channel{font-family:'Playfair Display',serif;font-weight:700;color:#062E3A;font-size:1rem;}
 .yt-url a{color:#FF8C42;text-decoration:none;font-size:.85rem;}
 .yt-url a:hover{text-decoration:underline;}
 </style>
@@ -127,7 +130,8 @@ st.markdown('''
     <div class="hero-title">
         About <span class="accent">Pūjya Swamiji</span>
     </div>
-    <div class="hero-sub">Swāmī Aparājitānanda · Chinmaya Mission Chicago</div>
+    <div class="hero-sub">Swāmī Aparājitānanda</div>
+    <div class="hero-sub2">Chinmaya Mission Chicago</div>
 </div>
 ''', unsafe_allow_html=True)
 
@@ -216,25 +220,25 @@ st.markdown('''
         Pūjya Swāmī Aparājitānanda has authored several books over the years:
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:.8rem;">
-        <div style="background:#5A2424;border:1.5px solid #8B3A2E;border-radius:10px;padding:.8rem 1rem;">
-            <div style="font-family:\'Playfair Display\',serif;font-weight:700;color:#FFD89A;font-size:.95rem;">📖 Read Daily, Live Fully</div>
-            <div style="font-size:.82rem;color:#C9A961;margin-top:.2rem;"><strong>2016</strong> · A daily spiritual companion</div>
+        <div style="background:#D0EDF1;border:1.5px solid #88C5D0;border-radius:10px;padding:.8rem 1rem;">
+            <div style="font-family:\'Playfair Display\',serif;font-weight:700;color:#062E3A;font-size:.95rem;">📖 Read Daily, Live Fully</div>
+            <div style="font-size:.82rem;color:#1A3A45;margin-top:.2rem;"><strong>2016</strong> · A daily spiritual companion</div>
         </div>
-        <div style="background:#5A2424;border:1.5px solid #8B3A2E;border-radius:10px;padding:.8rem 1rem;">
-            <div style="font-family:\'Playfair Display\',serif;font-weight:700;color:#FFD89A;font-size:.95rem;">📖 Gurudev\'s Quotes — Volume I</div>
-            <div style="font-size:.82rem;color:#C9A961;margin-top:.2rem;"><strong>2019</strong> · Selected quotes from Gurudev</div>
+        <div style="background:#D0EDF1;border:1.5px solid #88C5D0;border-radius:10px;padding:.8rem 1rem;">
+            <div style="font-family:\'Playfair Display\',serif;font-weight:700;color:#062E3A;font-size:.95rem;">📖 Gurudev\'s Quotes — Volume I</div>
+            <div style="font-size:.82rem;color:#1A3A45;margin-top:.2rem;"><strong>2019</strong> · Selected quotes from Gurudev</div>
         </div>
-        <div style="background:#5A2424;border:1.5px solid #8B3A2E;border-radius:10px;padding:.8rem 1rem;">
-            <div style="font-family:\'Playfair Display\',serif;font-weight:700;color:#FFD89A;font-size:.95rem;">📖 Gurudev\'s Quotes — Volume II</div>
-            <div style="font-size:.82rem;color:#C9A961;margin-top:.2rem;"><strong>2021</strong> · Selected quotes from Gurudev</div>
+        <div style="background:#D0EDF1;border:1.5px solid #88C5D0;border-radius:10px;padding:.8rem 1rem;">
+            <div style="font-family:\'Playfair Display\',serif;font-weight:700;color:#062E3A;font-size:.95rem;">📖 Gurudev\'s Quotes — Volume II</div>
+            <div style="font-size:.82rem;color:#1A3A45;margin-top:.2rem;"><strong>2021</strong> · Selected quotes from Gurudev</div>
         </div>
-        <div style="background:#5A2424;border:1.5px solid #8B3A2E;border-radius:10px;padding:.8rem 1rem;">
-            <div style="font-family:\'Playfair Display\',serif;font-weight:700;color:#FFD89A;font-size:.95rem;">📖 Gurudev\'s Quotes — Volume III</div>
-            <div style="font-size:.82rem;color:#C9A961;margin-top:.2rem;"><strong>2021</strong> · Selected quotes from Gurudev</div>
+        <div style="background:#D0EDF1;border:1.5px solid #88C5D0;border-radius:10px;padding:.8rem 1rem;">
+            <div style="font-family:\'Playfair Display\',serif;font-weight:700;color:#062E3A;font-size:.95rem;">📖 Gurudev\'s Quotes — Volume III</div>
+            <div style="font-size:.82rem;color:#1A3A45;margin-top:.2rem;"><strong>2021</strong> · Selected quotes from Gurudev</div>
         </div>
-        <div style="background:#5A2424;border:1.5px solid #8B3A2E;border-radius:10px;padding:.8rem 1rem;grid-column:1/-1;border-left:5px solid #D4AF37;">
-            <div style="font-family:\'Playfair Display\',serif;font-weight:700;color:#FFD89A;font-size:1.05rem;">📖 Indispensable Values</div>
-            <div style="font-size:.85rem;color:#C9A961;margin-top:.2rem;"><strong>2022</strong> · Central Chinmaya Mission Trust · 37 values from Bhagavad Gītā Chapters 13 &amp; 16</div>
+        <div style="background:#D0EDF1;border:1.5px solid #88C5D0;border-radius:10px;padding:.8rem 1rem;grid-column:1/-1;border-left:5px solid #062E3A;">
+            <div style="font-family:\'Playfair Display\',serif;font-weight:700;color:#062E3A;font-size:1.05rem;">📖 Indispensable Values</div>
+            <div style="font-size:.85rem;color:#1A3A45;margin-top:.2rem;"><strong>2022</strong> · Central Chinmaya Mission Trust · 37 values from Bhagavad Gītā Chapters 13 &amp; 16</div>
         </div>
     </div>
 </div>
