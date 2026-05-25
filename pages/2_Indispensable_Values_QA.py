@@ -225,6 +225,12 @@ if "last_chunks" not in st.session_state:
     st.session_state.last_chunks = []
 if "last_usage" not in st.session_state:
     st.session_state.last_usage = {}
+if "story_value" not in st.session_state:
+    st.session_state.story_value = None
+if "story_result" not in st.session_state:
+    st.session_state.story_result = None
+if "story_chunks" not in st.session_state:
+    st.session_state.story_chunks = []
 
 # ── Toolbar ────────────────────────────────────────────────────────────────────
 col_clear, col_dl1, col_dl2, col_dl3 = st.columns([2, 1, 1, 1])
@@ -287,9 +293,10 @@ if not st.session_state.messages:
     </div>
     """, unsafe_allow_html=True)
 
-    tab_ch13, tab_ch16 = st.tabs([
+    tab_ch13, tab_ch16, tab_stories = st.tabs([
         "📖 BG Ch.13 — 20 Jñāna Values",
         "📖 BG Ch.16 — 26 Daivī Values",
+        "🪷 Stories from Swamiji's Talks",
     ])
 
     # ── TAB 1: Chapter 13 ─────────────────────────────────────────────────────
@@ -458,7 +465,133 @@ if not st.session_state.messages:
                         st.rerun()
             st.markdown("<br>", unsafe_allow_html=True)
 
-# ── Chat History ───────────────────────────────────────────────────────────────
+    # ── TAB 3: Stories from Swamiji's Talks ───────────────────────────────────
+    with tab_stories:
+        st.markdown("""
+        <div style="background:#FFFFFF;border:1.5px solid #88C5D0;border-radius:12px;
+            padding:1rem 1.4rem;margin-bottom:1.2rem;border-left:5px solid #0D5C6B;">
+            <div style="font-family:'Playfair Display',serif;font-weight:700;
+                color:#062E3A;font-size:1.05rem;margin-bottom:.3rem;">
+                🪷 Stories from Swamiji's Talks
+            </div>
+            <div style="font-size:.88rem;color:#1A3A45;line-height:1.6;">
+                Select any value below to retrieve a story or illustration Swamiji used
+                in his discourses to illuminate that value. Stories are drawn directly
+                from <strong>Swamiji's indexed talks and writings</strong> — nothing is invented.
+                If no specific story exists in the knowledge base for that value, the app
+                will say so honestly.
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+        # ── Ch.13 Value Buttons ────────────────────────────────────────────────
+        st.markdown("""
+        <div style="font-family:'Playfair Display',serif;font-size:.95rem;font-weight:800;
+            color:#062E3A;margin:.6rem 0 .4rem;">
+            📖 BG 13.7–11 — Jñāna Sādhana (20 Values)
+        </div>
+        """, unsafe_allow_html=True)
+        ch13_values = [
+            "amānitvam", "adambhitvam", "ahiṃsā", "kṣāntiḥ", "ārjavam",
+            "ācāryopāsanam", "śaucam", "sthairyam", "ātmavinigrahaḥ",
+            "indriyārtheṣu vairāgyam", "anahaṅkāra", "janma-mṛtyu darśanam",
+            "asaktiḥ", "anabhiṣvaṅga", "samacittatvam", "bhakti avyabhicāriṇī",
+            "viviktadeśa-sevitvam", "aratir janasaṃsadi",
+            "adhyātma-jñāna-nityatvam", "tattva-jñānārtha-darśanam",
+        ]
+        cols_s13 = st.columns(4)
+        for i, val in enumerate(ch13_values):
+            with cols_s13[i % 4]:
+                if st.button(val, key=f"story_ch13_{i}", use_container_width=True):
+                    st.session_state.story_value = val
+                    st.session_state.story_result = None
+                    st.session_state.story_chunks = []
+                    st.rerun()
+
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        # ── Ch.16 Value Buttons ────────────────────────────────────────────────
+        st.markdown("""
+        <div style="font-family:'Playfair Display',serif;font-size:.95rem;font-weight:800;
+            color:#062E3A;margin:.6rem 0 .4rem;">
+            📖 BG 16.01–16.03 — Daivī Sampat (26 Values)
+        </div>
+        """, unsafe_allow_html=True)
+        ch16_values = [
+            "abhayam", "sattva-saṁśuddhiḥ", "jñāna-yoga-vyavasthitiḥ",
+            "dānam", "damaḥ", "yajñaḥ", "svādhyāyaḥ", "tapas", "ārjavam",
+            "ahiṃsā", "satyam", "akrodhaḥ", "tyāgaḥ", "śāntiḥ", "apaiśunam",
+            "dayā bhūteṣu", "aloluptvam", "mārdavam", "hrīḥ", "acāpalam",
+            "tejaḥ", "kṣamā", "dhṛtiḥ", "śaucam", "adrohaḥ", "nātimānitā",
+        ]
+        cols_s16 = st.columns(4)
+        for i, val in enumerate(ch16_values):
+            with cols_s16[i % 4]:
+                if st.button(val, key=f"story_ch16_{i}", use_container_width=True):
+                    st.session_state.story_value = val
+                    st.session_state.story_result = None
+                    st.session_state.story_chunks = []
+                    st.rerun()
+
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        # ── Story Result ───────────────────────────────────────────────────────
+        if st.session_state.story_value:
+            selected_val = st.session_state.story_value
+
+            # Fire RAG query if no result yet
+            if st.session_state.story_result is None:
+                story_query = (
+                    f"Please share a story, parable, or illustration that Pūjya Swāmī "
+                    f"Aparājitānanda used in his teachings to explain the value of "
+                    f"{selected_val}. Narrate the story as Swamiji told it, with as much "
+                    f"detail as the knowledge base contains. Then offer a short reflection "
+                    f"prompt to help the reader contemplate this value in their daily life."
+                )
+                with st.spinner(f"🔍 Searching Swamiji's talks for a story on {selected_val}…"):
+                    result = get_rag_answer(
+                        question=story_query,
+                        filters=None,
+                        n_chunks=n_chunks,
+                        model=model,
+                    )
+                st.session_state.story_result = result.get("answer", "")
+                st.session_state.story_chunks = result.get("chunks", [])
+                st.rerun()
+
+            # Display story card
+            st.markdown(f"""
+            <div style="background:linear-gradient(135deg,#FFFFFF,#E8F4F6);
+                border:2px solid #88C5D0;border-left:5px solid #0D5C6B;
+                border-radius:0 16px 16px 0;
+                padding:1.5rem 2rem;margin:1rem 0;
+                box-shadow:0 4px 16px rgba(0,0,0,.08);">
+                <div style="font-family:'Playfair Display',serif;font-size:1.15rem;
+                    font-weight:800;color:#062E3A;margin-bottom:.6rem;">
+                    🪷 &nbsp; Story on <em>{selected_val}</em>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+            st.markdown(st.session_state.story_result)
+
+            if st.button("🔄 Clear Story & Choose Another", key="clear_story",
+                         use_container_width=False):
+                st.session_state.story_value = None
+                st.session_state.story_result = None
+                st.session_state.story_chunks = []
+                st.rerun()
+
+            # Source chunks
+            if show_sources and st.session_state.story_chunks:
+                st.divider()
+                st.markdown("### 📌 Retrieved Context Chunks")
+                st.caption(
+                    f"Top {len(st.session_state.story_chunks)} chunk(s) retrieved "
+                    "from the knowledge base."
+                )
+                for i, chunk in enumerate(st.session_state.story_chunks, 1):
+                    render_chunk_card(chunk, i)
 chat_container = st.container()
 with chat_container:
     for msg in st.session_state.messages:
