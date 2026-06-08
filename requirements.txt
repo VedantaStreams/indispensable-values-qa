@@ -10,6 +10,7 @@ langchain-community>=0.2.0
 # ── Vector Database ─────────────────────────────────────────────────────────────
 chromadb>=0.5.0
 protobuf>=3.20.0,<=3.20.3   # Pin to fix ChromaDB descriptor conflict
+pinecone>=3.0.0             # Permanent cloud vector store
 
 # ── Document Parsing ────────────────────────────────────────────────────────────
 pdfplumber>=0.11.0          # Primary PDF text extractor (better than PyPDF2)
